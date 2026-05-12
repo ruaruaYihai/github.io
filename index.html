@@ -1,0 +1,1800 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>D-4 · CPT208 Group</title>
+    <meta
+      name="description"
+      content="基于多源地理空间情报的俄乌冲突区域环境交互分析 — 小组展示站点。"
+    />
+
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body class="is-locked">
+    <section class="entry-gate" id="entryGate" aria-label="欢迎页">
+      <div class="float-field" id="floatField" aria-hidden="true"></div>
+      <div class="orb one" aria-hidden="true"></div>
+      <div class="orb two" aria-hidden="true"></div>
+      <div class="orb three" aria-hidden="true"></div>
+      <div class="ad-cloud-layer" aria-hidden="true">
+        <span class="ad-cloud ad-cloud--lg" style="--top: 11%; --dur: 30s; --delay: -5s">夜光遥感下，“消失”的光去了哪里？</span>
+        <span class="ad-cloud ad-cloud--sm" style="--top: 19%; --dur: 26s; --delay: -14s">我们记录的不仅是冲突，更是普通人的日常。</span>
+        <span class="ad-cloud ad-cloud--lg" style="--top: 27%; --dur: 28s; --delay: -9s">+15°E，这里究竟发生了什么？</span>
+        <span class="ad-cloud ad-cloud--sm" style="--top: 35%; --dur: 24s; --delay: -3s">战火掠过，留下一片数据“真空”。</span>
+        <span class="ad-cloud ad-cloud--lg" style="--top: 43%; --dur: 32s; --delay: -18s">黑海沿岸，绿色的农田为何急剧“瘦身”？</span>
+        <span class="ad-cloud ad-cloud--sm" style="--top: 51%; --dur: 27s; --delay: -11s">除了硝烟，饥荒的阴影也在靠近。</span>
+        <span class="ad-cloud ad-cloud--lg" style="--top: 59%; --dur: 25s; --delay: -7s">警告：民用设施损坏率急剧上升。</span>
+        <span class="ad-cloud ad-cloud--sm" style="--top: 67%; --dur: 29s; --delay: -16s">探测中：乌克兰的“生态呼吸”还剩多少？</span>
+      </div>
+      <div class="entry-card">
+        <p class="entry-kicker">
+          <span class="entry-kicker__zh">战火之上的地球</span>
+          <span class="entry-kicker__en">Earth Under Fire</span>
+        </p>
+        <h1 class="entry-title">基于多源地理空间情报的俄乌冲突区域环境交互分析</h1>
+        <p class="entry-desc">
+          Multi-Source Geospatial Intelligence Analysis of the Russia-Ukraine Conflict
+        </p>
+        <div class="entry-actions">
+          <button class="btn" id="themeBtnEntry" type="button" aria-label="Toggle theme from welcome">
+            Theme
+          </button>
+          <button class="enter-btn" id="enterBtn" type="button">▶ 加载数据集 · 启动推演</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="site-shell" id="siteShell">
+      <a class="skip" href="#content">Skip to content</a>
+      <div class="float-field float-field--ambient" id="siteFloatField" aria-hidden="true"></div>
+
+      <header>
+      <div class="container">
+        <div class="topbar">
+          <div class="brand" aria-label="Site identity">
+            <img class="logo-mark" src="./images_home/127177.PNG" alt="" aria-hidden="true" />
+            <div>
+              <h1>Group D-4</h1>
+              <p>FavoriteAgent-Pockety</p>
+            </div>
+          </div>
+          <nav class="nav-main" aria-label="Primary">
+            <a class="navlink" href="#project-timeline">项目时间线</a>
+            <div class="nav-item">
+              <a class="navlink" href="#motivation-research" aria-haspopup="true">Motivation &amp; Research</a>
+              <ul class="nav-submenu" role="list">
+                <li><a href="#motivation-spark">The Spark: Why This Matters?</a></li>
+                <li><a href="#motivation-gap">What&apos;s Missing in the Wild?</a></li>
+                <li><a href="#motivation-stakeholders">Who Cares &amp; Who Feels</a></li>
+                <li><a href="#personas">User personas</a></li>
+              </ul>
+            </div>
+            <div class="nav-item">
+              <a class="navlink" href="#user-requirements" aria-haspopup="true">User Requirements</a>
+              <ul class="nav-submenu" role="list">
+                <li><a href="#user-journey">A Day in Their Shoes</a></li>
+                <li><a href="#user-requirements-features">From &apos;I Wish&apos; to &apos;It Must&apos;</a></li>
+                <li><a href="#user-evidence">Proof We Listened</a></li>
+              </ul>
+            </div>
+            <div class="nav-item">
+              <a class="navlink" href="#ideation-alternatives" aria-haspopup="true">Ideation &amp; Alternatives</a>
+              <ul class="nav-submenu" role="list">
+                <li><a href="#ideation-wild-beginnings">The Wild Beginnings</a></li>
+                <li><a href="#ideation-options">From Option A to Option B: The Shift We Made</a></li>
+                <li><a href="#ideation-low-fi">First Tangible Shape</a></li>
+              </ul>
+            </div>
+            <div class="nav-item">
+              <a class="navlink" href="#technical-implementation" aria-haspopup="true">Technical Implementation</a>
+              <ul class="nav-submenu" role="list">
+                <li><a href="#technical-architecture">How the Machine Thinks</a></li>
+                <li><a href="#technical-prototype">From Sketch to Clickable Reality</a></li>
+                <li><a href="#technical-contributions">Who Built Which Gear</a></li>
+              </ul>
+            </div>
+            <div class="nav-item">
+              <a class="navlink" href="#evaluation-reflection" aria-haspopup="true">Evaluation &amp; Reflection</a>
+              <ul class="nav-submenu" role="list">
+                <li><a href="#evaluation-usability">Real People, Real Clicks, Real Truth</a></li>
+                <li><a href="#evaluation-iteration">Break It, Fix It, Level Up</a></li>
+                <li><a href="#evaluation-reflection-final">If We Knew Then What We Know Now</a></li>
+              </ul>
+            </div>
+            <div class="nav-actions">
+              <button class="btn" id="backToWelcomeBtn" type="button" aria-label="Back to welcome page">
+                Back
+              </button>
+              <button class="btn" id="themeBtn" type="button" aria-label="Toggle theme">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path
+                    d="M12 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12Z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M12 2v2M12 20v2M4 12H2M22 12h-2M5 5l1.5 1.5M17.5 17.5 19 19M19 5l-1.5 1.5M6.5 17.5 5 19"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </svg>
+                Theme
+              </button>
+            </div>
+          </nav>
+        </div>
+      </div>
+      </header>
+
+      <main id="content">
+        <div class="container">
+          <section id="extended-ua-map" class="home-module ua-map-ext" aria-labelledby="extended-ua-map-heading">
+            <div class="section-head">
+              <h3 id="extended-ua-map-heading">俄乌冲突</h3>
+              <p>中央主图与四角专题配图（可在 HTML 中替换图片地址）</p>
+            </div>
+            <article class="panel ua-map-panel">
+              <div class="panel-inner ua-map-panel-inner">
+                <div class="ua-map-diagram">
+                  <figure class="ua-slot ua-slot--tl">
+                    <a
+                      class="ua-slot__frame ua-slot__link"
+                      href="#ua-detail-spatiotemporal"
+                      aria-label="跳转：冲突事件时空分布与强度"
+                    >
+                      <img
+                        class="ua-slot__img"
+                        src="./photo/hsy1.png"
+                        alt=""
+                        width="360"
+                        height="220"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </a>
+                    <figcaption class="ua-slot__cap">冲突事件 · 点击查看详情</figcaption>
+                  </figure>
+                  <figure class="ua-slot ua-slot--tr">
+                    <a
+                      class="ua-slot__frame ua-slot__link"
+                      href="#ua-detail-agriculture"
+                      aria-label="跳转：冲突对农业生产结构的影响"
+                    >
+                      <img
+                        class="ua-slot__img"
+                        src="./photo/wpg1.png"
+                        alt=""
+                        width="360"
+                        height="220"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </a>
+                    <figcaption class="ua-slot__cap">农业生产结构 · 点击查看详情</figcaption>
+                  </figure>
+                  <figure class="ua-slot ua-slot--bl">
+                    <a
+                      class="ua-slot__frame ua-slot__link"
+                      href="#ua-detail-poi-density"
+                      aria-label="跳转：POI核密度分析"
+                    >
+                      <img
+                        class="ua-slot__img"
+                        src="./photo/lyt1.png"
+                        alt=""
+                        width="360"
+                        height="220"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </a>
+                    <figcaption class="ua-slot__cap">POI核密度 · 点击查看详情</figcaption>
+                  </figure>
+                  <figure class="ua-slot ua-slot--br">
+                    <a
+                      class="ua-slot__frame ua-slot__link"
+                      href="#ua-detail-nightlight"
+                      aria-label="跳转：夜光遥感时空演变与空间聚集特征"
+                    >
+                      <img
+                        class="ua-slot__img"
+                        src="./photo/wyl1.jpg"
+                        alt=""
+                        width="360"
+                        height="220"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </a>
+                    <figcaption class="ua-slot__cap">夜光遥感 · 点击查看详情</figcaption>
+                  </figure>
+                  <div class="ua-map-center">
+                    <img
+                      class="ua-map-center__img"
+                      src="./photo/main.png"
+                      alt="俄乌冲突主题视觉：乌克兰版图轮廓内的对决意象"
+                      width="640"
+                      height="640"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                </div>
+                <p class="value ua-map-note">
+                  说明：中央为主题主视觉图；四角配图可点击，将跳转至页面底部对应专题占位区。
+                </p>
+              </div>
+            </article>
+          </section>
+
+          <section id="product-intro" aria-label="Pockety product introduction">
+            <div class="section-head">
+              <h3>What is Pockety Favorite Agent?</h3>
+              <p>A playful AI system for cross-platform favorites digestion</p>
+            </div>
+            <article class="panel">
+              <div class="panel-inner">
+                <p class="value">
+                  Tired of endlessly saving tutorials, articles, and videos across Bilibili, RedNote, Douyin, and
+                  CSDN, only to never revisit your ever-growing collection?
+                </p>
+                <p class="value">
+                  Pockety is an AI-powered favorites management system built to cure modern
+                  <strong>Collection Digestion Disorder</strong>. It automatically syncs and categorizes cross-platform
+                  saved content, generates personalized weekly knowledge digests and audio summaries, builds an
+                  interactive visualized knowledge graph from scattered favorites, and lets users chat and ask
+                  questions directly over their own saved library with advanced RAG-powered AI.
+                </p>
+                <p class="value">
+                  Designed with a human-centric and playful experience, Pockety transforms idle "save and forget"
+                  clutter into an organized, actively growing personal knowledge base, making learning effortless and
+                  efficient.
+                </p>
+              </div>
+            </article>
+          </section>
+
+          <section id="members" aria-label="Team members">
+            <div class="section-head">
+              <h3 id="three-playful-requirements-heading">Three Playful Requirements</h3>
+            </div>
+            <div
+              class="pockety-feature-cards"
+              role="region"
+              aria-labelledby="three-playful-requirements-heading"
+            >
+              <article class="pockety-feature-card">
+                <h4 class="pockety-feature-card__title">
+                  <span class="pockety-feature-card__icon" aria-hidden="true">🧠</span>
+                  AI Agent Q&amp;A
+                </h4>
+                <p class="pockety-feature-card__body">
+                  Not just search — it's a little knowledge buddy. It answers your saved content in a playful,
+                  conversational tone. Turning "dig through my favorites" into "just ask."
+                </p>
+                <blockquote class="pockety-feature-card__quote">
+                  <p>
+                    <em>"What did that Bilibili tutorial say again?" — Just ask Pockety.</em>
+                  </p>
+                </blockquote>
+              </article>
+              <article class="pockety-feature-card">
+                <h4 class="pockety-feature-card__title">
+                  <span class="pockety-feature-card__icon" aria-hidden="true">🏷️</span>
+                  AI-Powered Smart Categorization
+                </h4>
+                <p class="pockety-feature-card__body">
+                  No more messy collections. The system automatically tags your links, notes, and videos, then presents
+                  them in a cute floating-card interface. Organizing becomes surprisingly enjoyable.
+                </p>
+                <blockquote class="pockety-feature-card__quote">
+                  <p><em>From "save and forget" to "feels good to look at."</em></p>
+                </blockquote>
+              </article>
+              <article class="pockety-feature-card">
+                <h4 class="pockety-feature-card__title">
+                  <span class="pockety-feature-card__icon" aria-hidden="true">📊</span>
+                  Playful Weekly Report
+                </h4>
+                <p class="pockety-feature-card__body">
+                  See what you saved, what you missed — visualized in soft cloud-shaped charts. It turns boring stats into
+                  a lighthearted weekly ritual.
+                </p>
+                <blockquote class="pockety-feature-card__quote">
+                  <p>
+                    <em>Not to stress you out. Just a gentle reminder: "Your saved world just grew a little bigger."</em>
+                  </p>
+                </blockquote>
+              </article>
+            </div>
+
+            <div class="members-grid" role="list">
+              <article class="member-card member-pink" role="listitem">
+                <div class="member-card-inner">
+                  <div class="member-face member-face-front">
+                    <div class="id-strip">ID card</div>
+                    <div class="member-avatar" aria-hidden="true">
+                      <img src="./images_home/jingxuan-weng.png" alt="" loading="lazy" decoding="async" />
+                    </div>
+                    <p class="name">Jingxuan Weng</p>
+                    <p class="meta">2364452</p>
+                    <p class="desc"><strong>Slogan:</strong> 孤的胜你们已经见过了，孤的败</p>
+                    <p class="flip-hint">Flip to see more</p>
+                  </div>
+                  <div class="member-face member-face-back">
+                    <div class="id-strip">ID card</div>
+                    <p class="desc"><strong>Intro:</strong> UI Designer / Front-end Developer</p>
+                    <p class="desc">
+                      <strong>Responsibility:</strong> Designed the project UI in Figma, assisted in poster creation, and developed the Process
+                      Portfolio website on GitHub.
+                    </p>
+                  </div>
+                </div>
+              </article>
+
+              <article class="member-card member-blue" role="listitem">
+                <div class="member-card-inner">
+                  <div class="member-face member-face-front">
+                    <div class="id-strip">ID card</div>
+                    <div class="member-avatar" aria-hidden="true">
+                      <img src="./images_home/haotian-ma.png" alt="" loading="lazy" decoding="async" />
+                    </div>
+                    <p class="name">Haotian Ma</p>
+                    <p class="meta">2361009</p>
+                    <p class="desc"><strong>Slogan:</strong> 每一位成功人士的背后都有一条脊椎</p>
+                    <p class="flip-hint">Flip to see more</p>
+                  </div>
+                  <div class="member-face member-face-back">
+                    <div class="id-strip">ID card</div>
+                    <p class="desc"><strong>Intro:</strong> Back-end Developer</p>
+                    <p class="desc">
+                      <strong>Responsibility:</strong> Implemented back-end code, fine-tuned, handled front-end and back-end integration, adapted
+                      LLM to fit the project theme, assisted in poster creation, and conducted preliminary research on relevant products and
+                      technologies.
+                    </p>
+                  </div>
+                </div>
+              </article>
+
+              <article class="member-card member-yellow" role="listitem">
+                <div class="member-card-inner">
+                  <div class="member-face member-face-front">
+                    <div class="id-strip">ID card</div>
+                    <div class="member-avatar" aria-hidden="true">
+                      <img src="./images_home/zeyu-yin.png" alt="" loading="lazy" decoding="async" />
+                    </div>
+                    <p class="name">Zeyu Yin</p>
+                    <p class="meta">2360955</p>
+                    <p class="desc"><strong>Slogan:</strong>有时候没有slogan也是一种slogan</p>
+                    <p class="flip-hint">Flip to see more</p>
+                  </div>
+                  <div class="member-face member-face-back">
+                    <div class="id-strip">ID card</div>
+                    <p class="desc"><strong>Intro:</strong> UI Designer / Portfolio Editor</p>
+                    <p class="desc">
+                      <strong>Responsibility:</strong> Designed the project UI in Figma, wrote and integrated the
+                      content of the Process Portfolio, assisted in poster creation, and participated in project testing.
+                    </p>
+                  </div>
+                </div>
+              </article>
+
+              <article class="member-card member-green" role="listitem">
+                <div class="member-card-inner">
+                  <div class="member-face member-face-front">
+                    <div class="id-strip">ID card</div>
+                    <div class="member-avatar" aria-hidden="true">
+                      <img src="./images_home/hongming-guo.png" alt="" loading="lazy" decoding="async" />
+                    </div>
+                    <p class="name">Hongming Guo</p>
+                    <p class="meta">2362959</p>
+                    <p class="desc"><strong>Slogan:</strong>Doctor...Docter...</p>
+                    <p class="flip-hint">Flip to see more</p>
+                  </div>
+                  <div class="member-face member-face-back">
+                    <div class="id-strip">ID card</div>
+                    <p class="desc"><strong>Intro:</strong> Team Leader</p>
+                    <p class="desc">
+                      <strong>Responsibility:</strong> Coordinated project progress, conducted user research, completed poster design & production & video demo, led project testing, optimized frontend codeand, took charge of poster design and production.
+                    </p>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <section id="project-timeline" class="home-module" aria-labelledby="project-timeline-heading">
+            <div class="section-head">
+              <h3 id="project-timeline-heading">项目时间线</h3>
+              <p>按周次划分的关键节点与任务</p>
+            </div>
+
+            <div class="process-timeline" role="region" aria-label="项目时间线（按周次）">
+              <div class="process-timeline__stage">
+                <svg
+                  class="process-timeline__svg"
+                  viewBox="-80 -195 1160 580"
+                  preserveAspectRatio="none"
+                  focusable="false"
+                  role="group"
+                  aria-label="项目时间线曲线与周次节点"
+                >
+                  <defs>
+                    <linearGradient id="processTimelineStroke" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+                      <stop offset="0%" stop-color="#34d399" />
+                      <stop offset="45%" stop-color="#6366f1" />
+                      <stop offset="100%" stop-color="#f97316" />
+                    </linearGradient>
+                    <marker
+                      id="processTimelineArrowEnd"
+                      viewBox="0 0 10 10"
+                      refX="9"
+                      refY="5"
+                      markerWidth="7"
+                      markerHeight="7"
+                      orient="auto"
+                      markerUnits="strokeWidth"
+                    >
+                      <path class="process-timeline__svg-arrowhead" d="M 0 0 L 10 5 L 0 10 Z" />
+                    </marker>
+                  </defs>
+                  
+                  <path
+                    class="process-timeline__curve-bg"
+                    fill="none"
+                    stroke="url(#processTimelineStroke)"
+                    stroke-width="12"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    opacity="0.12"
+                    d="M 40.00,58.40 L 54.60,53.46 L 69.21,50.63 L 83.81,50.08 L 98.41,51.83 L 113.02,55.79 L 127.62,61.75 L 142.22,69.40 L 156.83,78.33 L 171.43,88.09 L 186.03,98.16 L 200.63,108.01 L 215.24,117.13 L 229.84,125.04 L 244.44,131.31 L 259.05,135.64 L 273.65,137.78 L 288.25,137.63 L 302.86,135.19 L 317.46,130.60 L 332.06,124.09 L 346.67,116.00 L 361.27,106.76 L 375.87,96.85 L 390.48,86.79 L 405.08,77.11 L 419.68,68.32 L 434.29,60.86 L 448.89,55.15 L 463.49,51.47 L 478.10,50.02 L 492.70,50.87 L 507.30,53.98 L 521.90,59.19 L 536.51,66.22 L 551.11,74.71 L 565.71,84.21 L 580.32,94.22 L 594.92,104.22 L 609.52,113.68 L 624.13,122.11 L 638.73,129.07 L 653.33,134.20 L 667.94,137.21 L 682.54,137.96 L 697.14,136.41 L 711.75,132.64 L 726.35,126.84 L 740.95,119.33 L 755.56,110.48 L 770.16,100.77 L 784.76,90.71 L 799.37,80.82 L 813.97,71.62 L 828.57,63.59 L 843.17,57.16 L 857.78,52.65 L 872.38,50.31 L 886.98,50.26 L 901.59,52.51 L 916.19,56.92 L 930.79,63.28 L 945.40,71.24 L 960.00,80.40"
+                  />
+                  <path
+                    class="process-timeline__curve"
+                    fill="none"
+                    stroke="url(#processTimelineStroke)"
+                    stroke-width="3.25"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M 40.00,58.40 L 54.60,53.46 L 69.21,50.63 L 83.81,50.08 L 98.41,51.83 L 113.02,55.79 L 127.62,61.75 L 142.22,69.40 L 156.83,78.33 L 171.43,88.09 L 186.03,98.16 L 200.63,108.01 L 215.24,117.13 L 229.84,125.04 L 244.44,131.31 L 259.05,135.64 L 273.65,137.78 L 288.25,137.63 L 302.86,135.19 L 317.46,130.60 L 332.06,124.09 L 346.67,116.00 L 361.27,106.76 L 375.87,96.85 L 390.48,86.79 L 405.08,77.11 L 419.68,68.32 L 434.29,60.86 L 448.89,55.15 L 463.49,51.47 L 478.10,50.02 L 492.70,50.87 L 507.30,53.98 L 521.90,59.19 L 536.51,66.22 L 551.11,74.71 L 565.71,84.21 L 580.32,94.22 L 594.92,104.22 L 609.52,113.68 L 624.13,122.11 L 638.73,129.07 L 653.33,134.20 L 667.94,137.21 L 682.54,137.96 L 697.14,136.41 L 711.75,132.64 L 726.35,126.84 L 740.95,119.33 L 755.56,110.48 L 770.16,100.77 L 784.76,90.71 L 799.37,80.82 L 813.97,71.62 L 828.57,63.59 L 843.17,57.16 L 857.78,52.65 L 872.38,50.31 L 886.98,50.26 L 901.59,52.51 L 916.19,56.92 L 930.79,63.28 L 945.40,71.24 L 960.00,80.40"
+                  />
+                  <g class="process-timeline__callouts">
+                    <g class="process-timeline__note-cluster">
+                      <rect class="process-timeline__svg-note" x="-72" y="198" width="228" height="132" rx="10" ry="10" />
+                      <foreignObject x="-72" y="198" width="228" height="132">
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="process-timeline__note-html">
+                          <p><strong>第1周：选题确定与任务分工</strong></p>
+                          <ul>
+                            <li>确定最终分析主题与范围</li>
+                            <li>
+                              明确四项分析任务：夜光遥感分析、POI核密度分析、冲突对农业生产的影响、<strong>冲突事件时空分布与强度</strong>
+                            </li>
+                            <li>完成团队分工（每项分析指定小组成员，并明确协作机制）</li>
+                          </ul>
+                        </div>
+                      </foreignObject>
+                    </g>
+                    <line
+                      class="process-timeline__svg-arrow"
+                      x1="40"
+                      y1="65.4"
+                      x2="40"
+                      y2="198"
+                      marker-end="url(#processTimelineArrowEnd)"
+                    />
+                    <g class="process-timeline__note-cluster">
+                      <rect class="process-timeline__svg-note" x="159.65" y="-165" width="228" height="155" rx="10" ry="10" />
+                      <foreignObject x="159.65" y="-165" width="228" height="155">
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="process-timeline__note-html">
+                          <p><strong>第2–3周：数据收集准备</strong></p>
+                          <ul>
+                            <li>
+                              收集并整理初步资料：
+                              <ul>
+                                <li>夜光遥感数据源（VIIRS）</li>
+                                <li>POI数据（OpenStreetMap）</li>
+                                <li>农业生产数据（Earthdata、ESA WorldCover、OSM道路/建筑物）</li>
+                                <li><strong>冲突事件数据（ACLED，HDX）</strong></li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </div>
+                      </foreignObject>
+                    </g>
+                    <line
+                      class="process-timeline__svg-arrow"
+                      x1="273.65"
+                      y1="130.78"
+                      x2="273.65"
+                      y2="-10"
+                      marker-end="url(#processTimelineArrowEnd)"
+                    />
+                    <g class="process-timeline__note-cluster">
+                      <rect class="process-timeline__svg-note" x="364.1" y="198" width="228" height="168" rx="10" ry="10" />
+                      <foreignObject x="364.1" y="198" width="228" height="168">
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="process-timeline__note-html">
+                          <p><strong>第4–6周：数据下载与预处理</strong></p>
+                          <ul>
+                            <li>完成所有数据下载</li>
+                            <li>
+                              完成各项数据的初步预处理
+                              <ul>
+                                <li>夜光遥感：裁切、背景噪声去除</li>
+                                <li>POI：提取医院POI、坐标清洗、空间匹配</li>
+                                <li>农业生产数据：计算NDVI、物候曲线匹配、六边形聚合</li>
+                                <li><strong>冲突事件：数据清洗、州名统一、按州/按月份汇总、分时段筛选</strong></li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </div>
+                      </foreignObject>
+                    </g>
+                    <line
+                      class="process-timeline__svg-arrow"
+                      x1="478.1"
+                      y1="57.02"
+                      x2="478.1"
+                      y2="198"
+                      marker-end="url(#processTimelineArrowEnd)"
+                    />
+                    <g class="process-timeline__note-cluster">
+                      <rect class="process-timeline__svg-note" x="568.54" y="-188" width="228" height="178" rx="10" ry="10" />
+                      <foreignObject x="568.54" y="-188" width="228" height="178">
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="process-timeline__note-html">
+                          <p><strong>第6–9周：数据可视化与最终图件制作</strong></p>
+                          <ul>
+                            <li>
+                              各分析任务完成关键可视化
+                              <ul>
+                                <li>夜光亮度变化时序图与空间分布图</li>
+                                <li>POI核密度变化对比图（不同时期），创建渔网图</li>
+                                <li>土地覆盖图，作物与冲突数据叠加双变量专题图（重点区域）</li>
+                                <li>
+                                  <strong>冲突事件：时间强度折线图、全时段空间分布图、关键时期对比图（三时相）、Top5高发区表格</strong>
+                                </li>
+                              </ul>
+                            </li>
+                            <li>生成最终版高分辨率图表（用于报告与网页）</li>
+                            <li>初步整合四类分析结果</li>
+                          </ul>
+                        </div>
+                      </foreignObject>
+                    </g>
+                    <line
+                      class="process-timeline__svg-arrow"
+                      x1="682.54"
+                      y1="130.96"
+                      x2="682.54"
+                      y2="-10"
+                      marker-end="url(#processTimelineArrowEnd)"
+                    />
+                    <g class="process-timeline__note-cluster">
+                      <rect class="process-timeline__svg-note" x="846" y="198" width="228" height="142" rx="10" ry="10" />
+                      <foreignObject x="846" y="198" width="228" height="142">
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="process-timeline__note-html">
+                          <p><strong>第10–11周：报告撰写与网站搭建</strong></p>
+                          <ul>
+                            <li>撰写项目报告</li>
+                            <li>
+                              搭建项目展示网站
+                              <ul>
+                                <li>设计网页结构（首页、方法、结果、交互图表、报告下载）</li>
+                                <li>嵌入最终可视化图表（动态/交互）</li>
+                              </ul>
+                            </li>
+                            <li>小组审阅与修改</li>
+                          </ul>
+                        </div>
+                      </foreignObject>
+                    </g>
+                    <line
+                      class="process-timeline__svg-arrow"
+                      x1="960"
+                      y1="87.4"
+                      x2="960"
+                      y2="198"
+                      marker-end="url(#processTimelineArrowEnd)"
+                    />
+                  </g>
+                  <g class="process-timeline__markers">
+                    <text class="process-timeline__svg-week" x="40" y="42.4">第1周</text>
+                    <circle class="process-timeline__svg-dot" cx="40" cy="58.4" r="7" />
+                    <text class="process-timeline__svg-week" x="273.65" y="121.78">第2–3周</text>
+                    <circle class="process-timeline__svg-dot" cx="273.65" cy="137.78" r="7" />
+                    <text class="process-timeline__svg-week" x="478.1" y="34">第4–6周</text>
+                    <circle class="process-timeline__svg-dot" cx="478.1" cy="50.02" r="7" />
+                    <text class="process-timeline__svg-week" x="682.54" y="121.96">第6–9周</text>
+                    <circle class="process-timeline__svg-dot" cx="682.54" cy="137.96" r="7" />
+                    <text class="process-timeline__svg-week" x="960" y="64.4">第10–11周</text>
+                    <circle class="process-timeline__svg-dot" cx="960" cy="80.4" r="7" />
+                  </g>
+                </svg>
+              </div>
+            </div>
+          </section>
+
+          <section id="motivation-research" class="home-module" aria-labelledby="motivation-research-heading">
+            <div class="section-head">
+              <h3 id="motivation-research-heading">Motivation &amp; Research</h3>
+              <p>Why the problem matters, where existing work falls short, and who we serve</p>
+            </div>
+            <article class="panel">
+              <div class="panel-inner">
+                <p class="value">This section explains why the problem matters, where existing work falls short, and who our key stakeholders are.</p>
+              </div>
+            </article>
+
+            <div class="section-head">
+              <h4 id="motivation-spark">The Spark: Why This Matters?</h4>
+              <p>From excessive saving to poor digestion</p>
+            </div>
+            <article class="panel">
+              <div class="panel-inner">
+                <p class="value">
+                  In the current era of severe information overload, college students extensively consume fragmented content from WeChat, Douyin, RedNote, and Bilibili daily. They frequently save articles, videos, notes and resources to platform favorites with the positive expectation of reviewing, learning and digesting these materials later. Nevertheless, long-term observations and surveys among student groups reveal an extremely common issue: most saved favorite content is never reopened, read or learned. Instead, it gradually accumulates as useless digital garbage, forming a typical Collection-Digestion Disorder.
+                </p>
+                <p class="value">
+                  This gap between active collection and passive abandonment causes serious waste of information resources, weakens learning efficiency, and leads to fragmented, disorganized personal knowledge. Existing tools either focus on simple bookmark storage or lack playful automated digestion mechanisms. Therefore, our team chooses this user-centric intelligent knowledge management track. We aim to develop Pockety (FavoriteAgent) to unify cross-platform favorites, automate content organization, provide playful periodic digests, and build a queryable personal knowledge base, fundamentally solving Collection-Digestion Disorder and turning dormant collections into usable knowledge for college students.
+                </p>
+              </div>
+            </article>
+
+            <div class="section-head">
+              <h4 id="motivation-gap">What&apos;s Missing in the Wild?</h4>
+              <p>Literature and product benchmark analysis</p>
+            </div>
+
+            <article class="panel">
+              <div class="panel-inner">
+                <h4>1. Research Literature</h4>
+
+                <div class="table-wrap research-lit-table-wrap">
+                  <table class="contrib-table research-lit-table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Paper Title</th>
+                        <th scope="col">Did Well</th>
+                        <th scope="col">Missed</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <strong>1.1 Knowledge Graph Generation and Application for Unstructured Data Using Data Processing Pipeline</strong>
+                        </td>
+                        <td>
+                          Multi-modal entity and relation extraction for text, image, and video.<br />
+                          User-interest-aware semantic tagging and deduplication.<br />
+                          Cross-source knowledge fusion to reduce redundancy.
+                        </td>
+                        <td>
+                          No audio/podcast generation for commuting scenarios.<br />
+                          No spaced-repetition memory-card scheduling.<br />
+                          No real-time crawling for major Chinese platforms (Douyin / Xiaohongshu / Bilibili).
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <strong>1.2 Retrieval-augmented generation for educational application: A systematic survey</strong>
+                        </td>
+                        <td>
+                          Context-aware retrieval improves RAG answer accuracy.<br />
+                          Dynamic incremental updates for newly saved content.<br />
+                          Personalized summarization adjusted to user expertise.
+                        </td>
+                        <td>
+                          No visualized knowledge-graph presentation.<br />
+                          No automatic flashcard generation for hard knowledge.<br />
+                          No batch processing for daily favorites digest.
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <strong>1.3 Personalized Language Learning Using Spaced Repetition Scheduling</strong>
+                        </td>
+                        <td>
+                          Forgetting-aware tracing combines deep learning and memory modeling.<br />
+                          RL-based scheduling optimizes review timing from real feedback.<br />
+                          Real-world validation shows measurable gains on language-learning datasets.
+                        </td>
+                        <td>
+                          Narrow scope: mainly for language learning, not general knowledge management.<br />
+                          No multi-modal support for audio output or knowledge-graph visualization.<br />
+                          No platform integration with Douyin / Xiaohongshu / Bilibili.
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </article>
+
+            <article class="panel" style="margin-top: 14px">
+              <div class="panel-inner">
+                <h4>2. Product Benchmark</h4>
+
+                <div class="table-wrap product-benchmark-table-wrap">
+                  <table class="contrib-table product-benchmark-table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Product</th>
+                        <th scope="col">Did Well</th>
+                        <th scope="col">Missed</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><strong>2.1 NotebookLM (Google)</strong></td>
+                        <td>
+                          High-quality AI audio overviews and dialogue-style podcasts.<br />
+                          Strong source-grounded RAG with low hallucination risk.<br />
+                          Cross-document relation mining.
+                        </td>
+                        <td>
+                          No native support for Douyin / Xiaohongshu / Bilibili.<br />
+                          No automatic memory/flashcard generation.<br />
+                          No interactive visual knowledge graph.
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><strong>2.2 Karakeep</strong></td>
+                        <td>
+                          Self-hosted privacy and full webpage archiving.<br />
+                          AI auto-tagging and full-text search across formats.<br />
+                          Video support via yt-dlp for Bilibili-like sources.
+                        </td>
+                        <td>
+                          No built-in TTS podcast generation.<br />
+                          No spaced-repetition flashcard system.<br />
+                          Weak knowledge graph, mainly tag-based association.
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><strong>2.3 Cubox</strong></td>
+                        <td>
+                          Strong WeChat ecosystem integration.<br />
+                          Mature RAG full-library natural language QA.<br />
+                          Link snapshot and permanent content preservation.
+                        </td>
+                        <td>
+                          No one-click daily digest audio output.<br />
+                          No automatic hard-knowledge flashcard push.<br />
+                          No interactive knowledge-graph visualization.
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><strong>2.4 Bilibili-RAG</strong></td>
+                        <td>
+                          End-to-end Bilibili favorites ASR to vector DB to QA pipeline.<br />
+                          Robust audio extraction and fallback mechanisms.<br />
+                          Open and customizable for secondary development.
+                        </td>
+                        <td>
+                          Only supports Bilibili, no WeChat/Douyin/Xiaohongshu.<br />
+                          No tagging/categorization system.<br />
+                          No memory-card or podcast-oriented learning features.
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </article>
+
+            <div class="section-head">
+              <h4 id="motivation-stakeholders">Who Cares &amp; Who Feels</h4>
+              <p>Primary and secondary users we serve</p>
+            </div>
+            <article class="panel">
+              <div class="panel-inner">
+                <ul class="bullets">
+                  <li>University students who rely on digital content for continuous learning.</li>
+                  <li>University students preparing for internships and full-time job applications.</li>
+                </ul>
+              </div>
+            </article>
+
+            <section id="personas" aria-label="User personas">
+              <div class="persona-track">
+                <article class="persona-creative persona-left">
+                  <div class="persona-creative-head">
+                    <img
+                      class="persona-avatar"
+                      src="./images_User Requirements/yu-chen.png"
+                      alt="Yu Chen avatar"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <div class="persona-head-copy">
+                      <p class="persona-step">Persona 01</p>
+                      <h4>Yu Chen</h4>
+                      <p class="persona-meta">Age 20 · Female · University Student (Computer Science Major)</p>
+                    </div>
+                  </div>
+                  <div class="persona-creative-body">
+                    <div class="persona-layer">
+                      <p class="label">Typical Behavior</p>
+                      <p class="value">
+                        Watches tutorials on Bilibili daily, saves code on CSDN, and keeps notes on Xiaohongshu.
+                        Believes saving means learning, but revisit rate is below 10%.
+                      </p>
+                    </div>
+                    <div class="persona-layer">
+                      <p class="label">Pain Points</p>
+                      <ul class="bullets">
+                        <li>
+                          <strong>Search Barriers:</strong> Must switch between four apps during exams/projects to find
+                          one remembered technical point.
+                        </li>
+                        <li>
+                          <strong>Anxiety Loop:</strong> More than 500 unread items trigger stress and avoidance.
+                        </li>
+                        <li>
+                          <strong>Logical Disconnect:</strong> Related Bilibili and CSDN content cannot be linked into
+                          one knowledge path.
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="persona-layer">
+                      <p class="label">Core Expectations</p>
+                      <p class="value">
+                        Connect cross-platform knowledge, auto-build a knowledge graph, and support Q&amp;A from saved
+                        content.
+                      </p>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="persona-creative persona-right">
+                  <div class="persona-creative-head">
+                    <img
+                      class="persona-avatar"
+                      src="./images_User Requirements/adam.png"
+                      alt="Adam avatar"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <div class="persona-head-copy">
+                      <p class="persona-step">Persona 02</p>
+                      <h4>Adam</h4>
+                      <p class="persona-meta">Age 22 · Male · Senior Student / Job Seeker / New Intern</p>
+                    </div>
+                  </div>
+                  <div class="persona-creative-body">
+                    <div class="persona-layer">
+                      <p class="label">Typical Behavior</p>
+                      <p class="value">
+                        Saves resume/interview/internship/product resources in bursts. Adds dozens weekly but rarely
+                        revisits, so the collection becomes a mental comfort zone.
+                      </p>
+                    </div>
+                    <div class="persona-layer">
+                      <p class="label">Pain Points</p>
+                      <ul class="bullets">
+                        <li>
+                          <strong>Asset Fragility:</strong> Valuable saved content is later deleted or paywalled,
+                          causing frustration and helplessness.
+                        </li>
+                        <li>
+                          <strong>Categorization Fatigue:</strong> Manual tagging is tiring, but no tagging leads to
+                          chaos and a dumping-ground folder.
+                        </li>
+                        <li>
+                          <strong>Lack of Reminders:</strong> Key deadlines are missed without proactive reminders, so
+                          plans and actions disconnect.
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="persona-layer">
+                      <p class="label">Core Expectations</p>
+                      <p class="value">
+                        Keep reliable backups even if source posts disappear, quickly extract key takeaways, and
+                        categorize/tag content for easier retrieval.
+                      </p>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </section>
+          </section>
+
+          <section id="user-requirements" class="home-module" aria-labelledby="user-requirements-heading">
+            <div class="section-head">
+              <h3 id="user-requirements-heading">User Requirements</h3>
+              <p>Journey analysis, feature requirements, and field evidence</p>
+            </div>
+            <article class="panel">
+              <div class="panel-inner">
+                <p class="value">This section summarizes user needs through journey analysis, feature requirements, and real-life evidence.</p>
+              </div>
+            </article>
+
+            <div class="section-head">
+              <h4 id="user-journey">A Day in Their Shoes</h4>
+              <p>From collection to review: behavior, pain points, and opportunities</p>
+            </div>
+            <article class="panel">
+              <div class="panel-inner">
+                <figure class="media-card">
+                  <img
+                    src="./images_User Requirements/user-journey-map.png"
+                    alt="User journey map showing stages, behaviors, pain points, opportunities, and competitor issues"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </figure>
+              </div>
+            </article>
+
+            <div class="section-head">
+              <h4 id="user-requirements-features">From &apos;I Wish&apos; to &apos;It Must&apos;</h4>
+              <p>Core feature requirements derived from user research</p>
+            </div>
+            <div class="requirements-list">
+              <article class="shot requirement-item">
+                <b>AI Agent Q&amp;A</b>
+                <p>Delivers playful, engaging responses that make everyday interactions more enjoyable.</p>
+              </article>
+              <article class="shot requirement-item">
+                <b>AI-assisted Favorite Categorization</b>
+                <p>
+                  Combines a dedicated playful UI with practical categorization, helping users keep their saved content
+                  neat and well organized.
+                </p>
+              </article>
+              <article class="shot requirement-item">
+                <b>Weekly Report</b>
+                <p>
+                  Creates a playful reviewing experience through remarkable statistics and a sense of ritual, encouraging
+                  users to revisit and reflect on the content they have saved.
+                </p>
+              </article>
+            </div>
+
+            <div class="section-head">
+              <h4 id="user-evidence">Proof We Listened</h4>
+              <p>Interviewing a potential user</p>
+            </div>
+            <div class="evidence-grid evidence-proof-three">
+              <figure class="media-card">
+                <img src="./images_User Requirements/evidence-life-1.png" alt="Two students observing saved-content usage on laptop in classroom" loading="lazy" decoding="async" />
+              </figure>
+              <figure class="media-card">
+                <img src="./images_User Requirements/evidence-life-2.png" alt="Participant pointing at laptop screen showing saved-content platform" loading="lazy" decoding="async" />
+              </figure>
+              <figure class="media-card">
+                <img src="./images_User Requirements/evidence-life-3.png" alt="Interview scene during field research on content saving habits" loading="lazy" decoding="async" />
+              </figure>
+              <figure class="media-card">
+                <img src="./images_User Requirements/evidence-life-4.png" alt="Dorm study scenario discussing saved information retrieval workflow" loading="lazy" decoding="async" />
+              </figure>
+              <figure class="media-card evidence-proof-three__kife">
+                <img
+                  src="./images_User Requirements/evidence-kife-5.png"
+                  alt="Participant using laptop during field research on saved-content habits"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </figure>
+            </div>
+          </section>
+
+          <section id="ideation-alternatives" class="home-module" aria-labelledby="ideation-alternatives-heading">
+            <div class="section-head">
+              <h3 id="ideation-alternatives-heading">Ideation &amp; Alternatives</h3>
+              <p>Sketches, design alternatives, and low-fidelity prototypes</p>
+            </div>
+            <article class="panel">
+              <div class="panel-inner">
+                <p class="value">This section presents early ideation sketches, design alternatives, and selected low-fidelity prototype directions.</p>
+              </div>
+            </article>
+
+            <div class="section-head">
+              <h4 id="ideation-wild-beginnings">The Wild Beginnings</h4>
+              <p>Rapid ideation sketches exploring multiple interaction paths</p>
+            </div>
+            <article class="panel">
+              <div class="panel-inner">
+                <figure class="media-card">
+                  <img
+                    src="./images_Ideation & Alternativesw/crazy-eights.png"
+                    alt="Crazy Eights sketch sheet with multiple mobile interface concepts"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </figure>
+              </div>
+            </article>
+
+            <div class="section-head">
+              <h4 id="ideation-options">From Option A to Option B: The Shift We Made</h4>
+              <p>Comparison between original and optimized direction</p>
+            </div>
+            <div class="ideation-alt-grid">
+              <article class="shot ideation-alt-item">
+                <b>Option A (Original)</b>
+                <p>
+                  Rigid, high-saturation solid matcha green flat UI. Lacking depth or whitespace, all modules appear as
+                  monotonous, indistinguishable blocks. Weekly reports rely on rigid text lists - completely lacking any
+                  engaging visual interaction.
+                </p>
+              </article>
+              <article class="shot ideation-alt-item">
+                <b>Option B (Optimized)</b>
+                <p>
+                  We adopted a soft, dreamy pastel gradient system with generous whitespace. Core functions are
+                  structured as independent, elevated floating cards. We introduced a playful cloud-shaped visual
+                  hierarchy for the weekly overview, turning abstract data into friendly, approachable graphics.
+                </p>
+              </article>
+            </div>
+            <article class="panel ideation-justification">
+              <div class="panel-inner">
+                <h4>Justification</h4>
+                <p class="value">
+                  This iteration embodies a Playful design philosophy beyond aesthetics: The gentle, vibrant color
+                  palette and airy layout creates a stress-free environment, dissolving users' anxiety towards their
+                  cluttered collections. Playful cloud visualization transforms tedious data sorting into an intuitive,
+                  delightful experience. Floating cards establish clear visual boundaries, while the whimsical style
+                  aligns perfectly with our AI-powered dialogue and sorting features.
+                </p>
+              </div>
+            </article>
+
+            <div class="section-head">
+              <h4 id="ideation-low-fi">First Tangible Shape</h4>
+              <p>Selected direction translated into low-fidelity mobile interfaces</p>
+            </div>
+            <article class="panel">
+              <div class="panel-inner">
+                <p class="value">
+                  Low-Fi figma link：
+                  <a
+                    href="https://www.figma.com/proto/PaMURBeNrMMcPKupq5qzze/CPT208-FavoriteAgent?node-id=3640-283&amp;t=sB5iQxEH45Biszzw-1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >https://www.figma.com/proto/PaMURBeNrMMcPKupq5qzze/CPT208-FavoriteAgent?node-id=3640-283&amp;t=sB5iQxEH45Biszzw-1</a>
+                </p>
+                <div class="lowfi-stack">
+                  <figure class="media-card">
+                    <img
+                      src="./images_Ideation & Alternativesw/low-fi-prototype-1.png"
+                      alt="Low-fidelity prototype version one"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </figure>
+                  <figure class="media-card">
+                    <img
+                      src="./images_Ideation & Alternativesw/low-fi-prototype-2.png"
+                      alt="Low-fidelity prototype version two"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </figure>
+                </div>
+              </div>
+            </article>
+          </section>
+
+          <section id="technical-implementation" class="home-module" aria-labelledby="technical-implementation-heading">
+            <div class="section-head">
+              <h3 id="technical-implementation-heading">Technical Implementation</h3>
+              <p>Architecture, prototype entry, and team contributions</p>
+            </div>
+            <article class="panel">
+              <div class="panel-inner">
+                <p class="value">This section presents architecture assets, prototype entry, and team contributions.</p>
+              </div>
+            </article>
+
+            <div class="section-head">
+              <h4 id="technical-architecture">How the Machine Thinks</h4>
+              <p>Architecture diagram</p>
+            </div>
+            <article class="panel">
+              <div class="panel-inner">
+                <figure class="media-card">
+                  <img
+                    src="./images_Technical Implementation/Sequence_diagram.png"
+                    alt="System architecture sequence diagram"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </figure>
+              </div>
+            </article>
+
+            <div class="section-head">
+              <h4 id="technical-prototype">From Sketch to Clickable Reality</h4>
+              <p>URL to the hosted system</p>
+            </div>
+            <article class="panel">
+              <div class="panel-inner">
+                <p class="value">
+                  <strong>URL:</strong>
+                  <a href="https://pockety-three.vercel.app" target="_blank" rel="noopener noreferrer">https://pockety-three.vercel.app</a>
+                </p>
+              </div>
+            </article>
+
+            <div class="section-head">
+              <h4 id="technical-contributions">Who Built Which Gear</h4>
+              <p>Role assignment and specific deliverables</p>
+            </div>
+            <article class="panel">
+              <div class="panel-inner">
+                <div class="table-wrap">
+                  <table class="contrib-table">
+                    <thead>
+                      <tr>
+                        <th>Team Member</th>
+                        <th>Role</th>
+                        <th>Specific Contributions</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Jingxuan Weng</td>
+                        <td>UI Designer / Front-end Developer</td>
+                        <td>
+                          Designed the project UI in Figma, assisted in poster creation, and developed the Process
+                          Portfolio website on GitHub.
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Haotian Ma</td>
+                        <td>Back-end Developer</td>
+                        <td>
+                          Implemented back-end code, fine-tuned, handled front-end and back-end integration, adapted
+                          LLM to fit the project theme, assisted in poster creation, and conducted preliminary research on relevant products and
+                          technologies.
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Zeyu Yin</td>
+                        <td>UI Designer / Portfolio Editor</td>
+                        <td>
+                          Designed the project UI in Figma, wrote and integrated the content of the Process Portfolio, assisted in poster creation, and participated in project testing.
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Hongming Guo</td>
+                        <td>Team Leader</td>
+                        <td>
+                          Coordinated project progress, conducted user research, completed poster design &amp; production &amp; video demo, led project testing, optimized frontend codeand, took charge of poster design and production.
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </article>
+          </section>
+
+          <section id="evaluation-reflection" class="home-module" aria-labelledby="evaluation-reflection-heading">
+            <div class="section-head">
+              <h3 id="evaluation-reflection-heading">Evaluation &amp; Reflection</h3>
+              <p>Usability findings, iteration direction, and team reflections</p>
+            </div>
+            <article class="panel">
+              <div class="panel-inner">
+                <p class="value">This section summarizes usability findings, iteration direction, and final reflections from the team.</p>
+              </div>
+            </article>
+
+            <div class="section-head">
+              <h4 id="evaluation-usability">Real People, Real Clicks, Real Truth</h4>
+              <p>Survey and interview feedback after high-fidelity prototype</p>
+            </div>
+            <article class="panel">
+              <div class="panel-inner">
+                <ul class="bullets">
+                  <li>After completing the high-fidelity prototype, we conducted a survey and short interviews with volunteers.</li>
+                  <li>
+                    The results showed that the front page was the most confusing part, they reported difficulties in
+                    understanding how to use it and only one participant was aware of the function of this system after
+                    the first seen of this system.
+                  </li>
+                  <li>
+                    Some users also criticized the design of the front page and the report page, and some did not notice
+                    that the favorites collection could be expanded without guidance. One of the users I interviewed told
+                    me that you should add more messages informing users about the ai function, otherwise they might
+                    overlook it.
+                  </li>
+                  <li>
+                    In addition, another user informs me that the ai chatting is not smart enough, which might stick to
+                    the favorite knowledge without considering the meaning of the question. Also, an active question
+                    could be added at the end of each response, which connects and binds more information in the
+                    favorites. None of the participants selected the weekly report as the most valuable feature,
+                    suggesting that this function may need to be redesigned in later iterations.
+                  </li>
+                  <li>Despite these drawbacks, most participants still expressed a willingness to use the system and recommend it to others</li>
+                </ul>
+              </div>
+            </article>
+
+            <div class="section-head">
+              <h4 id="evaluation-iteration">Break It, Fix It, Level Up</h4>
+              <p>Improvement direction based on testing insights</p>
+            </div>
+            <article class="panel">
+              <div class="panel-inner">
+                <p class="value">
+                  In our evaluation, we conducted two rounds of user testing. The first round involved participants who
+                  had previously tested our low-fi prototype, while the second round involved first-time users of the
+                  current system.
+                </p>
+                <p class="value">
+                  The results indicated that the current version still has several usability issues, particularly in
+                  workflow guidance and homepage design. Among users who had tested the low-fi prototype, 25% reported
+                  concerns about the homepage design. However, among first-time users, this complaint rate increased to
+                  35.7%. In terms of function entrances, almost all low-fi prototype users were already familiar with
+                  them, whereas only 70.5% of first-time users clearly understood the meaning of each function entrance.
+                  During the interviews, participants also pointed out that the auto-categorization function lacked
+                  transparency and user autonomy
+                </p>
+                <div class="lowfi-stack">
+                  <figure class="media-card">
+                    <img
+                      src="./images_Evaluation & Reflection/lowfi_user1.png"
+                      alt="User testing results among participants who had tested the low-fi prototype"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </figure>
+                  <figure class="media-card">
+                    <img
+                      src="./images_Evaluation & Reflection/new_user1.png"
+                      alt="User testing results among first-time users of the current system"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </figure>
+                </div>
+                <p class="value">
+                  To address this issue, we made one design improvement. When users upload a file, the system now
+                  displays a notification for five seconds, showing which collection the document has been automatically
+                  stored in. This change aims to make the auto-categorization process more transparent and easier for
+                  users to understand.
+                </p>
+                <p class="value">
+                  Despite these drawbacks, several functions received positive feedback from participants. Among users
+                  who had tested the low-fi prototype, 87.5% stated that they would like to continue using the system.
+                  In addition, most participants were clearly aware of the AI function and were able to use it smoothly.
+                  Overall, 95.5% of participants could interact with the system using ready-made questions, and 81%
+                  found it easy to chat with the AI assistant. The UI design also received positive comments from users,
+                  as shown in the pie chart.
+                </p>
+                <figure class="media-card media-card--eval-pie">
+                  <img
+                    src="./images_Evaluation & Reflection/all_user.png"
+                    alt="Pie chart of positive feedback on UI design and AI-related functions"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </figure>
+                <div class="evidence-grid iteration-grid">
+                  <figure class="media-card">
+                    <img
+                      src="./images_Evaluation & Reflection/iteration1.png"
+                      alt="Design iteration 1"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </figure>
+                  <figure class="media-card">
+                    <img
+                      src="./images_Evaluation & Reflection/iteration2.png"
+                      alt="Design iteration 2"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </figure>
+                  <figure class="media-card">
+                    <img
+                      src="./images_Evaluation & Reflection/iteration3.png"
+                      alt="Design iteration 3"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </figure>
+                  <figure class="media-card">
+                    <img
+                      src="./images_Evaluation & Reflection/iteration4.png"
+                      alt="Design iteration 4"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </figure>
+                </div>
+              </div>
+            </article>
+
+            <div class="section-head">
+              <h4 id="evaluation-reflection-final">If We Knew Then What We Know Now</h4>
+              <p>What we learned from design and validation</p>
+            </div>
+            <article class="panel">
+              <div class="panel-inner">
+                <p class="value"><strong>Ethic and social impact</strong></p>
+                <p class="value">
+                  Data privacy is a key ethical concern in our system, as users are required to upload content and files.
+                  Since the auto-categorization function needs to analyse the uploaded materials, users should be clearly
+                  informed about how their data is processed, stored, and used. Accessing users&apos; saved or favourite
+                  content should also require explicit user permission. Therefore, our design should reduce unnecessary
+                  data exposure and ensure that users understand how their content is used by the system.
+                </p>
+                <p class="value">
+                  From a social perspective, our design may help users reduce information overload caused by excessive
+                  content saving. However, users should not rely completely on AI-generated summaries or recommendations.
+                  The AI functions should support users&apos; learning, searching, and reviewing processes rather than
+                  replace their own judgement.
+                </p>
+                <p class="value"><strong>AI use</strong></p>
+                <p class="value">
+                  We mainly use generative AI tools (such as Cursor and ChatGPT) as a development assistant to build a
+                  FastAPI back-end framework, connect SQLite and Chroma databases, and reconstruct the HTML exported by
+                  Figma into usable components. This greatly reduces the workload of the sample code and accelerates the
+                  prototype development. However, the code generated by AI is often only applicable to the &quot;ideal
+                  path&quot;, and problems such as upload function, CORS cross-domain restrictions and httpx timeout still
+                  need to be carefully reviewed and debugged manually. In practice, AI is more like a draft generator than a
+                  reliable engineer, and the key links still need to be judged manually.
+                </p>
+                <p class="value">
+                  In general, AI has accelerated the implementation process but failed to replace decision-making. We still
+                  need to judge for ourselves when to adopt AI output, when to rewrite the code and how to deal with the
+                  failure scenario. The project clearly shows that while AI improves productivity, it also expands the
+                  boundaries of responsibility.
+                </p>
+              </div>
+            </article>
+          </section>
+
+          <section id="reference" class="home-module" aria-labelledby="reference-heading">
+            <div class="section-head">
+              <h3 id="reference-heading">Reference</h3>
+            </div>
+            <article class="panel">
+              <div class="panel-inner">
+                <p class="value">
+                  [1] Chatgpt 5.5-Thinking, accessed on 2026-05-02, available at
+                  <a href="https://chatgpt.com" target="_blank" rel="noopener noreferrer">https://chatgpt.com</a>. Used
+                  for refining grammar mistakes in the script of Video Demo.
+                </p>
+                <p class="value">
+                  [2] Seedance, 2.0, accessed on 2026-05-01, available at
+                  <a href="https://www.doubao.com/" target="_blank" rel="noopener noreferrer">https://www.doubao.com/</a>.
+                  Used for generating the hook part of Video Demo
+                </p>
+                <p class="value">
+                  [3] ElevenLabs, Text to Speech, accessed on 2026-05-02, available at
+                  <a href="https://elevenlabs.io/" target="_blank" rel="noopener noreferrer">https://elevenlabs.io/</a>.
+                  Used for generating the voice-over audio of the Video Demo.
+                </p>
+                <p class="value">
+                  [4] Chatgpt 5.5-Thinking, accessed on 2026-05-07, available at
+                  <a href="https://chatgpt.com" target="_blank" rel="noopener noreferrer">https://chatgpt.com</a>. Used
+                  for refining grammar in process portfolio.
+                </p>
+                <p class="value">
+                  [5] Cursor, v0.40, accessed from 2026-03-16 to 2026-05-08, available at
+                  <a href="https://cursor.com/" target="_blank" rel="noopener noreferrer">https://cursor.com</a>. Used for
+                  vibe coding the system &apos;s back-end code, portfolio website, fine-tuning, handling front-end and back-end integration
+                </p>
+                
+              </div>
+            </article>
+          </section>
+
+          <div class="ua-research-details" id="ua-research-details" aria-label="俄乌冲突专题详情（占位）">
+            <section
+              id="ua-detail-spatiotemporal"
+              class="home-module ua-research-detail ua-acled-module"
+              aria-labelledby="ua-detail-spatiotemporal-heading"
+            >
+              <article class="panel ua-acled-module__shell">
+                <div class="panel-inner ua-acled-module__inner">
+                  <header class="ua-acled-hero">
+                    <h3 id="ua-detail-spatiotemporal-heading" class="ua-acled-hero__title">
+                      冲突事件时空分布与强度分析
+                    </h3>
+                    <p class="ua-acled-hero__lead">
+                      基于 14 万+ 条 ACLED 数据，还原 2022-2023 年俄乌冲突的时空演变
+                    </p>
+                    <a class="ua-acled-scroll-hint" href="#ua-acled-sources">
+                      <span class="ua-acled-scroll-hint__label">向下浏览模块</span>
+                      <span class="ua-acled-scroll-hint__arrow" aria-hidden="true">↓</span>
+                    </a>
+                  </header>
+
+                  <section id="ua-acled-sources" class="ua-acled-block" aria-labelledby="ua-acled-sources-heading">
+                    <h4 id="ua-acled-sources-heading" class="ua-acled-block__title">数据从哪里来</h4>
+                    <div class="ua-acled-src-grid">
+                      <article class="ua-acled-src-card">
+                        <div class="ua-acled-src-card__icon" aria-hidden="true">💥</div>
+                        <h5 class="ua-acled-src-card__name">ACLED</h5>
+                        <p class="ua-acled-src-card__desc">武装冲突事件数据库</p>
+                        <span class="ua-acled-badge">14 万+ 行</span>
+                      </article>
+                      <article class="ua-acled-src-card">
+                        <div class="ua-acled-src-card__icon" aria-hidden="true">🌐</div>
+                        <h5 class="ua-acled-src-card__name">HDX</h5>
+                        <p class="ua-acled-src-card__desc">人道主义数据交换平台</p>
+                        <span class="ua-acled-badge">数据下载</span>
+                      </article>
+                      <article class="ua-acled-src-card">
+                        <div class="ua-acled-src-card__icon" aria-hidden="true">🗺️</div>
+                        <h5 class="ua-acled-src-card__name">GADM</h5>
+                        <p class="ua-acled-src-card__desc">全球行政区划数据库</p>
+                        <span class="ua-acled-badge">27 个州</span>
+                      </article>
+                    </div>
+                    <p class="ua-acled-src-meta">
+                      <span><span aria-hidden="true">📅</span> 时间范围：2022 年 1 月 — 2023 年 12 月</span>
+                      <span><span aria-hidden="true">📍</span> 空间范围：乌克兰全境（27 个州）</span>
+                    </p>
+                  </section>
+
+                  <section id="ua-acled-pipeline" class="ua-acled-block" aria-labelledby="ua-acled-pipeline-heading">
+                    <h4 id="ua-acled-pipeline-heading" class="ua-acled-block__title">数据如何变成地图</h4>
+                    <div class="ua-acled-compare">
+                      <article class="ua-acled-compare__card">
+                        <h5 class="ua-acled-compare__card-title"><span aria-hidden="true">📄</span> 原始数据</h5>
+                        <table class="ua-acled-table">
+                          <thead>
+                            <tr>
+                              <th scope="col">州（示例）</th>
+                              <th scope="col">区</th>
+                              <th scope="col">时间</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>Chernihiv</td>
+                              <td>多个区</td>
+                              <td>多个月份</td>
+                            </tr>
+                            <tr>
+                              <td>Kyiv</td>
+                              <td>多个区</td>
+                              <td>多个月份</td>
+                            </tr>
+                            <tr>
+                              <td>Odesa</td>
+                              <td>多个区</td>
+                              <td>多个月份</td>
+                            </tr>
+                            <tr>
+                              <td>Zaporizhia</td>
+                              <td>多个区</td>
+                              <td>多个月份</td>
+                            </tr>
+                            <tr>
+                              <td>Donetsk</td>
+                              <td>区 A、区 B、区 C</td>
+                              <td>多行</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </article>
+                      <div class="ua-acled-compare__arrow" aria-hidden="true">→</div>
+                      <article class="ua-acled-compare__card">
+                        <h5 class="ua-acled-compare__card-title"><span aria-hidden="true">📊</span> 处理后（按州汇总）</h5>
+                        <table class="ua-acled-table">
+                          <thead>
+                            <tr>
+                              <th scope="col">统一州名</th>
+                              <th scope="col">事件数</th>
+                              <th scope="col">死亡数</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>Chernigov</td>
+                              <td>汇总</td>
+                              <td>汇总</td>
+                            </tr>
+                            <tr>
+                              <td>Kiev</td>
+                              <td>汇总</td>
+                              <td>汇总</td>
+                            </tr>
+                            <tr>
+                              <td>Odessa</td>
+                              <td>汇总</td>
+                              <td>汇总</td>
+                            </tr>
+                            <tr>
+                              <td>Zaporozh&apos;ye</td>
+                              <td>汇总</td>
+                              <td>汇总</td>
+                            </tr>
+                            <tr>
+                              <td>Donetsk</td>
+                              <td colspan="2">每州一行汇总</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </article>
+                    </div>
+
+                    <ol class="ua-acled-steps" aria-label="数据处理关键步骤">
+                      <li class="ua-acled-steps__item">
+                        <span class="ua-acled-steps__circle">1</span>
+                        <span class="ua-acled-steps__label">州名统一</span>
+                        <span class="ua-acled-steps__hint">Chernihiv → Chernigov，Kyiv → Kiev …</span>
+                      </li>
+                      <li class="ua-acled-steps__sep" aria-hidden="true"></li>
+                      <li class="ua-acled-steps__item">
+                        <span class="ua-acled-steps__circle">2</span>
+                        <span class="ua-acled-steps__label">按州汇总</span>
+                        <span class="ua-acled-steps__hint">各州多区合并为一行</span>
+                      </li>
+                      <li class="ua-acled-steps__sep" aria-hidden="true"></li>
+                      <li class="ua-acled-steps__item">
+                        <span class="ua-acled-steps__circle">3</span>
+                        <span class="ua-acled-steps__label">分时段筛选</span>
+                        <span class="ua-acled-steps__hint">2022.03 / 2022.09 / 2023.06</span>
+                      </li>
+                    </ol>
+
+                    <div class="ua-acled-join-note">
+                      <p>
+                        <span aria-hidden="true">🔗</span>
+                        最后一步：将处理好的数据连接到地图（属性连接：<strong>矢量面.ADMIN_NAME = 汇总表.Admin1</strong>）
+                      </p>
+                    </div>
+                  </section>
+
+                  <section id="ua-acled-findings" class="ua-acled-block" aria-labelledby="ua-acled-findings-heading">
+                    <h4 id="ua-acled-findings-heading" class="ua-acled-block__title">成果展示</h4>
+
+                    <div class="ua-acled-gallery-row1">
+                      <figure class="ua-acled-fig ua-acled-fig--line">
+                        <figcaption class="ua-acled-fig__cap">
+                          2022-2023 年乌克兰月度冲突事件与死亡人数变化
+                        </figcaption>
+                        <button
+                          type="button"
+                          class="ua-acled-zoom"
+                          data-full="./hsyphoto/line_chart.png"
+                          data-alt="2022-2023 年乌克兰月度冲突事件与死亡人数折线图"
+                          data-caption="事件数与死亡人数在 2022 年 3 月与 10 月出现两个峰值；2023 年事件数维持高位但死亡数相对下降。"
+                          aria-label="放大查看：月度冲突折线图"
+                        >
+                          <img
+                            src="./hsyphoto/line_chart.png"
+                            alt="2022-2023 年乌克兰月度冲突事件与死亡人数折线图"
+                            width="720"
+                            height="420"
+                            loading="lazy"
+                            decoding="async"
+                          />
+                        </button>
+                        <p class="ua-acled-fig__note">
+                          事件数与死亡人数在 2022 年 3 月和 10 月出现两个峰值，2023 年事件数维持高位但死亡数下降。
+                        </p>
+                      </figure>
+                      <div class="ua-acled-gallery-maps">
+                        <figure class="ua-acled-fig">
+                          <figcaption class="ua-acled-fig__cap">2018-2026 年冲突事件空间分布</figcaption>
+                          <button
+                            type="button"
+                            class="ua-acled-zoom"
+                            data-full="./hsyphoto/full_events_map.png"
+                            data-alt="2018-2026 年乌克兰冲突事件空间分布图"
+                            data-caption="东部地区事件记录密度最高，与战线及热点区域一致。"
+                            aria-label="放大查看：事件空间分布图"
+                          >
+                            <img
+                              src="./hsyphoto/full_events_map.png"
+                              alt="2018-2026 年乌克兰冲突事件空间分布图"
+                              width="480"
+                              height="480"
+                              loading="lazy"
+                              decoding="async"
+                            />
+                          </button>
+                          <p class="ua-acled-fig__note">东部地区事件密度最高。</p>
+                        </figure>
+                        <figure class="ua-acled-fig">
+                          <figcaption class="ua-acled-fig__cap">2018-2026 年死亡人数空间分布</figcaption>
+                          <button
+                            type="button"
+                            class="ua-acled-zoom"
+                            data-full="./hsyphoto/full_fatalities_map.png"
+                            data-alt="2018-2026 年乌克兰死亡人数空间分布图"
+                            data-caption="伤亡高度集中于顿涅茨克、卢甘斯克等东部州。"
+                            aria-label="放大查看：死亡空间分布图"
+                          >
+                            <img
+                              src="./hsyphoto/full_fatalities_map.png"
+                              alt="2018-2026 年乌克兰死亡人数空间分布图"
+                              width="480"
+                              height="480"
+                              loading="lazy"
+                              decoding="async"
+                            />
+                          </button>
+                          <p class="ua-acled-fig__note">伤亡集中在顿涅茨克、卢甘斯克一带。</p>
+                        </figure>
+                      </div>
+                    </div>
+
+                    <div class="ua-acled-gallery-row2">
+                      <figure class="ua-acled-fig ua-acled-fig--wide">
+                        <figcaption class="ua-acled-fig__cap">
+                          关键时期 — 冲突事件空间分布（2022 年 3 月 / 9 月，2023 年 6 月）
+                        </figcaption>
+                        <button
+                          type="button"
+                          class="ua-acled-zoom"
+                          data-full="./hsyphoto/key_period_events.png"
+                          data-alt="俄乌冲突关键时期冲突事件空间分布图"
+                          data-caption="三时相对比：基辅战役阶段、哈尔科夫反攻、扎波罗热反攻前后的事件分布变化。"
+                          aria-label="放大查看：关键时期事件分布图"
+                        >
+                          <img
+                            src="./hsyphoto/key_period_events.png"
+                            alt="俄乌冲突关键时期冲突事件空间分布图"
+                            width="1100"
+                            height="360"
+                            loading="lazy"
+                            decoding="async"
+                          />
+                        </button>
+                        <p class="ua-acled-fig__note ua-acled-fig__note--mono">
+                          事件数高发州（示例）：Donetsk (2305) | Zaporozh&apos;ye (731) | 其余州见原图图例
+                        </p>
+                      </figure>
+                      <figure class="ua-acled-fig ua-acled-fig--wide">
+                        <figcaption class="ua-acled-fig__cap">
+                          关键时期 — 死亡人数空间分布（2022 年 3 月 / 9 月，2023 年 6 月）
+                        </figcaption>
+                        <button
+                          type="button"
+                          class="ua-acled-zoom"
+                          data-full="./hsyphoto/key_period_fatalities.png"
+                          data-alt="俄乌冲突关键时期死亡人数空间分布图"
+                          data-caption="同一三时相下，死亡分布与事件热点高度重合，峰值区域突出。"
+                          aria-label="放大查看：关键时期死亡分布图"
+                        >
+                          <img
+                            src="./hsyphoto/key_period_fatalities.png"
+                            alt="俄乌冲突关键时期死亡人数空间分布图"
+                            width="1100"
+                            height="360"
+                            loading="lazy"
+                            decoding="async"
+                          />
+                        </button>
+                        <p class="ua-acled-fig__note ua-acled-fig__note--mono">
+                          死亡数高发州（示例）：Donetsk | Luhansk | 详见原图分级
+                        </p>
+                      </figure>
+                    </div>
+                  </section>
+
+                  <section id="ua-acled-takeaways" class="ua-acled-block" aria-labelledby="ua-acled-takeaways-heading">
+                    <h4 id="ua-acled-takeaways-heading" class="ua-acled-block__title">核心结论</h4>
+                    <div class="ua-acled-take-grid">
+                      <article class="ua-acled-take-card">
+                        <h5 class="ua-acled-take-card__title"><span aria-hidden="true">📈</span> 时间维度</h5>
+                        <ul class="ua-acled-take-card__list">
+                          <li>2022 年 3 月：死亡峰值约 4,891 人（示意口径以原图为准）</li>
+                          <li>2022 年 10 月：死亡峰值约 5,433 人</li>
+                          <li>2023 年：事件数维持高位，死亡数相对回落</li>
+                        </ul>
+                      </article>
+                      <article class="ua-acled-take-card">
+                        <h5 class="ua-acled-take-card__title"><span aria-hidden="true">🗺️</span> 空间维度</h5>
+                        <ul class="ua-acled-take-card__list">
+                          <li>高发区集中于东部与南部</li>
+                          <li>冲突重心随战线由基辅方向向东、向南迁移</li>
+                          <li>空间格局与公开报道中的战役节点高度吻合</li>
+                        </ul>
+                      </article>
+                      <article class="ua-acled-take-card">
+                        <h5 class="ua-acled-take-card__title"><span aria-hidden="true">🔥</span> Top5 高发区</h5>
+                        <ul class="ua-acled-take-card__list">
+                          <li>Donetsk / Luhansk</li>
+                          <li>Khar&apos;kov / Kherson / Zaporozh&apos;ye</li>
+                          <li>可作为人道救援与风险评估的重点关注带</li>
+                        </ul>
+                      </article>
+                    </div>
+                  </section>
+                </div>
+              </article>
+
+              <dialog id="uaAcledLightbox" class="ua-acled-dialog" aria-modal="true" aria-label="成果图放大预览">
+                <div class="ua-acled-dialog__frame">
+                  <button type="button" class="ua-acled-dialog__close" aria-label="关闭预览">×</button>
+                  <img class="ua-acled-dialog__img" src="" alt="" decoding="async" />
+                  <p class="ua-acled-dialog__caption" hidden></p>
+                </div>
+              </dialog>
+            </section>
+
+            <section
+              id="ua-detail-poi-density"
+              class="home-module ua-research-detail"
+              aria-labelledby="ua-detail-poi-density-heading"
+            >
+              <div class="section-head">
+                <h3 id="ua-detail-poi-density-heading">POI核密度分析</h3>
+                <p>对应俄乌冲突版块左下角配图；正文与图表尺寸待定，此处预留版块结构。</p>
+              </div>
+              <article class="panel ua-research-detail__panel">
+                <div class="panel-inner">
+                  <p class="value ua-research-detail__placeholder">
+                    内容占位：可在此补充 POI 数据说明、核密度图、参数与解读等。
+                  </p>
+                </div>
+              </article>
+            </section>
+
+            <section
+              id="ua-detail-agriculture"
+              class="home-module ua-research-detail"
+              aria-labelledby="ua-detail-agriculture-heading"
+            >
+              <div class="section-head">
+                <h3 id="ua-detail-agriculture-heading">冲突对农业生产结构的影响</h3>
+                <p>对应俄乌冲突版块右上角配图；正文与图表尺寸待定，此处预留版块结构。</p>
+              </div>
+              <article class="panel ua-research-detail__panel">
+                <div class="panel-inner">
+                  <p class="value ua-research-detail__placeholder">
+                    内容占位：可在此补充耕地/作物结构、冲突暴露与农业指标等图表与论述。
+                  </p>
+                </div>
+              </article>
+            </section>
+
+            <section
+              id="ua-detail-nightlight"
+              class="home-module ua-research-detail"
+              aria-labelledby="ua-detail-nightlight-heading"
+            >
+              <div class="section-head">
+                <h3 id="ua-detail-nightlight-heading">夜光遥感时空演变与空间聚集特征</h3>
+                <p>对应俄乌冲突版块右下角配图；正文与图表尺寸待定，此处预留版块结构。</p>
+              </div>
+              <article class="panel ua-research-detail__panel">
+                <div class="panel-inner">
+                  <p class="value ua-research-detail__placeholder">
+                    内容占位：可在此补充夜光时序、莫兰指数或聚类结果等空间分析展示。
+                  </p>
+                </div>
+              </article>
+            </section>
+          </div>
+
+        </div>
+      </main>
+    </div>
+
+    <button
+      type="button"
+      class="back-to-top"
+      id="backToTopBtn"
+      aria-label="Back to top"
+      aria-hidden="true"
+      tabindex="-1"
+    >
+      <span class="back-to-top__glyph" aria-hidden="true">↑</span>
+      <span class="back-to-top__label">Back to top</span>
+    </button>
+
+    <script src="./float-icons.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
+
