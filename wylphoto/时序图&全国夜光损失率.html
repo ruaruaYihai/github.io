@@ -1,0 +1,374 @@
+<!--
+	此示例下载自 https://echarts.apache.org/examples/zh/editor.html?c=line-tooltip-touch&code=1VrrcxNHEv9OFf_DXFxEUmyv96GnMVyR48hRRZIr4OCDzx9W0kraYqV1rdZgJ1xVkouxDX5wBwFDAAcOCOGKR8DHwzj4f6FYyf5E_oTr2Zldzb4kGXDdZQ327k5PT293z6-ne2ZgAL1-PmtNnrEmH1qTd6zvf7FuXrEmZxpfvdiYWmh897Axd__N6rTIiwInCKgfwZ3ECeKb1Znt247LBqrqNbOyVzZltAsNb9-G4Iph6n5BiPU5tyK9Fft55y3cMm-lWF-rLzzn3CaBb91ChxaV1OIFtw4vuPXwgmeHl9TiBbetvsB2-7aRndu3kQ8ya5r3c8RULpkRBC4p9SExI4qZTI5L5_qQJKUkUUxx6Qy8T-Ykns9yfLoPCRk-k8pmuWSWyiGkc0ArcGkRGtOZVFpIcRJ0EnIin8F6FR3CbJZP5pIcnwWOUiorprKclLIJ05IkcZLLMQscxSyXxcPlBCmVS3EZHjoJyXQqyXMCMBDS6SyMxeVSzteBrdfvX2_ev9icf9B4cN5aWLRmLzTnp8C-O1x7FipyrawclE3F0QLuXNINFMfNKrzhd8KfIUdRnKbUymYF3vX2JtCXREC1hOJAuguI3Xf48nLnRsfqlXhtTNMSMAZu_xtStLrC9mjJBCPH43TQYXUEfNF96BdGEmjA9_wREnie8o0ae1Q26so-TZfNOGnmTH2fOq4U40Ii4Qq1fRv8s_Vnza5Y06ca04vWzJz1z1l8c3a-efnbjRtX1mceEQ2OGspR2fiDroHOdqFYTyqZ4Qvp2E7ghC1w7ipQgvCECe2i101Pn2JG4sUM7gNdmis3Wl3OzmNR9FFT1WtASjVlqqamDLJ6M5VxcxDFfl2aWoH_t9vO8otPrJUF4g7O3MFXfSxPuRAcaFy91Vg5-2b18pH9-w8eQns_-7hxZdpauU152TToJEYI0Xq-nOzP4uaF04IAf0lrc3XFuvkz0FinHjXvfm09WF2fWmZFef3szMaluebKbSnJpXawwmhKCUtSUGqmYrANpj46CJZm34DQh8wJn0LwVQKwOqR-AQ1CmungNB1V1HIFj5LXtSKAgtMG1rf_0C6mrmumCqOy6jbUclkxoK88rtZZ-fDzn3UViw09kDkxCsPH6hW5qJ-IuTyJCEZVNm260litgC2MHVSu1j1zyJkVhlIf00zsLkN109Br5d0x1ItIh2F-hMMDH5G1MQXexoYGKM1Q3hjYHWOmBb7AyRqnF5sra9b3L4mlvO10qF4Y69elc6cRazLwh6E8qmN97_qggD14sKckZ0VJ-MAn0HEsDEywA3pB1pRDoLJaOZ4g0uWjBVv6uXn6iSsYgJV1-5vGtSuNKzM2aLHkGHboeMII-vBDZ3CBDo5-B4iE8SaqbaxWVEpqTSkGNB7AIl93n-AOuWwY-gmgpt12Ix79HsVeXXgUQ-AFry6s-r_YHYdigbdjD8_ns7mk3bmnmJZ4SQhj4LXXNGIBH9urPirXvCbDliJDgjmI4Yjo8Ag_vehT2axwcr5OcdI22w7wKuAUsBqdLy1pzDGjRoViSH3TSlPKSq3omVVFAOpBNBx0OhQ__NmBBA7hge-DgIbiOxKxkSB44D8B6Eiz0KGaSvWoWjQrgwgCr_f9nyg6CGwDizUsvIhhoJHXxz2fV1Jk0EwQpqpyWS0ctoHCAYzhmAZuiT84LxvwbS7iI_weQ7Qzf4EGSPAbZ-IAynhwxtHsEVU5gTkYilz8vKZNDAKKjSkua4r66z-eIjx8HOrycWVPfT_ISsSknV6vXbXuLUKP5swUiDIKwVSDmKvqgwh04uMBLmHqtgLc_htTc81f7sNwjJ8wvQBmsQ1ED95jM4q8V99lQ_X6EvWBrCeqUHYxgfe8tjnGBC9tXjdNvYrfi573BbC6rNYOyHlFoypkOsmFY2VDB1yxgzuetiUZ_9Dw4og7vgfQ2htRSKAowHqlrBsT7IhkWrgrb6alJldty118snFxme2CGzDu4qACBFW1WNTAnbwEn8jw2UlWtTiG0A_z-aihmyAZkLOzwRdjWU72LMJBENByEFFj-a1rD2f7M_Frd2YRkALlwTLY786402G1cAzTyZparh1VzQpjDf9MnCCqpqt7fPk-jWrehnVWRYyCw7AoSNhW4R6lp_yqilZ81ErBFjc0bDEYTKhgqQxLY3wlmPUuRvRPw6KJD84DQDCqqWao1agii3K9ohQBDFwrKjz-CcMlrJHDLKa6fciaArgEV2pRYLF5u4YFkncybGB6bJFhiV1xTH5XC9YrOkSFkozzsO6tky6kCkqms3XIrROb64qhKm3nIiwAIYsMXJ7FgBv6QklD7Ry5oAj1GBJ6gwEU8IVknH59VnUdLyFsJfrbJqqgFQzsqlEIOg5pJvjpZPtuBGPmVtDGJ-iyxdeJRCj_HLIX1j9dcjPL18_mW-vsxfnG4kuS6QZ5kcTlY20MGPoFbLU7wc4o5-W4COiGBAl-JaFswnNSgsmtwvxRhhVJ9IfSr6kpJ5ACi1HDrHNlQx6tqAUO-7BsfGLIRRXyxDiMSP4JfayLsdeXSC-V6go4K5A5egqXOpUILoKCbGCotmx4EbMJchlJtNcJXoF21EnLwkGSvG4UFVJisAlLpWgqugQW24ukRcIYwRDfUsi5oNihUvCEdVaYEJtIhBmcsBbugt82b65Yk483zt9vfvMcCjONH6aa916-WZ3d-HrNmpxrnLnVmL0ZzsIubxXH3dSOw1N8PySE4yGI6ha5cAdc5kInT5Le8CCyDxL7kGQfhGTk57Ahm0rzNpE7BPt93GOh4SLUJs6yLhfS6nj_MPh5is28NuGg7SowYVIp1dGKXPetmlvMCmPQEiMRJmy4Oi5CwHzlOni5XFPBGcEF9yqaDDmS65FgxlD7Uc1iK38ECzt_buxjX5WNY3Z5KPQzaAIcBTo0PlXlccB0Z2n6-KH11SqK4zIcxws4SWaDSppvA2IOP7XW4rf-8KnDDxf-w_iFoFnIENFw8ZZz_n1OkgiVtNw2HC7DUzwb-Pk--4fLBFYVLhDKxSKUwMC-sDEAlXz8O0xxLVw-CIENu3WyuznbYa3hX2-kmKwsylXpKjGEkQr7AODEEaDfwZGjDUwTY2bLKJqWeuyry9dJfbk5fcpa-EfbLo5TtiHxeSdm79S4Rahs_7XmHaw9Iyb4QbGrEzWTSwtdkHrRs0MH17VpGbEDeYSXi6lUn_Of57KRvv42Pt-173eaxf7Fc_DbndUziONNWqPCZySGRktA6w5iNoehqY2oThGH7DI9f2xdnWo8XIabdsp9C0dmB0CvZqaxaK-f4ardFvlwu4_2uCSfyyYVyRf_383SlKVraYGDjdWttjXs03Zv67PzW2xrZwDb1iDa_4et6RTcylm9GVuHrGU6R8U9kLC-96iIU3QyQyEVX1qCja_GfybJ9vH632cblx4Etr-cK4IhCbUedAEdMQGWHtpgU01vMgsZrCABRsIhCDuXBbwPqeF5x_MGcCFS81FRgKoBnJdRA9Qu3p8azs571UDOo7RRQyCn36Qe7DMnkXro7IFdVTujKme-Eqdb9tlU8Sx8yy28eoY3rHwtNjzaqTUumIQV1ryHNXwkwJFWKGIp7ymBzpUS72JiOAk2JFWiNllrtwkJriCQDMStIUTtDTv1A0pOt6UTblreUywpaSUXla_gSXHvX9aNaxvfrTXP32m-WIPpAFWO9eWl1svlf8PLAYIYzccvOgkBW8zM-HSj2Tm1cuHb9bmnMAzUCskAnbgNQUkENtkp612oX2S503IxPd9iC4rPtzz7CQ7VkDMg7asW7t6394CMdfNH6_lkFIPQFIkpZya7K2c6iR2k1r-d-ljrZATNkYMuF-Vr1Ku782lmn8k5s9Brn1aI4QQcv43co9h00WmTszOggnCH77Iz-Dc7WyOPYni8Np2Gc2Ddf_r_ohombG01DMwvek7lhQ0SdsCq5Y2g_X2b3iZrh7WNiz-Qow4d7NfCyaBbb2LzLXI3zNXtH8GQOEeOgY7rplr4fMw9tuLV_19GIVqC2SKt4NG-6Ojd0XfY4QT7ckaj-ypdbJbjczB-v4o8sseepvDvj9qnkkIt755oPDeLGo_vwDmmjicNISLCzmDj6nXr6aP1qbvW6Tvra9ca87dCQVXVcKmsJy_mlYJ7hjiqGtPegb_ACRB7xoEaGg6S7vwv&enc=deflate
+	⚠ 请注意，该图表不是 Apache ECharts 官方示例，而是由用户代码生成的。请注意鉴别其内容。
+-->
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+<head>
+  <meta charset="utf-8">
+</head>
+<body style="height: 100%; margin: 0">
+  <div id="container" style="height: 100%"></div>
+
+  
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+  
+  <!-- Uncomment this line if you want to dataTool extension
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5/dist/extension/dataTool.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to use gl extension
+  <script type="text/javascript" src="https://echarts.apache.org/zh/js/vendors/echarts-gl/dist/echarts-gl.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to echarts-stat extension
+  <script type="text/javascript" src="https://echarts.apache.org/zh/js/vendors/echarts-stat/dist/ecStat.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to echarts-graph-modularity extension
+  <script type="text/javascript" src="https://echarts.apache.org/zh/js/vendors/echarts-graph-modularity/dist/echarts-graph-modularity.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to use map
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@4.9.0/map/js/world.js"></script>
+  -->
+  <!-- Uncomment these two lines if you want to use bmap extension
+  <script type="text/javascript" src="https://api.map.baidu.com/api?v=3.0&ak=YOUR_API_KEY"></script>
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5/dist/extension/bmap.min.js"></script>
+  -->
+
+  <script type="text/javascript">
+    var dom = document.getElementById('container');
+    var myChart = echarts.init(dom, null, {
+      renderer: 'canvas',
+      useDirtyRect: false
+    });
+    var app = {};
+    
+    var option;
+
+    // 乌克兰全国夜光总量数据（2021.11 - 2023.12）
+var monthData = [
+    '2021-11', '2021-12', '2022-01', '2022-02', '2022-03',
+    '2022-09', '2022-10', '2022-12',
+    '2023-01', '2023-02', '2023-03',
+    '2023-09', '2023-10', '2023-11', '2023-12'
+];
+
+var tnlData = [
+    2594711.43, 2722779.69, 3353225.67, 2493008.06, 1707588.48,
+    1693351.62, 1675615.37, 1920721.12,
+    1880494.08, 2358258.35, 1926333.38,
+    1893328.86, 1913595.70, 2146540.18, 1668756.95
+];
+
+// 计算环比变化率（%）
+var changeRateData = [];
+for (var i = 0; i < tnlData.length; i++) {
+    if (i === 0) {
+        changeRateData.push(null);
+    } else {
+        var change = ((tnlData[i] - tnlData[i-1]) / tnlData[i-1]) * 100;
+        changeRateData.push(parseFloat(change.toFixed(1)));
+    }
+}
+
+// 区分战前和战后的颜色
+var preWarColor = '#5470c6';   // 蓝色 - 战前
+var postWarColor = '#d73027';  // 红色 - 战后
+
+option = {
+    title: {
+        text: '🇺🇦 乌克兰全国夜光总量时序变化',
+        subtext: '数据来源：VIIRS DNB月度夜光数据 | 2022年4-8月及11月数据缺失 | 冲突导致夜光总量下降约34.5%',
+        left: 'center',
+        top: 10,
+        textStyle: {
+            fontSize: 16,
+            fontWeight: 'bold'
+        }
+    },
+    tooltip: {
+        trigger: 'axis',
+        axisPointer: { type: 'shadow' },
+        formatter: function(params) {
+            var result = '<strong>' + params[0].axisValue + '</strong><br/>';
+            // 折线图数据
+            result += '📊 夜光总量：<b style="color:#fa8231">' + params[0].value.toLocaleString() + '</b><br/>';
+            // 柱状图数据（如果有）
+            if (params[1] && params[1].value !== null && params[1].value !== undefined) {
+                var change = params[1].value;
+                var arrow = change > 0 ? '▲' : '▼';
+                var color = change > 0 ? '#00b894' : '#d63031';
+                result += '📈 环比变化：<span style="color:' + color + '">' + arrow + ' ' + Math.abs(change) + '%</span>';
+            }
+            return result;
+        }
+    },
+    legend: {
+        data: ['📊 夜光总量 (TNL)', '📈 环比变化率 (%)'],
+        left: 'left',
+        top: 60,
+        itemWidth: 35,
+        itemHeight: 15,
+        textStyle: { fontSize: 12 }
+    },
+    toolbox: {
+        feature: {
+            magicType: { type: ['line', 'bar'], title: { line: '折线图', bar: '柱状图' } },
+            dataView: { readOnly: true, title: '数据视图' },
+            saveAsImage: { title: '保存图片', pixelRatio: 2 },
+            restore: { title: '重置' }
+        },
+        right: 20,
+        top: 20
+    },
+    grid: {
+        left: '8%',
+        right: '10%',
+        top: '18%',
+        bottom: '12%',
+        containLabel: true,
+        backgroundColor: '#fafafa'
+    },
+    xAxis: {
+        type: 'category',
+        data: monthData,
+        name: '时间',
+        nameLocation: 'middle',
+        nameGap: 40,
+        axisLabel: {
+            rotate: 45,
+            fontSize: 10,
+            interval: 0
+        },
+        axisLine: { lineStyle: { color: '#333' } },
+        axisTick: { alignWithLabel: true }
+    },
+    yAxis: [
+        {
+            type: 'value',
+            name: '夜光总量 (TNL)',
+            nameLocation: 'middle',
+            nameGap: 50,
+            axisLabel: {
+                formatter: function(value) {
+                    return (value / 1000000).toFixed(1) + 'M';
+                }
+            },
+            splitLine: { lineStyle: { type: 'dashed', color: '#e0e0e0' } },
+            nameTextStyle: { color: '#fa8231', fontWeight: 'bold' }
+        },
+        {
+            type: 'value',
+            name: '环比变化率 (%)',
+            nameLocation: 'middle',
+            nameGap: 45,
+            axisLabel: {
+                formatter: function(value) {
+                    return value + '%';
+                }
+            },
+            splitLine: { show: false },
+            nameTextStyle: { color: '#6c5ce7', fontWeight: 'bold' }
+        }
+    ],
+    series: [
+        {
+            // ==================== 夜光总量折线图 ====================
+            name: '📊 夜光总量 (TNL)',
+            type: 'line',
+            data: tnlData,
+            smooth: false,
+            symbol: 'circle',
+            symbolSize: 8,
+            lineStyle: {
+                width: 3,
+                color: '#fa8231',  // 橙红色 - 与柱状图明显区分
+                shadowBlur: 8,
+                shadowColor: 'rgba(250, 130, 49, 0.3)'
+            },
+            areaStyle: {
+                color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                    { offset: 0, color: 'rgba(250, 130, 49, 0.35)' },
+                    { offset: 1, color: 'rgba(250, 130, 49, 0.02)' }
+                ])
+            },
+            itemStyle: {
+                color: '#fa8231',
+                borderColor: '#fff',
+                borderWidth: 2
+            },
+            label: {
+                show: true,
+                position: 'top',
+                formatter: function(params) {
+                    // 只显示关键点的标签，避免拥挤
+                    var idx = params.dataIndex;
+                    if (idx === 0 || idx === 2 || idx === 3 || idx === 4 || idx === 14) {
+                        return (params.value / 1000000).toFixed(1) + 'M';
+                    }
+                    return '';
+                },
+                fontSize: 9,
+                offset: [0, 5],
+                color: '#fa8231',
+                fontWeight: 'bold'
+            },
+            emphasis: {
+                focus: 'series',
+                scale: 1.2
+            },
+            animationDelay: function(idx) {
+                return idx * 50;
+            },
+            markPoint: {
+                data: [
+                    { type: 'max', name: '峰值 (2022.01)', symbolSize: 60 },
+                    { type: 'min', name: '谷值 (2023.12)', symbolSize: 60 }
+                ],
+                label: {
+                    formatter: function(params) {
+                        return (params.value / 1000000).toFixed(1) + 'M';
+                    },
+                    color: '#fff',
+                    backgroundColor: 'rgba(0,0,0,0.7)',
+                    padding: [2, 6, 2, 6],
+                    borderRadius: 4
+                },
+                symbol: 'circle',
+                symbolSize: 50
+            },
+            markLine: {
+                silent: true,
+                data: [
+                    { 
+                        xAxis: '2022-02', 
+                        name: '⚡冲突爆发', 
+                        label: { 
+                            formatter: '⚡ 2022年2月\n冲突爆发',
+                            position: 'end',
+                            fontSize: 11,
+                            fontWeight: 'bold',
+                            color: '#d63031',
+                            backgroundColor: 'rgba(255,255,255,0.8)',
+                            padding: [2, 6, 2, 6],
+                            borderRadius: 4
+                        },
+                        lineStyle: { color: '#d63031', width: 2, type: 'dashed' }
+                    },
+                    {
+                        yAxis: 2890000,
+                        name: '战前平均水平',
+                        label: { 
+                            formatter: '战前平均 ≈ 289万', 
+                            position: 'end',
+                            fontSize: 10,
+                            color: '#0984e3'
+                        },
+                        lineStyle: { color: '#0984e3', width: 1.5, type: 'dashed' }
+                    },
+                    {
+                        yAxis: 1890000,
+                        name: '战后平均水平',
+                        label: { 
+                            formatter: '战后平均 ≈ 189万', 
+                            position: 'end',
+                            fontSize: 10,
+                            color: '#d63031'
+                        },
+                        lineStyle: { color: '#d63031', width: 1.5, type: 'dashed' }
+                    }
+                ]
+            },
+            markArea: {
+                silent: true,
+                data: [
+                    // 战前区域（浅蓝色背景）
+                    [
+                        { name: '战前', xAxis: '2021-11', itemStyle: { color: 'rgba(9, 132, 227, 0.08)' } },
+                        { xAxis: '2022-01' }
+                    ],
+                    // 战后区域（浅橙色背景）
+                    [
+                        { name: '战后', xAxis: '2022-03', itemStyle: { color: 'rgba(250, 130, 49, 0.08)' } },
+                        { xAxis: '2023-12' }
+                    ]
+                ]
+            }
+        },
+        {
+            // ==================== 环比变化率柱状图 ====================
+            name: '📈 环比变化率 (%)',
+            type: 'bar',
+            yAxisIndex: 1,
+            data: changeRateData,
+            barWidth: '55%',
+            itemStyle: {
+                borderRadius: [4, 4, 0, 0],
+                color: function(params) {
+                    var value = params.value;
+                    if (value === null) return '#dfe6e9';
+                    // 正增长用绿色，负增长用紫色/蓝色系
+                    if (value > 0) return '#00b894';   // 薄荷绿 - 增长
+                    if (value < 0 && value >= -20) return '#6c5ce7';  // 紫色 - 温和下降
+                    return '#d63031';  // 红色 - 大幅下降
+                },
+                shadowBlur: 4,
+                shadowColor: 'rgba(0,0,0,0.1)'
+            },
+            label: {
+                show: true,
+                position: 'top',
+                formatter: function(params) {
+                    if (params.value === null) return '';
+                    var val = params.value;
+                    return (val > 0 ? '+' : '') + val + '%';
+                },
+                fontSize: 9,
+                color: function(params) {
+                    if (params.value > 0) return '#00b894';
+                    if (params.value < 0) return '#d63031';
+                    return '#666';
+                },
+                fontWeight: 'bold'
+            },
+            emphasis: {
+                focus: 'series',
+                scale: 1.1
+            },
+            animationDelay: function(idx) {
+                return idx * 50 + 200;
+            },
+            tooltip: {
+                valueFormatter: function(value) {
+                    if (value === null) return '无数据';
+                    return (value > 0 ? '+' : '') + value + '%';
+                }
+            }
+        }
+    ],
+    animationEasing: 'elasticOut',
+    animationDelayUpdate: function(idx) {
+        return idx * 20;
+    },
+    backgroundColor: '#ffffff',
+    graphic: [
+        {
+            type: 'text',
+            left: 'center',
+            bottom: 5,
+            style: {
+                text: '📌 注：2022年4-8月及11月数据缺失，线条已自动连接',
+                fill: '#b2bec3',
+                fontSize: 11
+            },
+            z: 100
+        }
+    ]
+};
+
+    if (option && typeof option === 'object') {
+      myChart.setOption(option);
+    }
+
+    window.addEventListener('resize', myChart.resize);
+  </script>
+</body>
+</html>

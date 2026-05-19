@@ -168,7 +168,7 @@
       });
 
     const backToTopBtn = document.getElementById("backToTopBtn");
-    const motivationSection = document.getElementById("motivation-research");
+    const backToTopAnchor = document.getElementById("members");
     if (backToTopBtn) {
       let scrollTicking = false;
 
@@ -176,10 +176,10 @@
         scrollTicking = false;
         const y = window.scrollY || window.pageYOffset || 0;
         let show = false;
-        if (body.classList.contains("is-entered") && motivationSection) {
+        if (body.classList.contains("is-entered") && backToTopAnchor) {
           const headerLead = 88;
           const sectionTopDoc =
-            motivationSection.getBoundingClientRect().top + y;
+            backToTopAnchor.getBoundingClientRect().top + y;
           show = y >= sectionTopDoc - headerLead;
         }
         backToTopBtn.classList.toggle("is-visible", show);
@@ -214,6 +214,262 @@
       });
     }
 
+    (function initUaHsyModule() {
+      const root = document.getElementById("uaHsyModule");
+      if (!root) return;
+
+      const prefersReduced =
+        window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      function addRipple(el, e) {
+        if (prefersReduced) return;
+        const rect = el.getBoundingClientRect();
+        const size = 200;
+        const x = (e.clientX || rect.left + rect.width / 2) - rect.left - size / 2;
+        const y = (e.clientY || rect.top + rect.height / 2) - rect.top - size / 2;
+        const span = document.createElement("span");
+        span.className = "ua-hsy-ripple-span";
+        span.style.width = span.style.height = size + "px";
+        span.style.left = x + "px";
+        span.style.top = y + "px";
+        el.appendChild(span);
+        span.addEventListener("animationend", function () {
+          span.remove();
+        });
+      }
+
+      root.querySelectorAll(".ua-hsy-ripple").forEach(function (el) {
+        el.addEventListener("click", function (e) {
+          addRipple(el, e);
+        });
+      });
+
+      if (!prefersReduced && "IntersectionObserver" in window) {
+        const revealObs = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+                revealObs.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
+        );
+        root.querySelectorAll(".ua-hsy-reveal").forEach(function (el) {
+          revealObs.observe(el);
+        });
+      } else {
+        root.querySelectorAll(".ua-hsy-reveal").forEach(function (el) {
+          el.classList.add("is-visible");
+        });
+      }
+
+      root.querySelectorAll(".ua-hsy-flip-card").forEach(function (card) {
+        const flipBtn = card.querySelector(".ua-hsy-flip-card__flip");
+        const back = card.querySelector(".ua-hsy-flip-card__face--back");
+        const dl = card.querySelector(".ua-hsy-flip-card__dl");
+
+        function setFlipped(flipped) {
+          card.classList.toggle("is-flipped", flipped);
+          if (flipBtn) flipBtn.setAttribute("aria-pressed", flipped ? "true" : "false");
+          if (back) back.setAttribute("aria-hidden", flipped ? "false" : "true");
+        }
+
+        setFlipped(false);
+
+        flipBtn &&
+          flipBtn.addEventListener("click", function (e) {
+            e.stopPropagation();
+            setFlipped(!card.classList.contains("is-flipped"));
+          });
+
+        back &&
+          back.addEventListener("click", function (e) {
+            if (e.target.closest(".ua-hsy-flip-card__flip, .ua-hsy-flip-card__dl")) return;
+            setFlipped(false);
+          });
+
+        back &&
+          back.addEventListener("keydown", function (e) {
+            if (e.key === "Enter" || e.key === " ") {
+              e.preventDefault();
+              setFlipped(false);
+            }
+          });
+
+        dl &&
+          dl.addEventListener("click", function (e) {
+            e.stopPropagation();
+          });
+      });
+
+      const tlNodes = root.querySelectorAll(".ua-hsy-tl-node");
+      const tlPanels = root.querySelectorAll(".ua-hsy-exp-panel");
+      const tlSelect = root.querySelector(".ua-hsy-tl-select");
+
+      function setTimelineStep(step) {
+        const idx = Number(step);
+        tlNodes.forEach(function (node) {
+          const active = Number(node.getAttribute("data-hsy-step")) === idx;
+          node.classList.toggle("is-active", active);
+          node.setAttribute("aria-pressed", active ? "true" : "false");
+        });
+        tlPanels.forEach(function (panel) {
+          const active = Number(panel.getAttribute("data-hsy-panel")) === idx;
+          if (active) {
+            panel.hidden = false;
+            panel.classList.remove("is-fading");
+          } else {
+            panel.hidden = true;
+          }
+        });
+        if (tlSelect) tlSelect.value = String(idx);
+      }
+
+      function fadeTimelineStep(step) {
+        const current = root.querySelector(".ua-hsy-exp-panel:not([hidden])");
+        if (!current || prefersReduced) {
+          setTimelineStep(step);
+          return;
+        }
+        current.classList.add("is-fading");
+        window.setTimeout(function () {
+          setTimelineStep(step);
+        }, 200);
+      }
+
+      tlNodes.forEach(function (node) {
+        node.addEventListener("click", function () {
+          fadeTimelineStep(node.getAttribute("data-hsy-step"));
+        });
+      });
+      if (tlSelect) {
+        tlSelect.addEventListener("change", function () {
+          fadeTimelineStep(tlSelect.value);
+        });
+      }
+
+      const modal = document.getElementById("uaHsyGalleryModal");
+      const modalImg = modal && modal.querySelector(".ua-hsy-modal__img");
+      const modalTitle = modal && modal.querySelector(".ua-hsy-modal__title");
+      const modalTag = modal && modal.querySelector(".ua-hsy-modal__tag");
+      const modalReport = modal && modal.querySelector(".ua-hsy-modal__report");
+      const thumbs = root.querySelectorAll(".ua-hsy-thumb");
+      let galleryState = { group: "conflict", index: 0 };
+
+      function getThumbsInGroup(group) {
+        return Array.prototype.filter.call(thumbs, function (t) {
+          return t.getAttribute("data-hsy-group") === group;
+        });
+      }
+
+      function applyThumbFromButton(btn) {
+        if (!btn || !modalImg) return;
+        galleryState.group = btn.getAttribute("data-hsy-group") || "conflict";
+        galleryState.index = Number(btn.getAttribute("data-hsy-index")) || 0;
+        modalImg.src = btn.getAttribute("data-hsy-src") || "";
+        modalImg.alt = btn.getAttribute("data-hsy-title") || "";
+        if (modalTitle) modalTitle.textContent = btn.getAttribute("data-hsy-title") || "";
+        if (modalTag) modalTag.textContent = btn.getAttribute("data-hsy-tag") || "";
+        if (modalReport) modalReport.textContent = btn.getAttribute("data-hsy-report") || "";
+        thumbs.forEach(function (t) {
+          t.classList.toggle("is-active", t === btn);
+        });
+      }
+
+      function openGallery(btn) {
+        if (!modal || typeof modal.showModal !== "function") return;
+        applyThumbFromButton(btn);
+        modal.showModal();
+        document.body.classList.add("is-locked");
+      }
+
+      function closeGallery() {
+        if (!modal || !modal.open) return;
+        modal.close();
+        document.body.classList.remove("is-locked");
+        thumbs.forEach(function (t) {
+          t.classList.remove("is-active");
+        });
+      }
+
+      function stepGallery(delta) {
+        const groupThumbs = getThumbsInGroup(galleryState.group);
+        if (!groupThumbs.length) return;
+        let next = galleryState.index + delta;
+        if (next < 0) next = groupThumbs.length - 1;
+        if (next >= groupThumbs.length) next = 0;
+        const nextBtn = groupThumbs[next];
+        if (!nextBtn || !modalImg) return;
+        if (prefersReduced) {
+          applyThumbFromButton(nextBtn);
+          return;
+        }
+        modalImg.classList.add("is-fading");
+        window.setTimeout(function () {
+          applyThumbFromButton(nextBtn);
+          modalImg.classList.remove("is-fading");
+        }, 200);
+      }
+
+      thumbs.forEach(function (btn) {
+        btn.addEventListener("click", function (e) {
+          addRipple(btn, e);
+          openGallery(btn);
+        });
+      });
+
+      if (modal) {
+        modal.querySelectorAll("[data-hsy-modal-close]").forEach(function (el) {
+          el.addEventListener("click", closeGallery);
+        });
+        modal.addEventListener("click", function (e) {
+          if (e.target === modal) closeGallery();
+        });
+        modal.addEventListener("close", function () {
+          document.body.classList.remove("is-locked");
+          thumbs.forEach(function (t) {
+            t.classList.remove("is-active");
+          });
+        });
+        const prevBtn = modal.querySelector(".ua-hsy-modal__nav--prev");
+        const nextBtn = modal.querySelector(".ua-hsy-modal__nav--next");
+        prevBtn &&
+          prevBtn.addEventListener("click", function (e) {
+            addRipple(prevBtn, e);
+            stepGallery(-1);
+          });
+        nextBtn &&
+          nextBtn.addEventListener("click", function (e) {
+            addRipple(nextBtn, e);
+            stepGallery(1);
+          });
+      }
+
+      document.addEventListener("keydown", function (e) {
+        if (!modal || !modal.open) return;
+        if (e.key === "Escape") {
+          e.preventDefault();
+          closeGallery();
+        } else if (e.key === "ArrowLeft") {
+          stepGallery(-1);
+        } else if (e.key === "ArrowRight") {
+          stepGallery(1);
+        }
+      });
+
+      root.querySelectorAll('.ua-hsy-jump-btn[href^="#"]').forEach(function (link) {
+        link.addEventListener("click", function (e) {
+          const id = link.getAttribute("href");
+          const target = id && document.querySelector(id);
+          if (!target) return;
+          e.preventDefault();
+          target.scrollIntoView({ behavior: prefersReduced ? "auto" : "smooth", block: "start" });
+        });
+      });
+    })();
+
     (function initUaAcledLightbox() {
       const dlg = document.getElementById("uaAcledLightbox");
       if (!dlg || typeof dlg.showModal !== "function") return;
@@ -246,6 +502,152 @@
             dlgCap.textContent = cap;
             dlgCap.hidden = !String(cap).trim();
           }
+          dlg.showModal();
+        });
+      });
+    })();
+
+    (function initUaAgriNav() {
+      const root = document.getElementById("uaAgriModule");
+      if (!root) return;
+      const views = root.querySelectorAll(".ua-agri-view");
+      const moduleHero = root.querySelector(".ua-agri-hero");
+
+      function showView(viewId) {
+        views.forEach(function (v) {
+          const active = v.dataset.agriView === viewId;
+          v.classList.toggle("is-active", active);
+          v.hidden = !active;
+        });
+        if (moduleHero) moduleHero.hidden = viewId !== "entry";
+        const prefersReduced =
+          window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        root.scrollIntoView({ behavior: prefersReduced ? "auto" : "smooth", block: "start" });
+      }
+
+      root.addEventListener("click", function (e) {
+        const btn = e.target.closest("[data-agri-go]");
+        if (!btn || !root.contains(btn)) return;
+        const viewId = btn.getAttribute("data-agri-go");
+        if (viewId) showView(viewId);
+      });
+    })();
+
+    (function initUaAgriStepDialog() {
+      const dlg = document.getElementById("uaAgriStepDialog");
+      if (!dlg || typeof dlg.showModal !== "function") return;
+      const dlgTitle = dlg.querySelector(".ua-poi-step-dialog__title");
+      const dlgBody = dlg.querySelector(".ua-poi-step-dialog__body");
+      const closeBtn = dlg.querySelector(".ua-acled-dialog__close");
+
+      function closeDlg() {
+        if (dlg.open) dlg.close();
+      }
+
+      closeBtn &&
+        closeBtn.addEventListener("click", function (e) {
+          e.preventDefault();
+          closeDlg();
+        });
+
+      dlg.addEventListener("click", function (e) {
+        if (e.target === dlg) closeDlg();
+      });
+
+      document.querySelectorAll(".ua-agri-step-detail").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          const title = btn.getAttribute("data-title") || "";
+          const body = btn.getAttribute("data-body") || "";
+          if (dlgTitle) dlgTitle.textContent = title;
+          if (dlgBody) dlgBody.textContent = body;
+          dlg.showModal();
+        });
+      });
+    })();
+
+    (function initUaWylFlipCards() {
+      const root = document.getElementById("uaWylModule");
+      if (!root) return;
+
+      function setFlipped(card, flipped) {
+        card.classList.toggle("is-flipped", flipped);
+        const front = card.querySelector(".ua-wyl-flip-card__face--front");
+        const back = card.querySelector(".ua-wyl-flip-card__face--back");
+        if (front) front.setAttribute("aria-hidden", flipped ? "true" : "false");
+        if (back) back.setAttribute("aria-hidden", flipped ? "false" : "true");
+      }
+
+      root.querySelectorAll(".ua-wyl-flip-card").forEach(function (card) {
+        const hint = card.querySelector(".ua-wyl-flip-card__hint");
+        const closeBtn = card.querySelector(".ua-wyl-flip-card__close");
+        const back = card.querySelector(".ua-wyl-flip-card__face--back");
+
+        function toggleFlip() {
+          setFlipped(card, !card.classList.contains("is-flipped"));
+        }
+
+        hint &&
+          hint.addEventListener("click", function (e) {
+            e.stopPropagation();
+            toggleFlip();
+          });
+
+        closeBtn &&
+          closeBtn.addEventListener("click", function (e) {
+            e.stopPropagation();
+            setFlipped(card, false);
+          });
+
+        back &&
+          back.addEventListener("click", function (e) {
+            if (e.target.closest(".ua-wyl-flip-card__close")) return;
+            if (card.classList.contains("is-flipped")) setFlipped(card, false);
+          });
+
+        card.addEventListener("click", function (e) {
+          if (e.target.closest(".ua-acled-zoom, .ua-wyl-flip-card__hint, .ua-wyl-flip-card__close")) return;
+          if (!card.classList.contains("is-flipped")) toggleFlip();
+        });
+
+        card.addEventListener("keydown", function (e) {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            toggleFlip();
+          }
+          if (e.key === "Escape" && card.classList.contains("is-flipped")) {
+            setFlipped(card, false);
+          }
+        });
+      });
+    })();
+
+    (function initUaPoiStepDialog() {
+      const dlg = document.getElementById("uaPoiStepDialog");
+      if (!dlg || typeof dlg.showModal !== "function") return;
+      const dlgTitle = dlg.querySelector(".ua-poi-step-dialog__title");
+      const dlgBody = dlg.querySelector(".ua-poi-step-dialog__body");
+      const closeBtn = dlg.querySelector(".ua-acled-dialog__close");
+
+      function closeDlg() {
+        if (dlg.open) dlg.close();
+      }
+
+      closeBtn &&
+        closeBtn.addEventListener("click", function (e) {
+          e.preventDefault();
+          closeDlg();
+        });
+
+      dlg.addEventListener("click", function (e) {
+        if (e.target === dlg) closeDlg();
+      });
+
+      document.querySelectorAll(".ua-poi-step-detail").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          const title = btn.getAttribute("data-title") || "";
+          const body = btn.getAttribute("data-body") || "";
+          if (dlgTitle) dlgTitle.textContent = title;
+          if (dlgBody) dlgBody.textContent = body;
           dlg.showModal();
         });
       });

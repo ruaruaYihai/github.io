@@ -79,48 +79,12 @@
             </div>
           </div>
           <nav class="nav-main" aria-label="Primary">
+            <a class="navlink" href="#members">成员介绍</a>
             <a class="navlink" href="#project-timeline">项目时间线</a>
-            <div class="nav-item">
-              <a class="navlink" href="#motivation-research" aria-haspopup="true">Motivation &amp; Research</a>
-              <ul class="nav-submenu" role="list">
-                <li><a href="#motivation-spark">The Spark: Why This Matters?</a></li>
-                <li><a href="#motivation-gap">What&apos;s Missing in the Wild?</a></li>
-                <li><a href="#motivation-stakeholders">Who Cares &amp; Who Feels</a></li>
-                <li><a href="#personas">User personas</a></li>
-              </ul>
-            </div>
-            <div class="nav-item">
-              <a class="navlink" href="#user-requirements" aria-haspopup="true">User Requirements</a>
-              <ul class="nav-submenu" role="list">
-                <li><a href="#user-journey">A Day in Their Shoes</a></li>
-                <li><a href="#user-requirements-features">From &apos;I Wish&apos; to &apos;It Must&apos;</a></li>
-                <li><a href="#user-evidence">Proof We Listened</a></li>
-              </ul>
-            </div>
-            <div class="nav-item">
-              <a class="navlink" href="#ideation-alternatives" aria-haspopup="true">Ideation &amp; Alternatives</a>
-              <ul class="nav-submenu" role="list">
-                <li><a href="#ideation-wild-beginnings">The Wild Beginnings</a></li>
-                <li><a href="#ideation-options">From Option A to Option B: The Shift We Made</a></li>
-                <li><a href="#ideation-low-fi">First Tangible Shape</a></li>
-              </ul>
-            </div>
-            <div class="nav-item">
-              <a class="navlink" href="#technical-implementation" aria-haspopup="true">Technical Implementation</a>
-              <ul class="nav-submenu" role="list">
-                <li><a href="#technical-architecture">How the Machine Thinks</a></li>
-                <li><a href="#technical-prototype">From Sketch to Clickable Reality</a></li>
-                <li><a href="#technical-contributions">Who Built Which Gear</a></li>
-              </ul>
-            </div>
-            <div class="nav-item">
-              <a class="navlink" href="#evaluation-reflection" aria-haspopup="true">Evaluation &amp; Reflection</a>
-              <ul class="nav-submenu" role="list">
-                <li><a href="#evaluation-usability">Real People, Real Clicks, Real Truth</a></li>
-                <li><a href="#evaluation-iteration">Break It, Fix It, Level Up</a></li>
-                <li><a href="#evaluation-reflection-final">If We Knew Then What We Know Now</a></li>
-              </ul>
-            </div>
+            <a class="navlink" href="#ua-detail-spatiotemporal">冲突事件</a>
+            <a class="navlink" href="#ua-detail-poi-density">POI</a>
+            <a class="navlink" href="#ua-detail-agriculture">NDVI</a>
+            <a class="navlink" href="#ua-detail-nightlight">夜光遥感</a>
             <div class="nav-actions">
               <button class="btn" id="backToWelcomeBtn" type="button" aria-label="Back to welcome page">
                 Back
@@ -248,94 +212,19 @@
             </article>
           </section>
 
-          <section id="product-intro" aria-label="Pockety product introduction">
-            <div class="section-head">
-              <h3>What is Pockety Favorite Agent?</h3>
-              <p>A playful AI system for cross-platform favorites digestion</p>
-            </div>
-            <article class="panel">
-              <div class="panel-inner">
-                <p class="value">
-                  Tired of endlessly saving tutorials, articles, and videos across Bilibili, RedNote, Douyin, and
-                  CSDN, only to never revisit your ever-growing collection?
-                </p>
-                <p class="value">
-                  Pockety is an AI-powered favorites management system built to cure modern
-                  <strong>Collection Digestion Disorder</strong>. It automatically syncs and categorizes cross-platform
-                  saved content, generates personalized weekly knowledge digests and audio summaries, builds an
-                  interactive visualized knowledge graph from scattered favorites, and lets users chat and ask
-                  questions directly over their own saved library with advanced RAG-powered AI.
-                </p>
-                <p class="value">
-                  Designed with a human-centric and playful experience, Pockety transforms idle "save and forget"
-                  clutter into an organized, actively growing personal knowledge base, making learning effortless and
-                  efficient.
-                </p>
-              </div>
-            </article>
-          </section>
 
-          <section id="members" aria-label="Team members">
+          <section id="members" aria-labelledby="members-intro-heading">
             <div class="section-head">
-              <h3 id="three-playful-requirements-heading">Three Playful Requirements</h3>
-            </div>
-            <div
-              class="pockety-feature-cards"
-              role="region"
-              aria-labelledby="three-playful-requirements-heading"
-            >
-              <article class="pockety-feature-card">
-                <h4 class="pockety-feature-card__title">
-                  <span class="pockety-feature-card__icon" aria-hidden="true">🧠</span>
-                  AI Agent Q&amp;A
-                </h4>
-                <p class="pockety-feature-card__body">
-                  Not just search — it's a little knowledge buddy. It answers your saved content in a playful,
-                  conversational tone. Turning "dig through my favorites" into "just ask."
-                </p>
-                <blockquote class="pockety-feature-card__quote">
-                  <p>
-                    <em>"What did that Bilibili tutorial say again?" — Just ask Pockety.</em>
-                  </p>
-                </blockquote>
-              </article>
-              <article class="pockety-feature-card">
-                <h4 class="pockety-feature-card__title">
-                  <span class="pockety-feature-card__icon" aria-hidden="true">🏷️</span>
-                  AI-Powered Smart Categorization
-                </h4>
-                <p class="pockety-feature-card__body">
-                  No more messy collections. The system automatically tags your links, notes, and videos, then presents
-                  them in a cute floating-card interface. Organizing becomes surprisingly enjoyable.
-                </p>
-                <blockquote class="pockety-feature-card__quote">
-                  <p><em>From "save and forget" to "feels good to look at."</em></p>
-                </blockquote>
-              </article>
-              <article class="pockety-feature-card">
-                <h4 class="pockety-feature-card__title">
-                  <span class="pockety-feature-card__icon" aria-hidden="true">📊</span>
-                  Playful Weekly Report
-                </h4>
-                <p class="pockety-feature-card__body">
-                  See what you saved, what you missed — visualized in soft cloud-shaped charts. It turns boring stats into
-                  a lighthearted weekly ritual.
-                </p>
-                <blockquote class="pockety-feature-card__quote">
-                  <p>
-                    <em>Not to stress you out. Just a gentle reminder: "Your saved world just grew a little bigger."</em>
-                  </p>
-                </blockquote>
-              </article>
+              <h3 id="members-intro-heading">成员介绍</h3>
             </div>
 
-            <div class="members-grid" role="list">
+            <div class="members-grid" role="list" aria-label="团队成员">
               <article class="member-card member-pink" role="listitem">
                 <div class="member-card-inner">
                   <div class="member-face member-face-front">
                     <div class="id-strip">ID card</div>
                     <div class="member-avatar" aria-hidden="true">
-                      <img src="./images_home/jingxuan-weng.png" alt="" loading="lazy" decoding="async" />
+                      <img src="./hsy.jpg" alt="" loading="lazy" decoding="async" />
                     </div>
                     <p class="name">Jingxuan Weng</p>
                     <p class="meta">2364452</p>
@@ -634,1161 +523,1517 @@
             </div>
           </section>
 
-          <section id="motivation-research" class="home-module" aria-labelledby="motivation-research-heading">
-            <div class="section-head">
-              <h3 id="motivation-research-heading">Motivation &amp; Research</h3>
-              <p>Why the problem matters, where existing work falls short, and who we serve</p>
-            </div>
-            <article class="panel">
-              <div class="panel-inner">
-                <p class="value">This section explains why the problem matters, where existing work falls short, and who our key stakeholders are.</p>
-              </div>
-            </article>
-
-            <div class="section-head">
-              <h4 id="motivation-spark">The Spark: Why This Matters?</h4>
-              <p>From excessive saving to poor digestion</p>
-            </div>
-            <article class="panel">
-              <div class="panel-inner">
-                <p class="value">
-                  In the current era of severe information overload, college students extensively consume fragmented content from WeChat, Douyin, RedNote, and Bilibili daily. They frequently save articles, videos, notes and resources to platform favorites with the positive expectation of reviewing, learning and digesting these materials later. Nevertheless, long-term observations and surveys among student groups reveal an extremely common issue: most saved favorite content is never reopened, read or learned. Instead, it gradually accumulates as useless digital garbage, forming a typical Collection-Digestion Disorder.
-                </p>
-                <p class="value">
-                  This gap between active collection and passive abandonment causes serious waste of information resources, weakens learning efficiency, and leads to fragmented, disorganized personal knowledge. Existing tools either focus on simple bookmark storage or lack playful automated digestion mechanisms. Therefore, our team chooses this user-centric intelligent knowledge management track. We aim to develop Pockety (FavoriteAgent) to unify cross-platform favorites, automate content organization, provide playful periodic digests, and build a queryable personal knowledge base, fundamentally solving Collection-Digestion Disorder and turning dormant collections into usable knowledge for college students.
-                </p>
-              </div>
-            </article>
-
-            <div class="section-head">
-              <h4 id="motivation-gap">What&apos;s Missing in the Wild?</h4>
-              <p>Literature and product benchmark analysis</p>
-            </div>
-
-            <article class="panel">
-              <div class="panel-inner">
-                <h4>1. Research Literature</h4>
-
-                <div class="table-wrap research-lit-table-wrap">
-                  <table class="contrib-table research-lit-table">
-                    <thead>
-                      <tr>
-                        <th scope="col">Paper Title</th>
-                        <th scope="col">Did Well</th>
-                        <th scope="col">Missed</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>
-                          <strong>1.1 Knowledge Graph Generation and Application for Unstructured Data Using Data Processing Pipeline</strong>
-                        </td>
-                        <td>
-                          Multi-modal entity and relation extraction for text, image, and video.<br />
-                          User-interest-aware semantic tagging and deduplication.<br />
-                          Cross-source knowledge fusion to reduce redundancy.
-                        </td>
-                        <td>
-                          No audio/podcast generation for commuting scenarios.<br />
-                          No spaced-repetition memory-card scheduling.<br />
-                          No real-time crawling for major Chinese platforms (Douyin / Xiaohongshu / Bilibili).
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <strong>1.2 Retrieval-augmented generation for educational application: A systematic survey</strong>
-                        </td>
-                        <td>
-                          Context-aware retrieval improves RAG answer accuracy.<br />
-                          Dynamic incremental updates for newly saved content.<br />
-                          Personalized summarization adjusted to user expertise.
-                        </td>
-                        <td>
-                          No visualized knowledge-graph presentation.<br />
-                          No automatic flashcard generation for hard knowledge.<br />
-                          No batch processing for daily favorites digest.
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <strong>1.3 Personalized Language Learning Using Spaced Repetition Scheduling</strong>
-                        </td>
-                        <td>
-                          Forgetting-aware tracing combines deep learning and memory modeling.<br />
-                          RL-based scheduling optimizes review timing from real feedback.<br />
-                          Real-world validation shows measurable gains on language-learning datasets.
-                        </td>
-                        <td>
-                          Narrow scope: mainly for language learning, not general knowledge management.<br />
-                          No multi-modal support for audio output or knowledge-graph visualization.<br />
-                          No platform integration with Douyin / Xiaohongshu / Bilibili.
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </article>
-
-            <article class="panel" style="margin-top: 14px">
-              <div class="panel-inner">
-                <h4>2. Product Benchmark</h4>
-
-                <div class="table-wrap product-benchmark-table-wrap">
-                  <table class="contrib-table product-benchmark-table">
-                    <thead>
-                      <tr>
-                        <th scope="col">Product</th>
-                        <th scope="col">Did Well</th>
-                        <th scope="col">Missed</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td><strong>2.1 NotebookLM (Google)</strong></td>
-                        <td>
-                          High-quality AI audio overviews and dialogue-style podcasts.<br />
-                          Strong source-grounded RAG with low hallucination risk.<br />
-                          Cross-document relation mining.
-                        </td>
-                        <td>
-                          No native support for Douyin / Xiaohongshu / Bilibili.<br />
-                          No automatic memory/flashcard generation.<br />
-                          No interactive visual knowledge graph.
-                        </td>
-                      </tr>
-                      <tr>
-                        <td><strong>2.2 Karakeep</strong></td>
-                        <td>
-                          Self-hosted privacy and full webpage archiving.<br />
-                          AI auto-tagging and full-text search across formats.<br />
-                          Video support via yt-dlp for Bilibili-like sources.
-                        </td>
-                        <td>
-                          No built-in TTS podcast generation.<br />
-                          No spaced-repetition flashcard system.<br />
-                          Weak knowledge graph, mainly tag-based association.
-                        </td>
-                      </tr>
-                      <tr>
-                        <td><strong>2.3 Cubox</strong></td>
-                        <td>
-                          Strong WeChat ecosystem integration.<br />
-                          Mature RAG full-library natural language QA.<br />
-                          Link snapshot and permanent content preservation.
-                        </td>
-                        <td>
-                          No one-click daily digest audio output.<br />
-                          No automatic hard-knowledge flashcard push.<br />
-                          No interactive knowledge-graph visualization.
-                        </td>
-                      </tr>
-                      <tr>
-                        <td><strong>2.4 Bilibili-RAG</strong></td>
-                        <td>
-                          End-to-end Bilibili favorites ASR to vector DB to QA pipeline.<br />
-                          Robust audio extraction and fallback mechanisms.<br />
-                          Open and customizable for secondary development.
-                        </td>
-                        <td>
-                          Only supports Bilibili, no WeChat/Douyin/Xiaohongshu.<br />
-                          No tagging/categorization system.<br />
-                          No memory-card or podcast-oriented learning features.
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </article>
-
-            <div class="section-head">
-              <h4 id="motivation-stakeholders">Who Cares &amp; Who Feels</h4>
-              <p>Primary and secondary users we serve</p>
-            </div>
-            <article class="panel">
-              <div class="panel-inner">
-                <ul class="bullets">
-                  <li>University students who rely on digital content for continuous learning.</li>
-                  <li>University students preparing for internships and full-time job applications.</li>
-                </ul>
-              </div>
-            </article>
-
-            <section id="personas" aria-label="User personas">
-              <div class="persona-track">
-                <article class="persona-creative persona-left">
-                  <div class="persona-creative-head">
-                    <img
-                      class="persona-avatar"
-                      src="./images_User Requirements/yu-chen.png"
-                      alt="Yu Chen avatar"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                    <div class="persona-head-copy">
-                      <p class="persona-step">Persona 01</p>
-                      <h4>Yu Chen</h4>
-                      <p class="persona-meta">Age 20 · Female · University Student (Computer Science Major)</p>
-                    </div>
-                  </div>
-                  <div class="persona-creative-body">
-                    <div class="persona-layer">
-                      <p class="label">Typical Behavior</p>
-                      <p class="value">
-                        Watches tutorials on Bilibili daily, saves code on CSDN, and keeps notes on Xiaohongshu.
-                        Believes saving means learning, but revisit rate is below 10%.
-                      </p>
-                    </div>
-                    <div class="persona-layer">
-                      <p class="label">Pain Points</p>
-                      <ul class="bullets">
-                        <li>
-                          <strong>Search Barriers:</strong> Must switch between four apps during exams/projects to find
-                          one remembered technical point.
-                        </li>
-                        <li>
-                          <strong>Anxiety Loop:</strong> More than 500 unread items trigger stress and avoidance.
-                        </li>
-                        <li>
-                          <strong>Logical Disconnect:</strong> Related Bilibili and CSDN content cannot be linked into
-                          one knowledge path.
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="persona-layer">
-                      <p class="label">Core Expectations</p>
-                      <p class="value">
-                        Connect cross-platform knowledge, auto-build a knowledge graph, and support Q&amp;A from saved
-                        content.
-                      </p>
-                    </div>
-                  </div>
-                </article>
-
-                <article class="persona-creative persona-right">
-                  <div class="persona-creative-head">
-                    <img
-                      class="persona-avatar"
-                      src="./images_User Requirements/adam.png"
-                      alt="Adam avatar"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                    <div class="persona-head-copy">
-                      <p class="persona-step">Persona 02</p>
-                      <h4>Adam</h4>
-                      <p class="persona-meta">Age 22 · Male · Senior Student / Job Seeker / New Intern</p>
-                    </div>
-                  </div>
-                  <div class="persona-creative-body">
-                    <div class="persona-layer">
-                      <p class="label">Typical Behavior</p>
-                      <p class="value">
-                        Saves resume/interview/internship/product resources in bursts. Adds dozens weekly but rarely
-                        revisits, so the collection becomes a mental comfort zone.
-                      </p>
-                    </div>
-                    <div class="persona-layer">
-                      <p class="label">Pain Points</p>
-                      <ul class="bullets">
-                        <li>
-                          <strong>Asset Fragility:</strong> Valuable saved content is later deleted or paywalled,
-                          causing frustration and helplessness.
-                        </li>
-                        <li>
-                          <strong>Categorization Fatigue:</strong> Manual tagging is tiring, but no tagging leads to
-                          chaos and a dumping-ground folder.
-                        </li>
-                        <li>
-                          <strong>Lack of Reminders:</strong> Key deadlines are missed without proactive reminders, so
-                          plans and actions disconnect.
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="persona-layer">
-                      <p class="label">Core Expectations</p>
-                      <p class="value">
-                        Keep reliable backups even if source posts disappear, quickly extract key takeaways, and
-                        categorize/tag content for easier retrieval.
-                      </p>
-                    </div>
-                  </div>
-                </article>
-              </div>
-            </section>
-          </section>
-
-          <section id="user-requirements" class="home-module" aria-labelledby="user-requirements-heading">
-            <div class="section-head">
-              <h3 id="user-requirements-heading">User Requirements</h3>
-              <p>Journey analysis, feature requirements, and field evidence</p>
-            </div>
-            <article class="panel">
-              <div class="panel-inner">
-                <p class="value">This section summarizes user needs through journey analysis, feature requirements, and real-life evidence.</p>
-              </div>
-            </article>
-
-            <div class="section-head">
-              <h4 id="user-journey">A Day in Their Shoes</h4>
-              <p>From collection to review: behavior, pain points, and opportunities</p>
-            </div>
-            <article class="panel">
-              <div class="panel-inner">
-                <figure class="media-card">
-                  <img
-                    src="./images_User Requirements/user-journey-map.png"
-                    alt="User journey map showing stages, behaviors, pain points, opportunities, and competitor issues"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </figure>
-              </div>
-            </article>
-
-            <div class="section-head">
-              <h4 id="user-requirements-features">From &apos;I Wish&apos; to &apos;It Must&apos;</h4>
-              <p>Core feature requirements derived from user research</p>
-            </div>
-            <div class="requirements-list">
-              <article class="shot requirement-item">
-                <b>AI Agent Q&amp;A</b>
-                <p>Delivers playful, engaging responses that make everyday interactions more enjoyable.</p>
-              </article>
-              <article class="shot requirement-item">
-                <b>AI-assisted Favorite Categorization</b>
-                <p>
-                  Combines a dedicated playful UI with practical categorization, helping users keep their saved content
-                  neat and well organized.
-                </p>
-              </article>
-              <article class="shot requirement-item">
-                <b>Weekly Report</b>
-                <p>
-                  Creates a playful reviewing experience through remarkable statistics and a sense of ritual, encouraging
-                  users to revisit and reflect on the content they have saved.
-                </p>
-              </article>
-            </div>
-
-            <div class="section-head">
-              <h4 id="user-evidence">Proof We Listened</h4>
-              <p>Interviewing a potential user</p>
-            </div>
-            <div class="evidence-grid evidence-proof-three">
-              <figure class="media-card">
-                <img src="./images_User Requirements/evidence-life-1.png" alt="Two students observing saved-content usage on laptop in classroom" loading="lazy" decoding="async" />
-              </figure>
-              <figure class="media-card">
-                <img src="./images_User Requirements/evidence-life-2.png" alt="Participant pointing at laptop screen showing saved-content platform" loading="lazy" decoding="async" />
-              </figure>
-              <figure class="media-card">
-                <img src="./images_User Requirements/evidence-life-3.png" alt="Interview scene during field research on content saving habits" loading="lazy" decoding="async" />
-              </figure>
-              <figure class="media-card">
-                <img src="./images_User Requirements/evidence-life-4.png" alt="Dorm study scenario discussing saved information retrieval workflow" loading="lazy" decoding="async" />
-              </figure>
-              <figure class="media-card evidence-proof-three__kife">
-                <img
-                  src="./images_User Requirements/evidence-kife-5.png"
-                  alt="Participant using laptop during field research on saved-content habits"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </figure>
-            </div>
-          </section>
-
-          <section id="ideation-alternatives" class="home-module" aria-labelledby="ideation-alternatives-heading">
-            <div class="section-head">
-              <h3 id="ideation-alternatives-heading">Ideation &amp; Alternatives</h3>
-              <p>Sketches, design alternatives, and low-fidelity prototypes</p>
-            </div>
-            <article class="panel">
-              <div class="panel-inner">
-                <p class="value">This section presents early ideation sketches, design alternatives, and selected low-fidelity prototype directions.</p>
-              </div>
-            </article>
-
-            <div class="section-head">
-              <h4 id="ideation-wild-beginnings">The Wild Beginnings</h4>
-              <p>Rapid ideation sketches exploring multiple interaction paths</p>
-            </div>
-            <article class="panel">
-              <div class="panel-inner">
-                <figure class="media-card">
-                  <img
-                    src="./images_Ideation & Alternativesw/crazy-eights.png"
-                    alt="Crazy Eights sketch sheet with multiple mobile interface concepts"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </figure>
-              </div>
-            </article>
-
-            <div class="section-head">
-              <h4 id="ideation-options">From Option A to Option B: The Shift We Made</h4>
-              <p>Comparison between original and optimized direction</p>
-            </div>
-            <div class="ideation-alt-grid">
-              <article class="shot ideation-alt-item">
-                <b>Option A (Original)</b>
-                <p>
-                  Rigid, high-saturation solid matcha green flat UI. Lacking depth or whitespace, all modules appear as
-                  monotonous, indistinguishable blocks. Weekly reports rely on rigid text lists - completely lacking any
-                  engaging visual interaction.
-                </p>
-              </article>
-              <article class="shot ideation-alt-item">
-                <b>Option B (Optimized)</b>
-                <p>
-                  We adopted a soft, dreamy pastel gradient system with generous whitespace. Core functions are
-                  structured as independent, elevated floating cards. We introduced a playful cloud-shaped visual
-                  hierarchy for the weekly overview, turning abstract data into friendly, approachable graphics.
-                </p>
-              </article>
-            </div>
-            <article class="panel ideation-justification">
-              <div class="panel-inner">
-                <h4>Justification</h4>
-                <p class="value">
-                  This iteration embodies a Playful design philosophy beyond aesthetics: The gentle, vibrant color
-                  palette and airy layout creates a stress-free environment, dissolving users' anxiety towards their
-                  cluttered collections. Playful cloud visualization transforms tedious data sorting into an intuitive,
-                  delightful experience. Floating cards establish clear visual boundaries, while the whimsical style
-                  aligns perfectly with our AI-powered dialogue and sorting features.
-                </p>
-              </div>
-            </article>
-
-            <div class="section-head">
-              <h4 id="ideation-low-fi">First Tangible Shape</h4>
-              <p>Selected direction translated into low-fidelity mobile interfaces</p>
-            </div>
-            <article class="panel">
-              <div class="panel-inner">
-                <p class="value">
-                  Low-Fi figma link：
-                  <a
-                    href="https://www.figma.com/proto/PaMURBeNrMMcPKupq5qzze/CPT208-FavoriteAgent?node-id=3640-283&amp;t=sB5iQxEH45Biszzw-1"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >https://www.figma.com/proto/PaMURBeNrMMcPKupq5qzze/CPT208-FavoriteAgent?node-id=3640-283&amp;t=sB5iQxEH45Biszzw-1</a>
-                </p>
-                <div class="lowfi-stack">
-                  <figure class="media-card">
-                    <img
-                      src="./images_Ideation & Alternativesw/low-fi-prototype-1.png"
-                      alt="Low-fidelity prototype version one"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </figure>
-                  <figure class="media-card">
-                    <img
-                      src="./images_Ideation & Alternativesw/low-fi-prototype-2.png"
-                      alt="Low-fidelity prototype version two"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </figure>
-                </div>
-              </div>
-            </article>
-          </section>
-
-          <section id="technical-implementation" class="home-module" aria-labelledby="technical-implementation-heading">
-            <div class="section-head">
-              <h3 id="technical-implementation-heading">Technical Implementation</h3>
-              <p>Architecture, prototype entry, and team contributions</p>
-            </div>
-            <article class="panel">
-              <div class="panel-inner">
-                <p class="value">This section presents architecture assets, prototype entry, and team contributions.</p>
-              </div>
-            </article>
-
-            <div class="section-head">
-              <h4 id="technical-architecture">How the Machine Thinks</h4>
-              <p>Architecture diagram</p>
-            </div>
-            <article class="panel">
-              <div class="panel-inner">
-                <figure class="media-card">
-                  <img
-                    src="./images_Technical Implementation/Sequence_diagram.png"
-                    alt="System architecture sequence diagram"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </figure>
-              </div>
-            </article>
-
-            <div class="section-head">
-              <h4 id="technical-prototype">From Sketch to Clickable Reality</h4>
-              <p>URL to the hosted system</p>
-            </div>
-            <article class="panel">
-              <div class="panel-inner">
-                <p class="value">
-                  <strong>URL:</strong>
-                  <a href="https://pockety-three.vercel.app" target="_blank" rel="noopener noreferrer">https://pockety-three.vercel.app</a>
-                </p>
-              </div>
-            </article>
-
-            <div class="section-head">
-              <h4 id="technical-contributions">Who Built Which Gear</h4>
-              <p>Role assignment and specific deliverables</p>
-            </div>
-            <article class="panel">
-              <div class="panel-inner">
-                <div class="table-wrap">
-                  <table class="contrib-table">
-                    <thead>
-                      <tr>
-                        <th>Team Member</th>
-                        <th>Role</th>
-                        <th>Specific Contributions</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>Jingxuan Weng</td>
-                        <td>UI Designer / Front-end Developer</td>
-                        <td>
-                          Designed the project UI in Figma, assisted in poster creation, and developed the Process
-                          Portfolio website on GitHub.
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Haotian Ma</td>
-                        <td>Back-end Developer</td>
-                        <td>
-                          Implemented back-end code, fine-tuned, handled front-end and back-end integration, adapted
-                          LLM to fit the project theme, assisted in poster creation, and conducted preliminary research on relevant products and
-                          technologies.
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Zeyu Yin</td>
-                        <td>UI Designer / Portfolio Editor</td>
-                        <td>
-                          Designed the project UI in Figma, wrote and integrated the content of the Process Portfolio, assisted in poster creation, and participated in project testing.
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Hongming Guo</td>
-                        <td>Team Leader</td>
-                        <td>
-                          Coordinated project progress, conducted user research, completed poster design &amp; production &amp; video demo, led project testing, optimized frontend codeand, took charge of poster design and production.
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </article>
-          </section>
-
-          <section id="evaluation-reflection" class="home-module" aria-labelledby="evaluation-reflection-heading">
-            <div class="section-head">
-              <h3 id="evaluation-reflection-heading">Evaluation &amp; Reflection</h3>
-              <p>Usability findings, iteration direction, and team reflections</p>
-            </div>
-            <article class="panel">
-              <div class="panel-inner">
-                <p class="value">This section summarizes usability findings, iteration direction, and final reflections from the team.</p>
-              </div>
-            </article>
-
-            <div class="section-head">
-              <h4 id="evaluation-usability">Real People, Real Clicks, Real Truth</h4>
-              <p>Survey and interview feedback after high-fidelity prototype</p>
-            </div>
-            <article class="panel">
-              <div class="panel-inner">
-                <ul class="bullets">
-                  <li>After completing the high-fidelity prototype, we conducted a survey and short interviews with volunteers.</li>
-                  <li>
-                    The results showed that the front page was the most confusing part, they reported difficulties in
-                    understanding how to use it and only one participant was aware of the function of this system after
-                    the first seen of this system.
-                  </li>
-                  <li>
-                    Some users also criticized the design of the front page and the report page, and some did not notice
-                    that the favorites collection could be expanded without guidance. One of the users I interviewed told
-                    me that you should add more messages informing users about the ai function, otherwise they might
-                    overlook it.
-                  </li>
-                  <li>
-                    In addition, another user informs me that the ai chatting is not smart enough, which might stick to
-                    the favorite knowledge without considering the meaning of the question. Also, an active question
-                    could be added at the end of each response, which connects and binds more information in the
-                    favorites. None of the participants selected the weekly report as the most valuable feature,
-                    suggesting that this function may need to be redesigned in later iterations.
-                  </li>
-                  <li>Despite these drawbacks, most participants still expressed a willingness to use the system and recommend it to others</li>
-                </ul>
-              </div>
-            </article>
-
-            <div class="section-head">
-              <h4 id="evaluation-iteration">Break It, Fix It, Level Up</h4>
-              <p>Improvement direction based on testing insights</p>
-            </div>
-            <article class="panel">
-              <div class="panel-inner">
-                <p class="value">
-                  In our evaluation, we conducted two rounds of user testing. The first round involved participants who
-                  had previously tested our low-fi prototype, while the second round involved first-time users of the
-                  current system.
-                </p>
-                <p class="value">
-                  The results indicated that the current version still has several usability issues, particularly in
-                  workflow guidance and homepage design. Among users who had tested the low-fi prototype, 25% reported
-                  concerns about the homepage design. However, among first-time users, this complaint rate increased to
-                  35.7%. In terms of function entrances, almost all low-fi prototype users were already familiar with
-                  them, whereas only 70.5% of first-time users clearly understood the meaning of each function entrance.
-                  During the interviews, participants also pointed out that the auto-categorization function lacked
-                  transparency and user autonomy
-                </p>
-                <div class="lowfi-stack">
-                  <figure class="media-card">
-                    <img
-                      src="./images_Evaluation & Reflection/lowfi_user1.png"
-                      alt="User testing results among participants who had tested the low-fi prototype"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </figure>
-                  <figure class="media-card">
-                    <img
-                      src="./images_Evaluation & Reflection/new_user1.png"
-                      alt="User testing results among first-time users of the current system"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </figure>
-                </div>
-                <p class="value">
-                  To address this issue, we made one design improvement. When users upload a file, the system now
-                  displays a notification for five seconds, showing which collection the document has been automatically
-                  stored in. This change aims to make the auto-categorization process more transparent and easier for
-                  users to understand.
-                </p>
-                <p class="value">
-                  Despite these drawbacks, several functions received positive feedback from participants. Among users
-                  who had tested the low-fi prototype, 87.5% stated that they would like to continue using the system.
-                  In addition, most participants were clearly aware of the AI function and were able to use it smoothly.
-                  Overall, 95.5% of participants could interact with the system using ready-made questions, and 81%
-                  found it easy to chat with the AI assistant. The UI design also received positive comments from users,
-                  as shown in the pie chart.
-                </p>
-                <figure class="media-card media-card--eval-pie">
-                  <img
-                    src="./images_Evaluation & Reflection/all_user.png"
-                    alt="Pie chart of positive feedback on UI design and AI-related functions"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </figure>
-                <div class="evidence-grid iteration-grid">
-                  <figure class="media-card">
-                    <img
-                      src="./images_Evaluation & Reflection/iteration1.png"
-                      alt="Design iteration 1"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </figure>
-                  <figure class="media-card">
-                    <img
-                      src="./images_Evaluation & Reflection/iteration2.png"
-                      alt="Design iteration 2"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </figure>
-                  <figure class="media-card">
-                    <img
-                      src="./images_Evaluation & Reflection/iteration3.png"
-                      alt="Design iteration 3"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </figure>
-                  <figure class="media-card">
-                    <img
-                      src="./images_Evaluation & Reflection/iteration4.png"
-                      alt="Design iteration 4"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </figure>
-                </div>
-              </div>
-            </article>
-
-            <div class="section-head">
-              <h4 id="evaluation-reflection-final">If We Knew Then What We Know Now</h4>
-              <p>What we learned from design and validation</p>
-            </div>
-            <article class="panel">
-              <div class="panel-inner">
-                <p class="value"><strong>Ethic and social impact</strong></p>
-                <p class="value">
-                  Data privacy is a key ethical concern in our system, as users are required to upload content and files.
-                  Since the auto-categorization function needs to analyse the uploaded materials, users should be clearly
-                  informed about how their data is processed, stored, and used. Accessing users&apos; saved or favourite
-                  content should also require explicit user permission. Therefore, our design should reduce unnecessary
-                  data exposure and ensure that users understand how their content is used by the system.
-                </p>
-                <p class="value">
-                  From a social perspective, our design may help users reduce information overload caused by excessive
-                  content saving. However, users should not rely completely on AI-generated summaries or recommendations.
-                  The AI functions should support users&apos; learning, searching, and reviewing processes rather than
-                  replace their own judgement.
-                </p>
-                <p class="value"><strong>AI use</strong></p>
-                <p class="value">
-                  We mainly use generative AI tools (such as Cursor and ChatGPT) as a development assistant to build a
-                  FastAPI back-end framework, connect SQLite and Chroma databases, and reconstruct the HTML exported by
-                  Figma into usable components. This greatly reduces the workload of the sample code and accelerates the
-                  prototype development. However, the code generated by AI is often only applicable to the &quot;ideal
-                  path&quot;, and problems such as upload function, CORS cross-domain restrictions and httpx timeout still
-                  need to be carefully reviewed and debugged manually. In practice, AI is more like a draft generator than a
-                  reliable engineer, and the key links still need to be judged manually.
-                </p>
-                <p class="value">
-                  In general, AI has accelerated the implementation process but failed to replace decision-making. We still
-                  need to judge for ourselves when to adopt AI output, when to rewrite the code and how to deal with the
-                  failure scenario. The project clearly shows that while AI improves productivity, it also expands the
-                  boundaries of responsibility.
-                </p>
-              </div>
-            </article>
-          </section>
-
-          <section id="reference" class="home-module" aria-labelledby="reference-heading">
-            <div class="section-head">
-              <h3 id="reference-heading">Reference</h3>
-            </div>
-            <article class="panel">
-              <div class="panel-inner">
-                <p class="value">
-                  [1] Chatgpt 5.5-Thinking, accessed on 2026-05-02, available at
-                  <a href="https://chatgpt.com" target="_blank" rel="noopener noreferrer">https://chatgpt.com</a>. Used
-                  for refining grammar mistakes in the script of Video Demo.
-                </p>
-                <p class="value">
-                  [2] Seedance, 2.0, accessed on 2026-05-01, available at
-                  <a href="https://www.doubao.com/" target="_blank" rel="noopener noreferrer">https://www.doubao.com/</a>.
-                  Used for generating the hook part of Video Demo
-                </p>
-                <p class="value">
-                  [3] ElevenLabs, Text to Speech, accessed on 2026-05-02, available at
-                  <a href="https://elevenlabs.io/" target="_blank" rel="noopener noreferrer">https://elevenlabs.io/</a>.
-                  Used for generating the voice-over audio of the Video Demo.
-                </p>
-                <p class="value">
-                  [4] Chatgpt 5.5-Thinking, accessed on 2026-05-07, available at
-                  <a href="https://chatgpt.com" target="_blank" rel="noopener noreferrer">https://chatgpt.com</a>. Used
-                  for refining grammar in process portfolio.
-                </p>
-                <p class="value">
-                  [5] Cursor, v0.40, accessed from 2026-03-16 to 2026-05-08, available at
-                  <a href="https://cursor.com/" target="_blank" rel="noopener noreferrer">https://cursor.com</a>. Used for
-                  vibe coding the system &apos;s back-end code, portfolio website, fine-tuning, handling front-end and back-end integration
-                </p>
-                
-              </div>
-            </article>
-          </section>
 
           <div class="ua-research-details" id="ua-research-details" aria-label="俄乌冲突专题详情（占位）">
             <section
               id="ua-detail-spatiotemporal"
-              class="home-module ua-research-detail ua-acled-module"
+              class="home-module ua-research-detail ua-acled-module ua-hsy-module"
               aria-labelledby="ua-detail-spatiotemporal-heading"
             >
-              <article class="panel ua-acled-module__shell">
-                <div class="panel-inner ua-acled-module__inner">
-                  <header class="ua-acled-hero">
-                    <h3 id="ua-detail-spatiotemporal-heading" class="ua-acled-hero__title">
-                      冲突事件时空分布与强度分析
+              <article class="panel ua-acled-module__shell" id="uaHsyModule">
+                <div class="panel-inner ua-acled-module__inner ua-hsy-module__inner">
+                  <header class="ua-hsy-hero">
+                    <h3 id="ua-detail-spatiotemporal-heading" class="ua-acled-hero__title ua-hsy-hero__title">
+                      冲突事件与夜光遥感融合分析
                     </h3>
-                    <p class="ua-acled-hero__lead">
-                      基于 14 万+ 条 ACLED 数据，还原 2022-2023 年俄乌冲突的时空演变
-                    </p>
-                    <a class="ua-acled-scroll-hint" href="#ua-acled-sources">
-                      <span class="ua-acled-scroll-hint__label">向下浏览模块</span>
-                      <span class="ua-acled-scroll-hint__arrow" aria-hidden="true">↓</span>
-                    </a>
+                    <p class="ua-hsy-hero__subtitle">基于 ACLED 冲突事件与夜光遥感的时空响应研究</p>
+                    <aside class="ua-hsy-bg-card">
+                      <p class="ua-hsy-bg-card__label"><span aria-hidden="true">📖</span> 项目背景</p>
+                      <p class="ua-hsy-bg-card__text">
+                        俄乌冲突爆发以来，冲突事件呈现显著的非均匀时空分布。本研究基于 ACLED 冲突事件数据与夜光遥感数据，从两个维度展开分析：① 冲突事件自身的时空演变规律；② 冲突对区域夜间活动（夜光指数）的影响及响应模式。
+                      </p>
+                    </aside>
+                    <nav class="ua-hsy-jump-nav" aria-label="板块内跳转">
+                      <a class="ua-hsy-jump-btn ua-hsy-ripple" href="#ua-hsy-process">数据处理</a>
+                      <a class="ua-hsy-jump-btn ua-hsy-ripple" href="#ua-hsy-tools">数据工具</a>
+                      <a class="ua-hsy-jump-btn ua-hsy-ripple" href="#ua-hsy-experiment">实验步骤</a>
+                      <a class="ua-hsy-jump-btn ua-hsy-ripple" href="#ua-hsy-results">成果展示</a>
+                    </nav>
                   </header>
 
-                  <section id="ua-acled-sources" class="ua-acled-block" aria-labelledby="ua-acled-sources-heading">
-                    <h4 id="ua-acled-sources-heading" class="ua-acled-block__title">数据从哪里来</h4>
-                    <div class="ua-acled-src-grid">
-                      <article class="ua-acled-src-card">
-                        <div class="ua-acled-src-card__icon" aria-hidden="true">💥</div>
-                        <h5 class="ua-acled-src-card__name">ACLED</h5>
-                        <p class="ua-acled-src-card__desc">武装冲突事件数据库</p>
-                        <span class="ua-acled-badge">14 万+ 行</span>
-                      </article>
-                      <article class="ua-acled-src-card">
-                        <div class="ua-acled-src-card__icon" aria-hidden="true">🌐</div>
-                        <h5 class="ua-acled-src-card__name">HDX</h5>
-                        <p class="ua-acled-src-card__desc">人道主义数据交换平台</p>
-                        <span class="ua-acled-badge">数据下载</span>
-                      </article>
-                      <article class="ua-acled-src-card">
-                        <div class="ua-acled-src-card__icon" aria-hidden="true">🗺️</div>
-                        <h5 class="ua-acled-src-card__name">GADM</h5>
-                        <p class="ua-acled-src-card__desc">全球行政区划数据库</p>
-                        <span class="ua-acled-badge">27 个州</span>
-                      </article>
-                    </div>
-                    <p class="ua-acled-src-meta">
-                      <span><span aria-hidden="true">📅</span> 时间范围：2022 年 1 月 — 2023 年 12 月</span>
-                      <span><span aria-hidden="true">📍</span> 空间范围：乌克兰全境（27 个州）</span>
-                    </p>
-                  </section>
-
-                  <section id="ua-acled-pipeline" class="ua-acled-block" aria-labelledby="ua-acled-pipeline-heading">
-                    <h4 id="ua-acled-pipeline-heading" class="ua-acled-block__title">数据如何变成地图</h4>
-                    <div class="ua-acled-compare">
-                      <article class="ua-acled-compare__card">
-                        <h5 class="ua-acled-compare__card-title"><span aria-hidden="true">📄</span> 原始数据</h5>
-                        <table class="ua-acled-table">
-                          <thead>
-                            <tr>
-                              <th scope="col">州（示例）</th>
-                              <th scope="col">区</th>
-                              <th scope="col">时间</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td>Chernihiv</td>
-                              <td>多个区</td>
-                              <td>多个月份</td>
-                            </tr>
-                            <tr>
-                              <td>Kyiv</td>
-                              <td>多个区</td>
-                              <td>多个月份</td>
-                            </tr>
-                            <tr>
-                              <td>Odesa</td>
-                              <td>多个区</td>
-                              <td>多个月份</td>
-                            </tr>
-                            <tr>
-                              <td>Zaporizhia</td>
-                              <td>多个区</td>
-                              <td>多个月份</td>
-                            </tr>
-                            <tr>
-                              <td>Donetsk</td>
-                              <td>区 A、区 B、区 C</td>
-                              <td>多行</td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </article>
-                      <div class="ua-acled-compare__arrow" aria-hidden="true">→</div>
-                      <article class="ua-acled-compare__card">
-                        <h5 class="ua-acled-compare__card-title"><span aria-hidden="true">📊</span> 处理后（按州汇总）</h5>
-                        <table class="ua-acled-table">
-                          <thead>
-                            <tr>
-                              <th scope="col">统一州名</th>
-                              <th scope="col">事件数</th>
-                              <th scope="col">死亡数</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td>Chernigov</td>
-                              <td>汇总</td>
-                              <td>汇总</td>
-                            </tr>
-                            <tr>
-                              <td>Kiev</td>
-                              <td>汇总</td>
-                              <td>汇总</td>
-                            </tr>
-                            <tr>
-                              <td>Odessa</td>
-                              <td>汇总</td>
-                              <td>汇总</td>
-                            </tr>
-                            <tr>
-                              <td>Zaporozh&apos;ye</td>
-                              <td>汇总</td>
-                              <td>汇总</td>
-                            </tr>
-                            <tr>
-                              <td>Donetsk</td>
-                              <td colspan="2">每州一行汇总</td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </article>
-                    </div>
-
-                    <ol class="ua-acled-steps" aria-label="数据处理关键步骤">
-                      <li class="ua-acled-steps__item">
-                        <span class="ua-acled-steps__circle">1</span>
-                        <span class="ua-acled-steps__label">州名统一</span>
-                        <span class="ua-acled-steps__hint">Chernihiv → Chernigov，Kyiv → Kiev …</span>
-                      </li>
-                      <li class="ua-acled-steps__sep" aria-hidden="true"></li>
-                      <li class="ua-acled-steps__item">
-                        <span class="ua-acled-steps__circle">2</span>
-                        <span class="ua-acled-steps__label">按州汇总</span>
-                        <span class="ua-acled-steps__hint">各州多区合并为一行</span>
-                      </li>
-                      <li class="ua-acled-steps__sep" aria-hidden="true"></li>
-                      <li class="ua-acled-steps__item">
-                        <span class="ua-acled-steps__circle">3</span>
-                        <span class="ua-acled-steps__label">分时段筛选</span>
-                        <span class="ua-acled-steps__hint">2022.03 / 2022.09 / 2023.06</span>
-                      </li>
-                    </ol>
-
-                    <div class="ua-acled-join-note">
-                      <p>
-                        <span aria-hidden="true">🔗</span>
-                        最后一步：将处理好的数据连接到地图（属性连接：<strong>矢量面.ADMIN_NAME = 汇总表.Admin1</strong>）
-                      </p>
-                    </div>
-                  </section>
-
-                  <section id="ua-acled-findings" class="ua-acled-block" aria-labelledby="ua-acled-findings-heading">
-                    <h4 id="ua-acled-findings-heading" class="ua-acled-block__title">成果展示</h4>
-
-                    <div class="ua-acled-gallery-row1">
-                      <figure class="ua-acled-fig ua-acled-fig--line">
-                        <figcaption class="ua-acled-fig__cap">
-                          2022-2023 年乌克兰月度冲突事件与死亡人数变化
-                        </figcaption>
-                        <button
-                          type="button"
-                          class="ua-acled-zoom"
-                          data-full="./hsyphoto/line_chart.png"
-                          data-alt="2022-2023 年乌克兰月度冲突事件与死亡人数折线图"
-                          data-caption="事件数与死亡人数在 2022 年 3 月与 10 月出现两个峰值；2023 年事件数维持高位但死亡数相对下降。"
-                          aria-label="放大查看：月度冲突折线图"
-                        >
-                          <img
-                            src="./hsyphoto/line_chart.png"
-                            alt="2022-2023 年乌克兰月度冲突事件与死亡人数折线图"
-                            width="720"
-                            height="420"
-                            loading="lazy"
-                            decoding="async"
-                          />
-                        </button>
-                        <p class="ua-acled-fig__note">
-                          事件数与死亡人数在 2022 年 3 月和 10 月出现两个峰值，2023 年事件数维持高位但死亡数下降。
-                        </p>
-                      </figure>
-                      <div class="ua-acled-gallery-maps">
-                        <figure class="ua-acled-fig">
-                          <figcaption class="ua-acled-fig__cap">2018-2026 年冲突事件空间分布</figcaption>
-                          <button
-                            type="button"
-                            class="ua-acled-zoom"
-                            data-full="./hsyphoto/full_events_map.png"
-                            data-alt="2018-2026 年乌克兰冲突事件空间分布图"
-                            data-caption="东部地区事件记录密度最高，与战线及热点区域一致。"
-                            aria-label="放大查看：事件空间分布图"
-                          >
-                            <img
-                              src="./hsyphoto/full_events_map.png"
-                              alt="2018-2026 年乌克兰冲突事件空间分布图"
-                              width="480"
-                              height="480"
-                              loading="lazy"
-                              decoding="async"
-                            />
-                          </button>
-                          <p class="ua-acled-fig__note">东部地区事件密度最高。</p>
-                        </figure>
-                        <figure class="ua-acled-fig">
-                          <figcaption class="ua-acled-fig__cap">2018-2026 年死亡人数空间分布</figcaption>
-                          <button
-                            type="button"
-                            class="ua-acled-zoom"
-                            data-full="./hsyphoto/full_fatalities_map.png"
-                            data-alt="2018-2026 年乌克兰死亡人数空间分布图"
-                            data-caption="伤亡高度集中于顿涅茨克、卢甘斯克等东部州。"
-                            aria-label="放大查看：死亡空间分布图"
-                          >
-                            <img
-                              src="./hsyphoto/full_fatalities_map.png"
-                              alt="2018-2026 年乌克兰死亡人数空间分布图"
-                              width="480"
-                              height="480"
-                              loading="lazy"
-                              decoding="async"
-                            />
-                          </button>
-                          <p class="ua-acled-fig__note">伤亡集中在顿涅茨克、卢甘斯克一带。</p>
-                        </figure>
+                  <section id="ua-hsy-process" class="ua-hsy-section ua-hsy-reveal" aria-labelledby="ua-hsy-process-heading">
+                    <h4 id="ua-hsy-process-heading" class="ua-hsy-section__title">一、数据处理</h4>
+                    <div class="ua-hsy-two-col">
+                      <div class="ua-hsy-col">
+                        <h5 class="ua-hsy-col__title"><span aria-hidden="true">📊</span> 冲突事件数据处理</h5>
+                        <ol class="ua-hsy-step-list">
+                          <li class="ua-hsy-step-item"><strong>数据筛选</strong><span>筛选 ACLED 数据中 2022.01—2023.12 的记录</span></li>
+                          <li class="ua-hsy-step-item"><strong>州名统一</strong><span>统一州名（Chernihiv→Chernigov，Kyiv→Kiev，Odesa→Odessa，Zaporizhia→Zaporozh'ye，Luhansk→Lugansk，Crimea→Crimean）</span></li>
+                          <li class="ua-hsy-step-item"><strong>数据透视</strong><span>按州、月份汇总事件数与死亡人数</span></li>
+                          <li class="ua-hsy-step-item"><strong>分时期筛选</strong><span>筛选三个关键时期：2022.03、2022.09、2023.06</span></li>
+                        </ol>
+                      </div>
+                      <div class="ua-hsy-col">
+                        <h5 class="ua-hsy-col__title"><span aria-hidden="true">🌙</span> 夜光数据处理</h5>
+                        <ol class="ua-hsy-step-list">
+                          <li class="ua-hsy-step-item"><strong>宽表构建</strong><span>将夜光长表转换为「州 × 月份」宽表</span></li>
+                          <li class="ua-hsy-step-item"><strong>缺失值处理</strong><span>线性插值 + 前后向填充</span></li>
+                          <li class="ua-hsy-step-item"><strong>标准化</strong><span>Z-score 标准化，消除绝对亮度差异</span></li>
+                          <li class="ua-hsy-step-item"><strong>数据关联</strong><span>与冲突事件数据按州名匹配</span></li>
+                        </ol>
                       </div>
                     </div>
+                  </section>
 
-                    <div class="ua-acled-gallery-row2">
-                      <figure class="ua-acled-fig ua-acled-fig--wide">
-                        <figcaption class="ua-acled-fig__cap">
-                          关键时期 — 冲突事件空间分布（2022 年 3 月 / 9 月，2023 年 6 月）
-                        </figcaption>
-                        <button
-                          type="button"
-                          class="ua-acled-zoom"
-                          data-full="./hsyphoto/key_period_events.png"
-                          data-alt="俄乌冲突关键时期冲突事件空间分布图"
-                          data-caption="三时相对比：基辅战役阶段、哈尔科夫反攻、扎波罗热反攻前后的事件分布变化。"
-                          aria-label="放大查看：关键时期事件分布图"
-                        >
-                          <img
-                            src="./hsyphoto/key_period_events.png"
-                            alt="俄乌冲突关键时期冲突事件空间分布图"
-                            width="1100"
-                            height="360"
-                            loading="lazy"
-                            decoding="async"
-                          />
+                  <section id="ua-hsy-tools" class="ua-hsy-section ua-hsy-reveal" aria-labelledby="ua-hsy-tools-heading">
+                    <h4 id="ua-hsy-tools-heading" class="ua-hsy-section__title">二、数据与工具说明</h4>
+                    <h5 class="ua-hsy-subheading">数据来源</h5>
+                    <div class="ua-hsy-flip-grid ua-hsy-flip-grid--data">
+                      <article class="ua-hsy-flip-card">
+                        <button type="button" class="ua-hsy-flip-card__flip ua-hsy-ripple" aria-label="翻转查看 ACLED 数据详情" title="翻转查看详情">
+                          <span aria-hidden="true">🔄</span>
                         </button>
-                        <p class="ua-acled-fig__note ua-acled-fig__note--mono">
-                          事件数高发州（示例）：Donetsk (2305) | Zaporozh&apos;ye (731) | 其余州见原图图例
-                        </p>
-                      </figure>
-                      <figure class="ua-acled-fig ua-acled-fig--wide">
-                        <figcaption class="ua-acled-fig__cap">
-                          关键时期 — 死亡人数空间分布（2022 年 3 月 / 9 月，2023 年 6 月）
-                        </figcaption>
-                        <button
-                          type="button"
-                          class="ua-acled-zoom"
-                          data-full="./hsyphoto/key_period_fatalities.png"
-                          data-alt="俄乌冲突关键时期死亡人数空间分布图"
-                          data-caption="同一三时相下，死亡分布与事件热点高度重合，峰值区域突出。"
-                          aria-label="放大查看：关键时期死亡分布图"
-                        >
-                          <img
-                            src="./hsyphoto/key_period_fatalities.png"
-                            alt="俄乌冲突关键时期死亡人数空间分布图"
-                            width="1100"
-                            height="360"
-                            loading="lazy"
-                            decoding="async"
-                          />
+                        <a class="ua-hsy-flip-card__dl ua-hsy-ripple" href="./ACLED.xlsx" download="ACLED.xlsx">📥 下载数据</a>
+                        <div class="ua-hsy-flip-card__inner">
+                          <div class="ua-hsy-flip-card__face ua-hsy-flip-card__face--front">
+                            <span class="ua-hsy-flip-card__icon" aria-hidden="true">📊</span>
+                            <h6 class="ua-hsy-flip-card__name">ACLED 冲突事件数据</h6>
+                            <p class="ua-hsy-flip-card__meta">来源：HDX</p>
+                            <div class="ua-hsy-tags"><span>Admin1</span><span>Events</span><span>Fatalities</span><span>Year</span><span>Month</span></div>
+                          </div>
+                          <div class="ua-hsy-flip-card__face ua-hsy-flip-card__face--back" tabindex="0" role="button" aria-label="点击返回正面">
+                            <p>用途：时空分析基础；示例：顿涅茨克 2305起；量级：2022-2023 约4.2万条</p>
+                          </div>
+                        </div>
+                      </article>
+                      <article class="ua-hsy-flip-card">
+                        <button type="button" class="ua-hsy-flip-card__flip ua-hsy-ripple" aria-label="翻转查看矢量数据详情" title="翻转查看详情">
+                          <span aria-hidden="true">🔄</span>
                         </button>
-                        <p class="ua-acled-fig__note ua-acled-fig__note--mono">
-                          死亡数高发州（示例）：Donetsk | Luhansk | 详见原图分级
-                        </p>
-                      </figure>
+                        <a class="ua-hsy-flip-card__dl ua-hsy-ripple" href="./Ukraine.zip" download="Ukraine.zip">📥 下载数据</a>
+                        <div class="ua-hsy-flip-card__inner">
+                          <div class="ua-hsy-flip-card__face ua-hsy-flip-card__face--front">
+                            <span class="ua-hsy-flip-card__icon" aria-hidden="true">🗺️</span>
+                            <h6 class="ua-hsy-flip-card__name">乌克兰州级矢量面</h6>
+                            <p class="ua-hsy-flip-card__meta">来源：HDX / GADM</p>
+                            <div class="ua-hsy-tags"><span>ADMIN_NAME</span></div>
+                          </div>
+                          <div class="ua-hsy-flip-card__face ua-hsy-flip-card__face--back" tabindex="0" role="button" aria-label="点击返回正面">
+                            <p>用途：空间制图底图；包含：25个州 + 基辅；格式：Shapefile</p>
+                          </div>
+                        </div>
+                      </article>
+                      <article class="ua-hsy-flip-card">
+                        <button type="button" class="ua-hsy-flip-card__flip ua-hsy-ripple" aria-label="翻转查看夜光数据详情" title="翻转查看详情">
+                          <span aria-hidden="true">🔄</span>
+                        </button>
+                        <a class="ua-hsy-flip-card__dl ua-hsy-ripple" href="./%E5%A4%9C%E5%85%89%E9%81%A5%E6%84%9F%E6%95%B0%E6%8D%AE.xlsx" download="夜光遥感数据.xlsx">📥 下载数据</a>
+                        <div class="ua-hsy-flip-card__inner">
+                          <div class="ua-hsy-flip-card__face ua-hsy-flip-card__face--front">
+                            <span class="ua-hsy-flip-card__icon" aria-hidden="true">🌙</span>
+                            <h6 class="ua-hsy-flip-card__name">夜光遥感数据</h6>
+                            <p class="ua-hsy-flip-card__meta">来源：Google Earth Engine</p>
+                            <div class="ua-hsy-tags"><span>admin1_std</span><span>date</span><span>ntl_mean</span></div>
+                          </div>
+                          <div class="ua-hsy-flip-card__face ua-hsy-flip-card__face--back" tabindex="0" role="button" aria-label="点击返回正面">
+                            <p>用途：夜光变化轨迹分析；范围：2021.11-2023.12；单位：nW/cm²/sr</p>
+                          </div>
+                        </div>
+                      </article>
+                    </div>
+                    <h5 class="ua-hsy-subheading">工具说明</h5>
+                    <div class="ua-hsy-tool-cloud" aria-label="分析工具">
+                      <span class="ua-hsy-tool-tag" tabindex="0">
+                        <span class="ua-hsy-tool-tag__inner">
+                          <span class="ua-hsy-tool-tag__front">
+                            <span class="ua-hsy-tool-tag__icon" aria-hidden="true">📗</span>
+                            <span class="ua-hsy-tool-tag__name">Excel</span>
+                          </span>
+                          <span class="ua-hsy-tool-tag__back">数据筛选、透视表、双轴折线图</span>
+                        </span>
+                      </span>
+                      <span class="ua-hsy-tool-tag" tabindex="0">
+                        <span class="ua-hsy-tool-tag__inner">
+                          <span class="ua-hsy-tool-tag__front">
+                            <span class="ua-hsy-tool-tag__icon" aria-hidden="true">🗺️</span>
+                            <span class="ua-hsy-tool-tag__name">ArcGIS Pro</span>
+                          </span>
+                          <span class="ua-hsy-tool-tag__back">属性连接、分级色彩专题图</span>
+                        </span>
+                      </span>
+                      <span class="ua-hsy-tool-tag" tabindex="0">
+                        <span class="ua-hsy-tool-tag__inner">
+                          <span class="ua-hsy-tool-tag__front">
+                            <span class="ua-hsy-tool-tag__icon" aria-hidden="true">🐍</span>
+                            <span class="ua-hsy-tool-tag__name">Python</span>
+                          </span>
+                          <span class="ua-hsy-tool-tag__back">数据清洗、批量处理</span>
+                        </span>
+                      </span>
+                      <span class="ua-hsy-tool-tag" tabindex="0">
+                        <span class="ua-hsy-tool-tag__inner">
+                          <span class="ua-hsy-tool-tag__front">
+                            <span class="ua-hsy-tool-tag__icon" aria-hidden="true">🐼</span>
+                            <span class="ua-hsy-tool-tag__name">pandas</span>
+                          </span>
+                          <span class="ua-hsy-tool-tag__back">数据透视、合并、缺失值处理</span>
+                        </span>
+                      </span>
+                      <span class="ua-hsy-tool-tag" tabindex="0">
+                        <span class="ua-hsy-tool-tag__inner">
+                          <span class="ua-hsy-tool-tag__front">
+                            <span class="ua-hsy-tool-tag__icon" aria-hidden="true">🤖</span>
+                            <span class="ua-hsy-tool-tag__name">scikit-learn</span>
+                          </span>
+                          <span class="ua-hsy-tool-tag__back">标准化、KMeans 聚类</span>
+                        </span>
+                      </span>
+                      <span class="ua-hsy-tool-tag" tabindex="0">
+                        <span class="ua-hsy-tool-tag__inner">
+                          <span class="ua-hsy-tool-tag__front">
+                            <span class="ua-hsy-tool-tag__icon" aria-hidden="true">📈</span>
+                            <span class="ua-hsy-tool-tag__name">matplotlib</span>
+                          </span>
+                          <span class="ua-hsy-tool-tag__back">轨迹图、统计图绘制</span>
+                        </span>
+                      </span>
+                      <span class="ua-hsy-tool-tag" tabindex="0">
+                        <span class="ua-hsy-tool-tag__inner">
+                          <span class="ua-hsy-tool-tag__front">
+                            <span class="ua-hsy-tool-tag__icon" aria-hidden="true">🎨</span>
+                            <span class="ua-hsy-tool-tag__name">seaborn</span>
+                          </span>
+                          <span class="ua-hsy-tool-tag__back">统计图表美化</span>
+                        </span>
+                      </span>
+                      <span class="ua-hsy-tool-tag" tabindex="0">
+                        <span class="ua-hsy-tool-tag__inner">
+                          <span class="ua-hsy-tool-tag__front">
+                            <span class="ua-hsy-tool-tag__icon" aria-hidden="true">🌍</span>
+                            <span class="ua-hsy-tool-tag__name">geopandas</span>
+                          </span>
+                          <span class="ua-hsy-tool-tag__back">空间数据处理、地图可视化</span>
+                        </span>
+                      </span>
                     </div>
                   </section>
 
-                  <section id="ua-acled-takeaways" class="ua-acled-block" aria-labelledby="ua-acled-takeaways-heading">
-                    <h4 id="ua-acled-takeaways-heading" class="ua-acled-block__title">核心结论</h4>
-                    <div class="ua-acled-take-grid">
-                      <article class="ua-acled-take-card">
-                        <h5 class="ua-acled-take-card__title"><span aria-hidden="true">📈</span> 时间维度</h5>
-                        <ul class="ua-acled-take-card__list">
-                          <li>2022 年 3 月：死亡峰值约 4,891 人（示意口径以原图为准）</li>
-                          <li>2022 年 10 月：死亡峰值约 5,433 人</li>
-                          <li>2023 年：事件数维持高位，死亡数相对回落</li>
-                        </ul>
-                      </article>
-                      <article class="ua-acled-take-card">
-                        <h5 class="ua-acled-take-card__title"><span aria-hidden="true">🗺️</span> 空间维度</h5>
-                        <ul class="ua-acled-take-card__list">
-                          <li>高发区集中于东部与南部</li>
-                          <li>冲突重心随战线由基辅方向向东、向南迁移</li>
-                          <li>空间格局与公开报道中的战役节点高度吻合</li>
-                        </ul>
-                      </article>
-                      <article class="ua-acled-take-card">
-                        <h5 class="ua-acled-take-card__title"><span aria-hidden="true">🔥</span> Top5 高发区</h5>
-                        <ul class="ua-acled-take-card__list">
-                          <li>Donetsk / Luhansk</li>
-                          <li>Khar&apos;kov / Kherson / Zaporozh&apos;ye</li>
-                          <li>可作为人道救援与风险评估的重点关注带</li>
-                        </ul>
-                      </article>
+                  <section id="ua-hsy-experiment" class="ua-hsy-section ua-hsy-reveal" aria-labelledby="ua-hsy-experiment-heading">
+                    <h4 id="ua-hsy-experiment-heading" class="ua-hsy-section__title">三、实验步骤</h4>
+                    <label class="ua-hsy-tl-select-wrap">
+                      <span class="ua-hsy-tl-select-label">选择步骤</span>
+                      <select class="ua-hsy-tl-select" aria-label="实验步骤（移动端）"><option value="0" selected>数据获取与预处理</option><option value="1">时间强度分析</option><option value="2">空间分布分析</option><option value="3">夜光数据整理与时间序列构建</option><option value="4">标准化与KMeans聚类</option><option value="5">结果表达与关联分析</option></select>
+                    </label>
+                    <div class="ua-hsy-exp-layout">
+                      <nav class="ua-hsy-timeline" aria-label="实验步骤时间线">                      <button
+                        type="button"
+                        class="ua-hsy-tl-node is-active"
+                        data-hsy-step="0"
+                        aria-pressed="true"
+                      >
+                        <span class="ua-hsy-tl-node__dot" aria-hidden="true"></span>
+                        <span class="ua-hsy-tl-node__text">
+                          <span class="ua-hsy-tl-node__title">数据获取与预处理</span>
+                          <span class="ua-hsy-tl-node__hint">筛选、清洗与州名统一</span>
+                        </span>
+                      </button>
+                      <button
+                        type="button"
+                        class="ua-hsy-tl-node"
+                        data-hsy-step="1"
+                        aria-pressed="false"
+                      >
+                        <span class="ua-hsy-tl-node__dot" aria-hidden="true"></span>
+                        <span class="ua-hsy-tl-node__text">
+                          <span class="ua-hsy-tl-node__title">时间强度分析</span>
+                          <span class="ua-hsy-tl-node__hint">月度事件数与死亡人数趋势</span>
+                        </span>
+                      </button>
+                      <button
+                        type="button"
+                        class="ua-hsy-tl-node"
+                        data-hsy-step="2"
+                        aria-pressed="false"
+                      >
+                        <span class="ua-hsy-tl-node__dot" aria-hidden="true"></span>
+                        <span class="ua-hsy-tl-node__text">
+                          <span class="ua-hsy-tl-node__title">空间分布分析</span>
+                          <span class="ua-hsy-tl-node__hint">地理集聚与分级色彩制图</span>
+                        </span>
+                      </button>
+                      <button
+                        type="button"
+                        class="ua-hsy-tl-node"
+                        data-hsy-step="3"
+                        aria-pressed="false"
+                      >
+                        <span class="ua-hsy-tl-node__dot" aria-hidden="true"></span>
+                        <span class="ua-hsy-tl-node__text">
+                          <span class="ua-hsy-tl-node__title">夜光数据整理与时间序列构建</span>
+                          <span class="ua-hsy-tl-node__hint">州×月份矩阵与缺失值处理</span>
+                        </span>
+                      </button>
+                      <button
+                        type="button"
+                        class="ua-hsy-tl-node"
+                        data-hsy-step="4"
+                        aria-pressed="false"
+                      >
+                        <span class="ua-hsy-tl-node__dot" aria-hidden="true"></span>
+                        <span class="ua-hsy-tl-node__text">
+                          <span class="ua-hsy-tl-node__title">标准化与KMeans聚类</span>
+                          <span class="ua-hsy-tl-node__hint">Z-score 与 K=4 轨迹分类</span>
+                        </span>
+                      </button>
+                      <button
+                        type="button"
+                        class="ua-hsy-tl-node"
+                        data-hsy-step="5"
+                        aria-pressed="false"
+                      >
+                        <span class="ua-hsy-tl-node__dot" aria-hidden="true"></span>
+                        <span class="ua-hsy-tl-node__text">
+                          <span class="ua-hsy-tl-node__title">结果表达与关联分析</span>
+                          <span class="ua-hsy-tl-node__hint">可视化聚类并与冲突关联</span>
+                        </span>
+                      </button>
+                      </nav>
+                      <div class="ua-hsy-exp-card" aria-live="polite">
+                    <div class="ua-hsy-exp-panel is-active" data-hsy-panel="0" role="tabpanel">
+<p class="ua-hsy-exp__lead"><span aria-hidden="true">📌</span> <strong>核心任务：</strong>完成冲突事件与夜光数据的筛选、清洗和统一</p>
+<h6 class="ua-hsy-exp__sub"><span aria-hidden="true">📥</span> 数据来源</h6>
+<ul class="ua-hsy-exp__list"><li>ACLED 乌克兰冲突事件数据（HDX平台）</li><li>乌克兰州级矢量边界（HDX/GADM）</li><li>州级月度夜光指数数据（GEE预处理）</li></ul>
+<h6 class="ua-hsy-exp__sub"><span aria-hidden="true">⚙️</span> 关键操作</h6>
+<ul class="ua-hsy-exp__list"><li>筛选 2022.01—2023.12 冲突事件记录</li><li>州名统一：6个州名替换（Kyiv→Kiev 等）</li><li>夜光数据：删除「总计」项，保留25个州</li></ul>
+<p class="ua-hsy-exp__tools"><span aria-hidden="true">📁</span> 使用工具：<span class="ua-hsy-chip">Excel</span><span class="ua-hsy-chip">Python</span></p>
+<p class="ua-hsy-exp__out"><span aria-hidden="true">📤</span> 输出：清洗后的冲突事件表、夜光数据表</p>
+                    </div>
+                    <div class="ua-hsy-exp-panel" data-hsy-panel="1" role="tabpanel" hidden>
+<p class="ua-hsy-exp__lead"><span aria-hidden="true">📌</span> <strong>核心任务：</strong>揭示冲突事件数和死亡人数的月度变化趋势</p>
+<h6 class="ua-hsy-exp__sub"><span aria-hidden="true">⚙️</span> 关键操作</h6>
+<ul class="ua-hsy-exp__list"><li>数据透视：按月份汇总事件数与死亡人数</li><li>绘制双轴折线图（左轴事件数 / 右轴死亡人数）</li><li>标注关键战役节点</li></ul>
+<h6 class="ua-hsy-exp__sub"><span aria-hidden="true">📊</span> 关键发现</h6>
+<ul class="ua-hsy-exp__list"><li>2022年3月达到峰值（基辅战役）</li><li>最大环比跌幅：<strong class="ua-hsy-em">-31.5%</strong></li><li>哈尔科夫反攻、扎波罗热反攻对应明显波峰</li></ul>
+<p class="ua-hsy-exp__tools"><span aria-hidden="true">📁</span> 使用工具：<span class="ua-hsy-chip">Excel</span></p>
+<p class="ua-hsy-exp__out"><span aria-hidden="true">📤</span> 输出：2022—2023年月度变化双轴折线图</p>
+                    </div>
+                    <div class="ua-hsy-exp-panel" data-hsy-panel="2" role="tabpanel" hidden>
+<p class="ua-hsy-exp__lead"><span aria-hidden="true">📌</span> <strong>核心任务：</strong>识别冲突事件和死亡人数的地理集聚特征</p>
+<h6 class="ua-hsy-exp__sub"><span aria-hidden="true">⚙️</span> 关键操作</h6>
+<ul class="ua-hsy-exp__list"><li>ArcGIS Pro 中导入矢量面 + 统计CSV</li><li>属性连接：ADMIN_NAME ↔ Admin1</li><li>分级色彩制图：6级，浅黄→深红</li></ul>
+<h6 class="ua-hsy-exp__sub"><span aria-hidden="true">📊</span> 关键发现</h6>
+<ul class="ua-hsy-exp__list"><li>高值区集中在东部和南部前线</li><li>顿涅茨克州事件数最高（<strong class="ua-hsy-em">2,305</strong>起）</li><li>死亡人数比事件数更集中</li></ul>
+<p class="ua-hsy-exp__tools"><span aria-hidden="true">📁</span> 使用工具：<span class="ua-hsy-chip">ArcGIS Pro</span></p>
+<p class="ua-hsy-exp__out"><span aria-hidden="true">📤</span> 输出：全时段及3个关键时期的空间分布专题图</p>
+                    </div>
+                    <div class="ua-hsy-exp-panel" data-hsy-panel="3" role="tabpanel" hidden>
+<p class="ua-hsy-exp__lead"><span aria-hidden="true">📌</span> <strong>核心任务：</strong>构建各州月度夜光时间序列</p>
+<p class="ua-hsy-exp__meta"><span aria-hidden="true">📥</span> 数据范围：2021.11 — 2023.12（冲突前 → 爆发 → 持续）</p>
+<h6 class="ua-hsy-exp__sub"><span aria-hidden="true">⚙️</span> 关键操作</h6>
+<ul class="ua-hsy-exp__list"><li>长表转宽表：「州 × 月份」矩阵</li><li>缺失值处理：线性插值 + 前后填充</li></ul>
+<h6 class="ua-hsy-exp__sub"><span aria-hidden="true">📊</span> 数据规模</h6>
+<ul class="ua-hsy-exp__list"><li>25个州 × 26个月</li><li>夜光指数单位：nW/cm²/sr</li></ul>
+<p class="ua-hsy-exp__tools"><span aria-hidden="true">📁</span> 使用工具：<span class="ua-hsy-chip">Python</span><span class="ua-hsy-chip">pandas</span></p>
+<p class="ua-hsy-exp__out"><span aria-hidden="true">📤</span> 输出：各州夜光时间序列矩阵</p>
+                    </div>
+                    <div class="ua-hsy-exp-panel" data-hsy-panel="4" role="tabpanel" hidden>
+<p class="ua-hsy-exp__lead"><span aria-hidden="true">📌</span> <strong>核心任务：</strong>对夜光变化轨迹进行分类识别</p>
+<h6 class="ua-hsy-exp__sub"><span aria-hidden="true">⚙️</span> 关键操作</h6>
+<ul class="ua-hsy-exp__list"><li>Z-score标准化（消除绝对亮度差异，突出变化形态）</li><li>KMeans聚类，聚类数 K=4</li></ul>
+<h6 class="ua-hsy-exp__sub"><span aria-hidden="true">📊</span> 聚类结果（4种轨迹类型）</h6>
+<ul class="ua-hsy-exp__list"><li>🔄 波动型（簇0）：高基础水平，动态调整</li><li>📈 中度下降恢复型（簇1）：初期下降，后期修复</li><li>🔴 持续受扰型（簇2）：长期低位，恢复有限</li><li>🟠 持续受扰型（簇3）：受影响略轻于簇2</li></ul>
+<p class="ua-hsy-exp__tools"><span aria-hidden="true">📁</span> 使用工具：<span class="ua-hsy-chip">Python</span><span class="ua-hsy-chip">scikit-learn</span></p>
+<p class="ua-hsy-exp__out"><span aria-hidden="true">📤</span> 输出：各州夜光轨迹聚类标签</p>
+                    </div>
+                    <div class="ua-hsy-exp-panel" data-hsy-panel="5" role="tabpanel" hidden>
+<p class="ua-hsy-exp__lead"><span aria-hidden="true">📌</span> <strong>核心任务：</strong>可视化聚类结果，并与冲突事件关联</p>
+<h6 class="ua-hsy-exp__sub"><span aria-hidden="true">⚙️</span> 关键操作</h6>
+<ul class="ua-hsy-exp__list"><li>绘制典型地区夜光轨迹图</li><li>绘制各类均值对比曲线</li><li>空间分布图：聚类标签 → 州级地图</li><li>箱线图：不同轨迹 vs 累计冲突事件数</li></ul>
+<h6 class="ua-hsy-exp__sub"><span aria-hidden="true">📊</span> 关键发现</h6>
+<ul class="ua-hsy-exp__list"><li>持续受扰型地区 = 冲突事件最密集</li><li>波动型地区：高韧性、动态恢复</li><li>夜光响应 ≠ 单纯事件数量，还反映恢复能力</li></ul>
+<p class="ua-hsy-exp__tools"><span aria-hidden="true">📁</span> 使用工具：<span class="ua-hsy-chip">Python</span><span class="ua-hsy-chip">matplotlib</span><span class="ua-hsy-chip">seaborn</span><span class="ua-hsy-chip">geopandas</span></p>
+<p class="ua-hsy-exp__out"><span aria-hidden="true">📤</span> 输出：4类成果图（轨迹图、对比图、空间分布图、箱线图）</p>
+                    </div>
+                      </div>
                     </div>
                   </section>
-                </div>
+
+                  <section id="ua-hsy-results" class="ua-hsy-section ua-hsy-reveal" aria-labelledby="ua-hsy-results-heading">
+                    <h4 id="ua-hsy-results-heading" class="ua-hsy-section__title">四、实验成果展示</h4>
+                    <h5 class="ua-hsy-gallery-group-title">A. 冲突事件时空分布与强度分析成果</h5>
+                    <div class="ua-hsy-gallery ua-hsy-gallery--row-a">
+                      <button
+                        type="button"
+                        class="ua-hsy-thumb ua-hsy-ripple"
+                        data-hsy-group="conflict"
+                        data-hsy-index="0"
+                        data-hsy-src="./hsyphoto2/result_monthly_events_fatalities_2022_2023.png"
+                        data-hsy-title="2022—2023年乌克兰月度冲突事件与死亡人数变化分析"
+                        data-hsy-tag="时序分析"
+                        data-hsy-report="该图展示了 2022—2023 年乌克兰月度冲突事件数与死亡人数的变化趋势。由于事件数与死亡人数的数值量级不同，采用双轴折线图能够在同一时间轴上同步呈现两类指标的变化情况。整体来看，冲突爆发初期曲线波动较大，事件数量和伤亡情况在短时间内出现明显上升；随着冲突进入持续阶段，月度变化逐渐呈现阶段性波动特征。图中标注的关键战役节点与曲线波动变化具有较强对应关系，说明重大军事行动会直接影响月度事件数量和死亡人数的变化。"
+                        aria-label="查看大图：2022—2023年乌克兰月度冲突事件与死亡人数变化分析"
+                      >
+                        <span class="ua-hsy-thumb__img-wrap">
+                          <img class="ua-hsy-thumb__img" src="./hsyphoto2/result_monthly_events_fatalities_2022_2023.png" alt="" width="200" height="150" loading="lazy" decoding="async" />
+                        </span>
+                        <span class="ua-hsy-thumb__caption">
+                          <span class="ua-hsy-thumb__tag">时序分析</span>
+                          <span class="ua-hsy-thumb__title">2022—2023年乌克兰月度冲突事件与死亡人数变化分析</span>
+                        </span>
+                      </button>
+                      <button
+                        type="button"
+                        class="ua-hsy-thumb ua-hsy-ripple"
+                        data-hsy-group="conflict"
+                        data-hsy-index="1"
+                        data-hsy-src="./hsyphoto2/result_conflict_events_spatial_2018_2026.png"
+                        data-hsy-title="2018-2026冲突事件空间分布图"
+                        data-hsy-tag="空间分布"
+                        data-hsy-report="该图反映了乌克兰冲突事件在空间上的整体分布格局。可以看出，冲突事件并非均匀分布于各州，而是呈现出明显的空间集聚特征，高值区域主要集中在东部和南部靠近前线的地区，而西部地区整体事件数量较少。该格局说明冲突具有较强的地理指向性，冲突事件往往围绕战线附近和战略要地展开。空间分布图能够直观识别冲突高发区，为后续救援资源配置和风险评估提供基础。"
+                        aria-label="查看大图：2018-2026冲突事件空间分布图"
+                      >
+                        <span class="ua-hsy-thumb__img-wrap">
+                          <img class="ua-hsy-thumb__img" src="./hsyphoto2/result_conflict_events_spatial_2018_2026.png" alt="" width="200" height="150" loading="lazy" decoding="async" />
+                        </span>
+                        <span class="ua-hsy-thumb__caption">
+                          <span class="ua-hsy-thumb__tag">空间分布</span>
+                          <span class="ua-hsy-thumb__title">2018-2026冲突事件空间分布图</span>
+                        </span>
+                      </button>
+                      <button
+                        type="button"
+                        class="ua-hsy-thumb ua-hsy-ripple"
+                        data-hsy-group="conflict"
+                        data-hsy-index="2"
+                        data-hsy-src="./hsyphoto2/result_fatalities_spatial_2018_2026.png"
+                        data-hsy-title="2018-2026死亡人数空间分布图"
+                        data-hsy-tag="空间分布"
+                        data-hsy-report="该图展示了乌克兰死亡人数的空间分布情况。与冲突事件分布图相比，死亡人数的高值区分布更加集中，说明伤亡往往发生在冲突烈度较高、持续时间较长的区域。东部和南部前线地区表现出显著高值，表明这些地区不仅冲突事件密集，而且单次事件造成的伤亡影响也更为突出。该图从伤亡强度角度反映了冲突的空间差异，有助于识别真正意义上的高风险区域。"
+                        aria-label="查看大图：2018-2026死亡人数空间分布图"
+                      >
+                        <span class="ua-hsy-thumb__img-wrap">
+                          <img class="ua-hsy-thumb__img" src="./hsyphoto2/result_fatalities_spatial_2018_2026.png" alt="" width="200" height="150" loading="lazy" decoding="async" />
+                        </span>
+                        <span class="ua-hsy-thumb__caption">
+                          <span class="ua-hsy-thumb__tag">空间分布</span>
+                          <span class="ua-hsy-thumb__title">2018-2026死亡人数空间分布图</span>
+                        </span>
+                      </button>
+                      <button
+                        type="button"
+                        class="ua-hsy-thumb ua-hsy-ripple"
+                        data-hsy-group="conflict"
+                        data-hsy-index="3"
+                        data-hsy-src="./hsyphoto2/result_conflict_events_key_period_comparison.png"
+                        data-hsy-title="关键时期冲突事件空间分布对比图"
+                        data-hsy-tag="时空对比"
+                        data-hsy-report="该图对比展示了多个关键时期冲突事件的空间分布差异。不同时间节点的地图表明，冲突事件的空间重心并非始终固定，而是随着战局推进而发生转移和收缩。早期阶段事件分布范围较广，之后逐步向东部和南部集中，反映出冲突从多方向扩散逐渐转变为局部前线持续对抗的空间格局。关键时期对比图能够清晰体现冲突重心变化，对于判断战线演变和冲突热点迁移具有较强解释力。"
+                        aria-label="查看大图：关键时期冲突事件空间分布对比图"
+                      >
+                        <span class="ua-hsy-thumb__img-wrap">
+                          <img class="ua-hsy-thumb__img" src="./hsyphoto2/result_conflict_events_key_period_comparison.png" alt="" width="200" height="150" loading="lazy" decoding="async" />
+                        </span>
+                        <span class="ua-hsy-thumb__caption">
+                          <span class="ua-hsy-thumb__tag">时空对比</span>
+                          <span class="ua-hsy-thumb__title">关键时期冲突事件空间分布对比图</span>
+                        </span>
+                      </button>
+                      <button
+                        type="button"
+                        class="ua-hsy-thumb ua-hsy-ripple"
+                        data-hsy-group="conflict"
+                        data-hsy-index="4"
+                        data-hsy-src="./hsyphoto2/result_fatalities_key_period_comparison.png"
+                        data-hsy-title="关键时期死亡人数空间分布对比图"
+                        data-hsy-tag="时空对比"
+                        data-hsy-report="该图展示了不同关键时期死亡人数的空间变化情况。可以观察到，死亡人数高值区域在不同阶段具有较强的集中性，但其空间范围和强度会随着冲突发展而发生变化。与事件数量相比，死亡人数更能体现局部高烈度冲突的伤亡后果，因此在关键时期对比中，高值区域的变化更能够反映战场冲击和人员损失的空间差异。"
+                        aria-label="查看大图：关键时期死亡人数空间分布对比图"
+                      >
+                        <span class="ua-hsy-thumb__img-wrap">
+                          <img class="ua-hsy-thumb__img" src="./hsyphoto2/result_fatalities_key_period_comparison.png" alt="" width="200" height="150" loading="lazy" decoding="async" />
+                        </span>
+                        <span class="ua-hsy-thumb__caption">
+                          <span class="ua-hsy-thumb__tag">时空对比</span>
+                          <span class="ua-hsy-thumb__title">关键时期死亡人数空间分布对比图</span>
+                        </span>
+                      </button>
+                    </div>
+                    <h5 class="ua-hsy-gallery-group-title">B. 夜光遥感融合分析成果</h5>
+                    <div class="ua-hsy-gallery ua-hsy-gallery--row-b">
+                      <button
+                        type="button"
+                        class="ua-hsy-thumb ua-hsy-ripple"
+                        data-hsy-group="ntl"
+                        data-hsy-index="0"
+                        data-hsy-src="./hsyphoto2/result_ntl_typical_region_trajectory.png"
+                        data-hsy-title="各轨迹类型典型地区夜光指数变化轨迹图"
+                        data-hsy-tag="轨迹聚类"
+                        data-hsy-report="该图选取各轨迹类型中的代表州，展示其夜光指数在冲突前后随时间变化的路径。可以看出，不同轨迹类型在冲突爆发前后呈现出显著差异：部分地区夜光变化幅度较小，表现为较为稳定的波动；部分地区在冲突爆发后出现明显下降，并在后续阶段逐步恢复；还有地区表现为持续受扰，夜光指数长期处于较低水平。图中标注的冲突节点能够帮助观察冲突对夜间活动强度的即时影响。"
+                        aria-label="查看大图：各轨迹类型典型地区夜光指数变化轨迹图"
+                      >
+                        <span class="ua-hsy-thumb__img-wrap">
+                          <img class="ua-hsy-thumb__img" src="./hsyphoto2/result_ntl_typical_region_trajectory.png" alt="" width="200" height="150" loading="lazy" decoding="async" />
+                        </span>
+                        <span class="ua-hsy-thumb__caption">
+                          <span class="ua-hsy-thumb__tag">轨迹聚类</span>
+                          <span class="ua-hsy-thumb__title">各轨迹类型典型地区夜光指数变化轨迹图</span>
+                        </span>
+                      </button>
+                      <button
+                        type="button"
+                        class="ua-hsy-thumb ua-hsy-ripple"
+                        data-hsy-group="ntl"
+                        data-hsy-index="1"
+                        data-hsy-src="./hsyphoto2/result_ntl_type_comparison.png"
+                        data-hsy-title="不同轨迹类型典型地区夜光指数变化对比图"
+                        data-hsy-tag="轨迹聚类"
+                        data-hsy-report="该图对比了不同轨迹类型地区夜光指数的变化差异。通过均值曲线可以发现，不同类别地区在冲突爆发前后表现出不同程度的下降、波动和恢复特征。其中，波动型地区变化较平缓，中度下降恢复型地区在冲突后出现明显回落但具有恢复趋势，而持续受扰型地区则表现为长期低位徘徊。该图说明冲突对不同地区夜间活动的影响存在显著差异，也反映了区域恢复能力和受扰程度的不均衡性。"
+                        aria-label="查看大图：不同轨迹类型典型地区夜光指数变化对比图"
+                      >
+                        <span class="ua-hsy-thumb__img-wrap">
+                          <img class="ua-hsy-thumb__img" src="./hsyphoto2/result_ntl_type_comparison.png" alt="" width="200" height="150" loading="lazy" decoding="async" />
+                        </span>
+                        <span class="ua-hsy-thumb__caption">
+                          <span class="ua-hsy-thumb__tag">轨迹聚类</span>
+                          <span class="ua-hsy-thumb__title">不同轨迹类型典型地区夜光指数变化对比图</span>
+                        </span>
+                      </button>
+                      <button
+                        type="button"
+                        class="ua-hsy-thumb ua-hsy-ripple"
+                        data-hsy-group="ntl"
+                        data-hsy-index="2"
+                        data-hsy-src="./hsyphoto2/result_ntl_cluster_spatial_distribution.png"
+                        data-hsy-title="乌克兰夜光轨迹类型空间分布图"
+                        data-hsy-tag="空间分布"
+                        data-hsy-report="该图将夜光轨迹聚类结果连接至州级行政区划，展示各类轨迹类型在空间上的分布格局。可以发现，不同轨迹类型并非随机分布，而是在空间上具有明显集聚特征。持续受扰型或中度下降恢复型地区往往集中在冲突影响较强的区域，而波动型地区则更多分布于相对稳定区域。该图揭示了冲突影响与区域夜光变化之间的空间对应关系。"
+                        aria-label="查看大图：乌克兰夜光轨迹类型空间分布图"
+                      >
+                        <span class="ua-hsy-thumb__img-wrap">
+                          <img class="ua-hsy-thumb__img" src="./hsyphoto2/result_ntl_cluster_spatial_distribution.png" alt="" width="200" height="150" loading="lazy" decoding="async" />
+                        </span>
+                        <span class="ua-hsy-thumb__caption">
+                          <span class="ua-hsy-thumb__tag">空间分布</span>
+                          <span class="ua-hsy-thumb__title">乌克兰夜光轨迹类型空间分布图</span>
+                        </span>
+                      </button>
+                      <button
+                        type="button"
+                        class="ua-hsy-thumb ua-hsy-ripple"
+                        data-hsy-group="ntl"
+                        data-hsy-index="3"
+                        data-hsy-src="./hsyphoto2/result_ntl_cluster_conflict_boxplot.png"
+                        data-hsy-title="夜光轨迹类型与冲突事件强度统计比较图"
+                        data-hsy-tag="融合分析"
+                        data-hsy-report="该图通过箱线图展示不同夜光轨迹类型对应的累计冲突事件数分布。结果表明，持续受扰型（簇2）对应的累计冲突事件数最高，箱体范围和整体分布都明显高于其他类型，说明夜光长期维持低位、恢复缓慢的地区，往往也是冲突事件高度集中的地区。波动型地区累计冲突事件数处于中等偏高水平，但夜光没有持续低迷，表现为波动下的动态恢复。中度下降恢复型地区累计冲突事件数总体较低。总体来看，夜光轨迹类型与累计冲突事件数之间存在明显相关性，但并非简单线性关系。"
+                        aria-label="查看大图：夜光轨迹类型与冲突事件强度统计比较图"
+                      >
+                        <span class="ua-hsy-thumb__img-wrap">
+                          <img class="ua-hsy-thumb__img" src="./hsyphoto2/result_ntl_cluster_conflict_boxplot.png" alt="" width="200" height="150" loading="lazy" decoding="async" />
+                        </span>
+                        <span class="ua-hsy-thumb__caption">
+                          <span class="ua-hsy-thumb__tag">融合分析</span>
+                          <span class="ua-hsy-thumb__title">夜光轨迹类型与冲突事件强度统计比较图</span>
+                        </span>
+                      </button>
+                    </div>
+                  </section>
+</div>
               </article>
 
-              <dialog id="uaAcledLightbox" class="ua-acled-dialog" aria-modal="true" aria-label="成果图放大预览">
-                <div class="ua-acled-dialog__frame">
-                  <button type="button" class="ua-acled-dialog__close" aria-label="关闭预览">×</button>
-                  <img class="ua-acled-dialog__img" src="" alt="" decoding="async" />
-                  <p class="ua-acled-dialog__caption" hidden></p>
+              <dialog id="uaHsyGalleryModal" class="ua-hsy-modal" aria-modal="true" aria-label="成果图详情">
+                <div class="ua-hsy-modal__backdrop" data-hsy-modal-close></div>
+                <div class="ua-hsy-modal__card" role="document">
+                  <button type="button" class="ua-hsy-modal__close ua-hsy-ripple" data-hsy-modal-close aria-label="关闭">×</button>
+                  <button type="button" class="ua-hsy-modal__nav ua-hsy-modal__nav--prev ua-hsy-ripple" aria-label="上一张">‹</button>
+                  <button type="button" class="ua-hsy-modal__nav ua-hsy-modal__nav--next ua-hsy-ripple" aria-label="下一张">›</button>
+                  <div class="ua-hsy-modal__img-wrap">
+                    <img class="ua-hsy-modal__img" src="" alt="" decoding="async" />
+                  </div>
+                  <div class="ua-hsy-modal__body">
+                    <h4 class="ua-hsy-modal__title"></h4>
+                    <span class="ua-hsy-modal__tag"></span>
+                    <p class="ua-hsy-modal__report"></p>
+                  </div>
                 </div>
               </dialog>
             </section>
 
             <section
               id="ua-detail-poi-density"
-              class="home-module ua-research-detail"
+              class="home-module ua-research-detail ua-acled-module ua-poi-module"
               aria-labelledby="ua-detail-poi-density-heading"
             >
-              <div class="section-head">
-                <h3 id="ua-detail-poi-density-heading">POI核密度分析</h3>
-                <p>对应俄乌冲突版块左下角配图；正文与图表尺寸待定，此处预留版块结构。</p>
-              </div>
-              <article class="panel ua-research-detail__panel">
-                <div class="panel-inner">
-                  <p class="value ua-research-detail__placeholder">
-                    内容占位：可在此补充 POI 数据说明、核密度图、参数与解读等。
-                  </p>
+              <article class="panel ua-acled-module__shell">
+                <div class="panel-inner ua-acled-module__inner">
+                  <header class="ua-acled-hero">
+                    <h3 id="ua-detail-poi-density-heading" class="ua-acled-hero__title">
+                      乌克兰 POI 时空变化分析
+                    </h3>
+                    <p class="ua-acled-hero__lead">
+                      基于 OSM 数据与 ArcGIS Pro 的建筑损毁评估与医疗设施演变研究
+                    </p>
+                    <p class="ua-poi-hero__desc">
+                      本研究基于 OpenStreetMap（OSM）人道主义数据，对比 2022 年冲突爆发前后的卫星影像及
+                      POI 变化，探讨战争对民用基础设施，特别是医疗设施的空间影响。
+                    </p>
+                    <a class="ua-acled-scroll-hint" href="#ua-poi-intro">
+                      <span class="ua-acled-scroll-hint__label">向下浏览模块</span>
+                      <span class="ua-acled-scroll-hint__arrow" aria-hidden="true">↓</span>
+                    </a>
+                  </header>
+                  <section id="ua-poi-intro" class="ua-acled-block ua-poi-intro" aria-label="建筑损毁观察引子">
+                    <figure class="ua-poi-intro__fig">
+                      <button
+                        type="button"
+                        class="ua-acled-zoom"
+                        data-full="./lytphoto/damage-building.png"
+                        data-alt="乌克兰建筑损毁分布示意"
+                        data-caption="建筑损毁高发区观察：冲突对民用基础设施造成显著空间冲击。"
+                        aria-label="放大查看：建筑损毁图"
+                      >
+                        <img
+                          src="./lytphoto/damage-building.png"
+                          alt="乌克兰建筑损毁分布示意"
+                          width="960"
+                          height="540"
+                          loading="lazy"
+                          decoding="async"
+                        />
+                      </button>
+                      <figcaption class="ua-poi-intro__note">
+                        这一观察引发本研究的核心问题：冲突背景下的医疗设施发生了怎样的空间变化？医院、诊所等
+                        POI 的分布是否也经历了类似的萎缩与迁移？
+                      </figcaption>
+                    </figure>
+                  </section>
+
+                  <section id="ua-poi-goals" class="ua-acled-block" aria-labelledby="ua-poi-goals-heading">
+                    <h4 id="ua-poi-goals-heading" class="ua-acled-block__title">研究目的</h4>
+                    <ul class="ua-poi-goals">
+                      <li class="ua-poi-goals__item">
+                        <span class="ua-poi-goals__icon" aria-hidden="true">①</span>
+                        <span>提取乌克兰 2021–2024 年医院 POI 数据</span>
+                      </li>
+                      <li class="ua-poi-goals__item">
+                        <span class="ua-poi-goals__icon" aria-hidden="true">②</span>
+                        <span>通过核密度分析揭示医疗资源时空演变</span>
+                      </li>
+                      <li class="ua-poi-goals__item">
+                        <span class="ua-poi-goals__icon" aria-hidden="true">③</span>
+                        <span>识别受影响最严重的区域，为人道主义援助提供数据支撑</span>
+                      </li>
+                    </ul>
+                  </section>
+
+                  <section id="ua-poi-pipeline" class="ua-acled-block" aria-labelledby="ua-poi-pipeline-heading">
+                    <h4 id="ua-poi-pipeline-heading" class="ua-acled-block__title">数据预处理与操作步骤</h4>
+                    <p class="ua-poi-pipeline__sub">从 OSM 数据下载到核密度分析的全流程操作记录</p>
+                    <div class="ua-poi-steps-grid">
+                      <article class="ua-poi-step-card">
+                        <span class="ua-poi-step-card__num" aria-hidden="true">1</span>
+                        <h5 class="ua-poi-step-card__name">OSM 数据下载</h5>
+                        <p class="ua-poi-step-card__tool">HDX 平台 / OSM</p>
+                        <p class="ua-poi-step-card__setting">筛选乌克兰 POI 数据</p>
+                        <p class="ua-poi-step-card__output">输出：原始 POI 图层</p>
+                        <button
+                          type="button"
+                          class="ua-poi-step-detail"
+                          data-title="OSM 数据下载"
+                          data-body="从人道主义数据交换平台（HDX）下载乌克兰 2021–2024 年逐年 POI 数据，确保数据覆盖全境。下载时注意选择 Shapefile 格式，时间范围分别选择 2021 年、2022 年、2023 年、2024 年。"
+                        >
+                          查看详情
+                        </button>
+                      </article>
+                      <article class="ua-poi-step-card">
+                        <span class="ua-poi-step-card__num" aria-hidden="true">2</span>
+                        <h5 class="ua-poi-step-card__name">数据筛选</h5>
+                        <p class="ua-poi-step-card__tool">按属性选择</p>
+                        <p class="ua-poi-step-card__setting">
+                          amenity IN (hospital, clinic, doctors, dentist)
+                        </p>
+                        <p class="ua-poi-step-card__output">输出：医院面图层</p>
+                        <button
+                          type="button"
+                          class="ua-poi-step-detail"
+                          data-title="数据筛选"
+                          data-body="在 ArcGIS Pro 中使用按属性选择工具，筛选条件为 amenity 字段包含 hospital、clinic、doctors、dentist 等医疗相关值。筛选后右键导出为独立图层，逐年命名保存。"
+                        >
+                          查看详情
+                        </button>
+                      </article>
+                      <article class="ua-poi-step-card">
+                        <span class="ua-poi-step-card__num" aria-hidden="true">3</span>
+                        <h5 class="ua-poi-step-card__name">面转点</h5>
+                        <p class="ua-poi-step-card__tool">要素转点</p>
+                        <p class="ua-poi-step-card__setting">内部点 = 是</p>
+                        <p class="ua-poi-step-card__output">输出：医院点图层</p>
+                        <button
+                          type="button"
+                          class="ua-poi-step-detail"
+                          data-title="面转点处理"
+                          data-body="原始数据中医院为面要素，使用要素转点工具将其转换为点要素，勾选「内部点」参数，确保生成的点位于面要素内部。转换后删除原始面图层以节省空间。"
+                        >
+                          查看详情
+                        </button>
+                      </article>
+                      <article class="ua-poi-step-card">
+                        <span class="ua-poi-step-card__num" aria-hidden="true">4</span>
+                        <h5 class="ua-poi-step-card__name">投影转换</h5>
+                        <p class="ua-poi-step-card__tool">投影</p>
+                        <p class="ua-poi-step-card__setting">WGS 1984 UTM Zone 36N</p>
+                        <p class="ua-poi-step-card__output">输出：投影后点图层</p>
+                        <button
+                          type="button"
+                          class="ua-poi-step-detail"
+                          data-title="投影转换"
+                          data-body="将所有数据统一投影至 WGS 1984 UTM Zone 36N 坐标系（EPSG:32636），单位为米。这是核密度分析的基础，确保搜索半径 15 km 能够正确设置为 15000 米。"
+                        >
+                          查看详情
+                        </button>
+                      </article>
+                      <article class="ua-poi-step-card">
+                        <span class="ua-poi-step-card__num" aria-hidden="true">5</span>
+                        <h5 class="ua-poi-step-card__name">核密度分析</h5>
+                        <p class="ua-poi-step-card__tool">核密度分析</p>
+                        <p class="ua-poi-step-card__setting">
+                          搜索半径 = 15000 m，像元 = 500 m，方法 = 测地线
+                        </p>
+                        <p class="ua-poi-step-card__output">输出：密度栅格</p>
+                        <button
+                          type="button"
+                          class="ua-poi-step-detail"
+                          data-title="核密度分析"
+                          data-body="逐年运行核密度分析工具，设置搜索半径 15000 米、像元大小 500 米、方法为测地线、面积单位为平方千米。输出结果为每平方千米医院数密度栅格。"
+                        >
+                          查看详情
+                        </button>
+                      </article>
+                      <article class="ua-poi-step-card">
+                        <span class="ua-poi-step-card__num" aria-hidden="true">6</span>
+                        <h5 class="ua-poi-step-card__name">符号统一</h5>
+                        <p class="ua-poi-step-card__tool">导入符号系统</p>
+                        <p class="ua-poi-step-card__setting">统一 .lyrx 文件</p>
+                        <p class="ua-poi-step-card__output">输出：可对比的四张图</p>
+                        <button
+                          type="button"
+                          class="ua-poi-step-detail"
+                          data-title="符号统一"
+                          data-body="以 2021 年图层为基准设置符号系统（分类 6 级，数值范围 0–1.5），保存为 .lyrx 文件，然后导入至 2022–2024 年图层，确保四张图具备直接可比性。"
+                        >
+                          查看详情
+                        </button>
+                      </article>
+                    </div>
+                  </section>
+
+                  <section id="ua-poi-kde" class="ua-acled-block" aria-labelledby="ua-poi-kde-heading">
+                    <h4 id="ua-poi-kde-heading" class="ua-acled-block__title">
+                      核密度分析：医院分布热点演变（2021–2024）
+                    </h4>
+                    <div class="ua-poi-kde-grid">
+                      <figure class="ua-poi-kde-card">
+                        <span class="ua-poi-kde-card__year">2021 年</span>
+                        <button
+                          type="button"
+                          class="ua-acled-zoom"
+                          data-full="./lytphoto/2021POI.png"
+                          data-alt="2021 年乌克兰医院核密度分布图"
+                          data-caption="冲突前基线：医院高密度区集中于基辅、哈尔科夫、第聂伯罗、利沃夫等主要城市，形成「多点核心」分布格局。"
+                          aria-label="放大查看：2021 年核密度图"
+                        >
+                          <img
+                            src="./lytphoto/2021POI.png"
+                            alt="2021 年乌克兰医院核密度分布图"
+                            width="520"
+                            height="325"
+                            loading="lazy"
+                            decoding="async"
+                          />
+                        </button>
+                        <figcaption class="ua-acled-fig__cap">图 1：2021 年乌克兰医院核密度分布图</figcaption>
+                        <p class="ua-poi-kde-card__analysis">
+                          冲突前基线：医院高密度区集中于基辅、哈尔科夫、第聂伯罗、利沃夫等主要城市，形成「多点核心」分布格局。
+                        </p>
+                      </figure>
+                      <figure class="ua-poi-kde-card">
+                        <span class="ua-poi-kde-card__year">2022 年</span>
+                        <button
+                          type="button"
+                          class="ua-acled-zoom"
+                          data-full="./lytphoto/2022POI.png"
+                          data-alt="2022 年乌克兰医院核密度分布图"
+                          data-caption="冲突爆发初期：东部战区（顿涅茨克、卢甘斯克）密度开始下降，但主要城市核心区仍保持较高密度。"
+                          aria-label="放大查看：2022 年核密度图"
+                        >
+                          <img
+                            src="./lytphoto/2022POI.png"
+                            alt="2022 年乌克兰医院核密度分布图"
+                            width="520"
+                            height="325"
+                            loading="lazy"
+                            decoding="async"
+                          />
+                        </button>
+                        <figcaption class="ua-acled-fig__cap">图 2：2022 年乌克兰医院核密度分布图</figcaption>
+                        <p class="ua-poi-kde-card__analysis">
+                          冲突爆发初期：东部战区（顿涅茨克、卢甘斯克）密度开始下降，但主要城市核心区仍保持较高密度。
+                        </p>
+                      </figure>
+                      <figure class="ua-poi-kde-card">
+                        <span class="ua-poi-kde-card__year">2023 年</span>
+                        <button
+                          type="button"
+                          class="ua-acled-zoom"
+                          data-full="./lytphoto/2023POI.png"
+                          data-alt="2023 年乌克兰医院核密度分布图"
+                          data-caption="冲突持续期：东部前线地区密度显著下降，原高密度区出现「空洞化」；西部相对稳定，利沃夫密度保持。"
+                          aria-label="放大查看：2023 年核密度图"
+                        >
+                          <img
+                            src="./lytphoto/2023POI.png"
+                            alt="2023 年乌克兰医院核密度分布图"
+                            width="520"
+                            height="325"
+                            loading="lazy"
+                            decoding="async"
+                          />
+                        </button>
+                        <figcaption class="ua-acled-fig__cap">图 3：2023 年乌克兰医院核密度分布图</figcaption>
+                        <p class="ua-poi-kde-card__analysis">
+                          冲突持续期：东部前线地区密度显著下降，原高密度区出现「空洞化」；西部相对稳定，利沃夫密度保持。
+                        </p>
+                      </figure>
+                      <figure class="ua-poi-kde-card">
+                        <span class="ua-poi-kde-card__year">2024 年</span>
+                        <button
+                          type="button"
+                          class="ua-acled-zoom"
+                          data-full="./lytphoto/2024POI.png"
+                          data-alt="2024 年乌克兰医院核密度分布图"
+                          data-caption="冲突长期化：东部医疗资源进一步萎缩，密度下降区域与冲突前线高度重合。西部成为医疗资源相对集中区。"
+                          aria-label="放大查看：2024 年核密度图"
+                        >
+                          <img
+                            src="./lytphoto/2024POI.png"
+                            alt="2024 年乌克兰医院核密度分布图"
+                            width="520"
+                            height="325"
+                            loading="lazy"
+                            decoding="async"
+                          />
+                        </button>
+                        <figcaption class="ua-acled-fig__cap">图 4：2024 年乌克兰医院核密度分布图</figcaption>
+                        <p class="ua-poi-kde-card__analysis">
+                          冲突长期化：东部医疗资源进一步萎缩，密度下降区域与冲突前线高度重合。西部成为医疗资源相对集中区。
+                        </p>
+                      </figure>
+                    </div>
+                  </section>
+
+                  <section id="ua-poi-findings" class="ua-acled-block" aria-labelledby="ua-poi-findings-heading">
+                    <h4 id="ua-poi-findings-heading" class="ua-acled-block__title ua-poi-findings__title">
+                      核心发现
+                    </h4>
+                    <blockquote class="ua-poi-findings">
+                      <ul class="ua-poi-findings__list">
+                        <li>
+                          2021–2024 年，乌克兰东部战区（顿涅茨克、卢甘斯克、扎波罗热）医院核密度显著下降，与建筑损毁高发区高度重合。
+                        </li>
+                        <li>医院分布格局从「东西均衡的多点核心」演变为「西部集中的单极格局」。</li>
+                        <li>西部地区医院密度相对稳定，利沃夫等城市成为新的医疗资源聚集中心。</li>
+                        <li>
+                          医疗设施的空间变化与冲突前线位置呈现强相关性，反映了战争对民用基础设施的直接冲击。
+                        </li>
+                      </ul>
+                    </blockquote>
+                  </section>
+
+                  <section id="ua-poi-meta" class="ua-acled-block" aria-labelledby="ua-poi-meta-heading">
+                    <h4 id="ua-poi-meta-heading" class="ua-acled-block__title ua-poi-findings__title">
+                      数据与方法
+                    </h4>
+                    <div class="ua-acled-src-grid">
+                      <article class="ua-acled-src-card">
+                        <div class="ua-acled-src-card__icon" aria-hidden="true">📍</div>
+                        <h5 class="ua-acled-src-card__name">数据来源</h5>
+                        <p class="ua-acled-src-card__desc">OpenStreetMap (OSM)</p>
+                        <span class="ua-acled-badge">Humanitarian Data Exchange (HDX)</span>
+                      </article>
+                      <article class="ua-acled-src-card">
+                        <div class="ua-acled-src-card__icon" aria-hidden="true">🛠️</div>
+                        <h5 class="ua-acled-src-card__name">分析工具</h5>
+                        <p class="ua-acled-src-card__desc">ArcGIS Pro 3.x</p>
+                        <span class="ua-acled-badge">Spatial Analyst 扩展</span>
+                      </article>
+                      <article class="ua-acled-src-card">
+                        <div class="ua-acled-src-card__icon" aria-hidden="true">📅</div>
+                        <h5 class="ua-acled-src-card__name">时间范围</h5>
+                        <p class="ua-acled-src-card__desc">2021 – 2024 年</p>
+                        <span class="ua-acled-badge">逐年对比分析</span>
+                      </article>
+                    </div>
+                    <div class="ua-poi-params-wrap">
+                      <table class="ua-acled-table ua-poi-params-table" aria-label="核密度分析参数设置">
+                        <thead>
+                          <tr>
+                            <th scope="col">参数</th>
+                            <th scope="col">设置值</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>投影坐标系</td>
+                            <td>WGS 1984 UTM Zone 36N (EPSG:32636)</td>
+                          </tr>
+                          <tr>
+                            <td>搜索半径</td>
+                            <td>15000 米（15 公里）</td>
+                          </tr>
+                          <tr>
+                            <td>输出像元大小</td>
+                            <td>500 米</td>
+                          </tr>
+                          <tr>
+                            <td>面积单位</td>
+                            <td>平方千米</td>
+                          </tr>
+                          <tr>
+                            <td>方法</td>
+                            <td>测地线</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <p class="ua-poi-disclaimer">
+                      数据来源：OpenStreetMap (ODbL 许可) / 人道主义开放街道地图团队 (HOTOSM)<br />
+                      分析工具：ArcGIS Pro 3.x (Spatial Analyst 扩展模块)<br />
+                      <em
+                        >注：OSM 数据由全球志愿者贡献，2022 年后人道主义制图活动增加了数据完整性，分析结果需结合实际情况审慎解读。</em
+                      >
+                    </p>
+                  </section>
+
                 </div>
               </article>
+              <dialog
+                id="uaPoiStepDialog"
+                class="ua-acled-dialog ua-poi-step-dialog"
+                aria-modal="true"
+                aria-labelledby="uaPoiStepDialogTitle"
+              >
+                <div class="ua-acled-dialog__frame ua-poi-step-dialog__frame">
+                  <button type="button" class="ua-acled-dialog__close" aria-label="关闭详情">×</button>
+                  <h4 id="uaPoiStepDialogTitle" class="ua-poi-step-dialog__title"></h4>
+                  <p class="ua-poi-step-dialog__body"></p>
+                </div>
+              </dialog>
             </section>
 
             <section
               id="ua-detail-agriculture"
-              class="home-module ua-research-detail"
+              class="home-module ua-research-detail ua-acled-module ua-agri-module"
               aria-labelledby="ua-detail-agriculture-heading"
             >
-              <div class="section-head">
-                <h3 id="ua-detail-agriculture-heading">冲突对农业生产结构的影响</h3>
-                <p>对应俄乌冲突版块右上角配图；正文与图表尺寸待定，此处预留版块结构。</p>
-              </div>
-              <article class="panel ua-research-detail__panel">
-                <div class="panel-inner">
-                  <p class="value ua-research-detail__placeholder">
-                    内容占位：可在此补充耕地/作物结构、冲突暴露与农业指标等图表与论述。
-                  </p>
+              <article class="panel ua-acled-module__shell">
+                <div class="panel-inner ua-acled-module__inner ua-agri-module__inner" id="uaAgriModule">
+                  <header class="ua-acled-hero ua-agri-hero">
+                    <h3 id="ua-detail-agriculture-heading" class="ua-acled-hero__title">
+                      冲突对农业生产结构的影响
+                    </h3>
+                    <p class="ua-acled-hero__lead">哈尔科夫州植被覆盖与 NDVI 时空演变（2021–2024）</p>
+                  </header>
+
+                  <div class="ua-agri-view is-active" data-agri-view="entry">
+                    <div class="ua-agri-entry">
+                      <figure class="ua-agri-entry__fig">
+                        <button
+                          type="button"
+                          class="ua-acled-zoom"
+                          data-full="./wpgphoto/kharkov.jpg"
+                          data-alt="哈尔科夫州区域示意"
+                          data-caption="哈尔科夫州 — 植被变化分析入口"
+                          aria-label="放大查看：哈尔科夫州示意"
+                        >
+                          <img
+                            src="./wpgphoto/kharkov.jpg"
+                            alt="哈尔科夫州区域示意"
+                            width="640"
+                            height="420"
+                            loading="lazy"
+                            decoding="async"
+                          />
+                        </button>
+                      </figure>
+                      <div class="ua-agri-entry__cta">
+                        <button type="button" class="ua-agri-go-btn" data-agri-go="main">
+                          哈尔科夫州植被变化分析 <span class="ua-agri-go-btn__arrow" aria-hidden="true">Go→</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="ua-agri-view" data-agri-view="main" hidden>
+                    <header class="ua-acled-hero ua-agri-main-hero">
+                      <h3 class="ua-acled-hero__title">成果分析</h3>
+                      <p class="ua-acled-hero__lead">哈尔科夫州 NDVI 时空演变与人道主义地理分析（2021–2024）</p>
+                    </header>
+
+                    <section id="ua-agri-bg" class="ua-acled-block" aria-labelledby="ua-agri-bg-heading">
+                      <h4 id="ua-agri-bg-heading" class="ua-acled-block__title">研究背景与区域概况</h4>
+                      <div class="ua-agri-prose">
+                        <p>哈尔科夫州位于乌克兰东部，是全国核心农业区，耕地面积大、以雨养农业为主，是区域粮食生产支柱。2022 年冲突爆发后，该州长期处于前线，农田损毁、耕作中断、人员流离失所，大面积耕地弃耕，直接威胁区域与全球粮食安全。</p>
+                        <p>NDVI（归一化植被指数）可快速反映植被覆盖、生长状况与耕作强度，是监测冲突区农田撂荒、植被退化的核心遥感指标。</p>
+                        <p>研究区总面积 31434.9 平方公里，下辖 7 区 56 个赫罗马达，伊久姆斯基区面积最大，为主要农业生产区。</p>
+                      </div>
+                    </section>
+
+                    <section id="ua-agri-pipeline" class="ua-acled-block" aria-labelledby="ua-agri-pipeline-heading">
+                      <h4 id="ua-agri-pipeline-heading" class="ua-acled-block__title">数据处理与技术流程</h4>
+                      <div class="ua-poi-steps-grid">
+                      <article class="ua-poi-step-card">
+                        <span class="ua-poi-step-card__num" aria-hidden="true">1</span>
+                        <h5 class="ua-poi-step-card__name">数据准备</h5>
+                        <p class="ua-poi-step-card__tool">MOD13Q1、ArcGIS Pro</p>
+                        <p class="ua-poi-step-card__setting">下载 2021–2024 年 MOD13Q1 数据，加载哈尔科夫州行政边界</p>
+                        <button type="button" class="ua-agri-step-detail" data-title="数据准备" data-body="使用 MOD13Q1 250m 分辨率 16 天合成植被指数数据，导入 ArcGIS Pro 并加载州界 shp 文件，完成研究区范围确定。">
+                          查看详情
+                        </button>
+                      </article>
+                      <article class="ua-poi-step-card">
+                        <span class="ua-poi-step-card__num" aria-hidden="true">2</span>
+                        <h5 class="ua-poi-step-card__name">按掩膜提取</h5>
+                        <p class="ua-poi-step-card__tool">按掩膜提取</p>
+                        <p class="ua-poi-step-card__setting">用行政边界裁剪 NDVI 栅格，保留哈尔科夫州范围</p>
+                        <button type="button" class="ua-agri-step-detail" data-title="按掩膜提取" data-body="在 ArcGIS Pro 中调用「按掩膜提取」工具，以行政边界为掩膜，裁剪出研究区 NDVI 数据，剔除域外无效像元。">
+                          查看详情
+                        </button>
+                      </article>
+                      <article class="ua-poi-step-card">
+                        <span class="ua-poi-step-card__num" aria-hidden="true">3</span>
+                        <h5 class="ua-poi-step-card__name">投影转换</h5>
+                        <p class="ua-poi-step-card__tool">投影栅格</p>
+                        <p class="ua-poi-step-card__setting">转换为 GCS_WGS_1984（EPSG:4326），重采样双线性插值</p>
+                        <button type="button" class="ua-agri-step-detail" data-title="投影转换" data-body="将裁剪后栅格统一投影为 WGS84 地理坐标系，保证经纬度计算与全球可视化精度，数值连续平滑。">
+                          查看详情
+                        </button>
+                      </article>
+                      <article class="ua-poi-step-card">
+                        <span class="ua-poi-step-card__num" aria-hidden="true">4</span>
+                        <h5 class="ua-poi-step-card__name">NDVI 还原</h5>
+                        <p class="ua-poi-step-card__tool">栅格计算器</p>
+                        <p class="ua-poi-step-card__setting">原始值 / 10000000，还原真实 NDVI 范围</p>
+                        <button type="button" class="ua-agri-step-detail" data-title="NDVI 还原" data-body="MOD13Q1 原始数据为放大存储整型，通过栅格计算「/10000000」还原为 -1 至 1 之间标准 NDVI 值。">
+                          查看详情
+                        </button>
+                      </article>
+                      <article class="ua-poi-step-card">
+                        <span class="ua-poi-step-card__num" aria-hidden="true">5</span>
+                        <h5 class="ua-poi-step-card__name">栅格转点与经纬度计算</h5>
+                        <p class="ua-poi-step-card__tool">栅格转点、Python 代码块</p>
+                        <p class="ua-poi-step-card__setting">生成点要素、批量计算 lon/lat、导出 CSV</p>
+                        <button type="button" class="ua-agri-step-detail" data-title="栅格转点与经纬度计算" data-body="栅格转点生成带 NDVI 值的点要素；添加 lon/lat 字段，用 Python 代码计算坐标；导出为 CSV 供可视化使用。">
+                          查看详情
+                        </button>
+                      </article>
+                      <article class="ua-poi-step-card">
+                        <span class="ua-poi-step-card__num" aria-hidden="true">6</span>
+                        <h5 class="ua-poi-step-card__name">Kepler 可视化</h5>
+                        <p class="ua-poi-step-card__tool">kepler.gl</p>
+                        <p class="ua-poi-step-card__setting">六边形聚合、自定义分级、空间分级成图</p>
+                        <button type="button" class="ua-agri-step-detail" data-title="Kepler 可视化" data-body="将 CSV 导入 kepler，使用六边形网格聚合，自定义 NDVI 分级，生成 2021–2024 年空间专题图。">
+                          查看详情
+                        </button>
+                      </article>
+                      </div>
+                    </section>
+
+                    <section id="ua-agri-results" class="ua-acled-block" aria-labelledby="ua-agri-results-heading">
+                      <h4 id="ua-agri-results-heading" class="ua-acled-block__title">成果分析</h4>
+                      <p class="ua-agri-years__hint">选择年份查看 NDVI 栅格、六边形聚合与完整解读</p>
+                      <nav class="ua-agri-years" aria-label="选择分析年份">
+                        <button type="button" class="ua-agri-year-btn" data-agri-go="year-2021">2021</button>
+                        <button type="button" class="ua-agri-year-btn" data-agri-go="year-2022">2022</button>
+                        <button type="button" class="ua-agri-year-btn" data-agri-go="year-2023">2023</button>
+                        <button type="button" class="ua-agri-year-btn" data-agri-go="year-2024">2024</button>
+                      </nav>
+                    </section>
+
+                    <section id="ua-agri-conclusions" class="ua-acled-block" aria-labelledby="ua-agri-conclusions-heading">
+                      <h4 id="ua-agri-conclusions-heading" class="ua-acled-block__title">核心结论与讨论</h4>
+                      <h5 class="ua-agri-subtitle">核心结论</h5>
+                      <ul class="ua-agri-finding-list">
+                        <li class="ua-agri-finding-item">2021–2024 年哈尔科夫州 NDVI 持续下降，整体呈「西高东低」格局，与冲突强度空间高度吻合。</li>
+                        <li class="ua-agri-finding-item">2022–2023 年植被退化最剧烈，2024 年跌至谷底，东部进入难恢复退化状态。</li>
+                        <li class="ua-agri-finding-item">冲突直接导致农田弃耕、植被损毁、森林大面积损失，破坏强度远超自然恢复能力。</li>
+                        <li class="ua-agri-finding-item">中西部区域停火后可自然恢复，东部需土壤修复、排雷与人工造林才能重建。</li>
+                      </ul>
+                      <h5 class="ua-agri-subtitle">研究局限与展望</h5>
+                      <ul class="ua-agri-finding-list">
+                        <li class="ua-agri-finding-item">MOD13Q1 250m 分辨率存在混合像元局限，可能低估局部破坏程度。</li>
+                        <li class="ua-agri-finding-item">未来可融合 Sentinel-2 数据提升精度，用于粮食安全预警、战后复耕规划与人道主义援助布局。</li>
+                      </ul>
+                    </section>
+
+                    <section id="ua-agri-meta" class="ua-acled-block" aria-labelledby="ua-agri-meta-heading">
+                      <h4 id="ua-agri-meta-heading" class="ua-acled-block__title ua-poi-findings__title">数据与方法</h4>
+                      <div class="ua-acled-src-grid">
+                        <article class="ua-acled-src-card">
+                          <div class="ua-acled-src-card__icon" aria-hidden="true">📍</div>
+                          <h5 class="ua-acled-src-card__name">数据来源</h5>
+                          <p class="ua-acled-src-card__desc">MOD13Q1、哈尔科夫州行政边界</p>
+                        </article>
+                        <article class="ua-acled-src-card">
+                          <div class="ua-acled-src-card__icon" aria-hidden="true">🛠️</div>
+                          <h5 class="ua-acled-src-card__name">分析工具</h5>
+                          <p class="ua-acled-src-card__desc">ArcGIS Pro、shturl.cc、Python</p>
+                        </article>
+                        <article class="ua-acled-src-card">
+                          <div class="ua-acled-src-card__icon" aria-hidden="true">📅</div>
+                          <h5 class="ua-acled-src-card__name">时间范围</h5>
+                          <p class="ua-acled-src-card__desc">2021–2024 年 8 月（同期对比）</p>
+                        </article>
+                      </div>
+                      <div class="ua-poi-params-wrap">
+                        <table class="ua-acled-table ua-poi-params-table" aria-label="分析参数设置">
+                          <thead>
+                            <tr><th scope="col">参数</th><th scope="col">设置值</th></tr>
+                          </thead>
+                          <tbody>
+                            <tr><td>投影坐标系</td><td>GCS_WGS_1984</td></tr>
+                            <tr><td>分辨率</td><td>250m</td></tr>
+                            <tr><td>合成周期</td><td>16 天最大值合成</td></tr>
+                            <tr><td>可视化</td><td>六边形网格聚合</td></tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <p class="ua-poi-disclaimer">本研究采用 MOD13Q1 V061 产品，结果可复现、可验证，仅供教学与科研使用。</p>
+                    </section>
+
+                    <button type="button" class="ua-agri-back" data-agri-go="entry">← 返回入口</button>
+                  </div>
+                  <div class="ua-agri-view" data-agri-view="year-2021" hidden>
+                    <h4 class="ua-agri-year-view__title">2021 年 NDVI 成果与解读</h4>
+                    <div class="ua-agri-year-dash">
+                      <figure class="ua-agri-year-dash__fig">
+                        <button type="button" class="ua-acled-zoom" data-full="./wpgphoto/2021.jpg" data-alt="2021 年 NDVI 栅格" data-caption="2021 年哈尔科夫州 NDVI 栅格影像" aria-label="放大：2021 NDVI 栅格">
+                          <img src="./wpgphoto/2021.jpg" alt="2021 年 NDVI 栅格" width="480" height="360" loading="lazy" decoding="async" />
+                        </button>
+                        <figcaption class="ua-agri-year-dash__cap">NDVI 栅格影像</figcaption>
+                      </figure>
+                      <div class="ua-agri-year-dash__center">
+                        <div class="ua-agri-ndvi-ring" role="img" aria-label="NDVI 均值 0.341">
+                          <span class="ua-agri-ndvi-ring__label">NDVI 均值</span>
+                          <span class="ua-agri-ndvi-ring__value">0.341</span>
+                        </div>
+                      </div>
+                      <figure class="ua-agri-year-dash__fig">
+                        <button type="button" class="ua-acled-zoom" data-full="./wpgphoto/2021.png" data-alt="2021 年六边形聚合" data-caption="2021 年 Kepler.gl 六边形网格分析" aria-label="放大：2021 六边形图">
+                          <img src="./wpgphoto/2021.png" alt="2021 年六边形聚合" width="480" height="360" loading="lazy" decoding="async" />
+                        </button>
+                        <figcaption class="ua-agri-year-dash__cap">六边形网格分析</figcaption>
+                      </figure>
+                    </div>
+                    <article class="ua-agri-report ua-agri-report--inline">
+                      <h4 class="ua-agri-report__title">2021年植被覆盖特征：战前稳定高值基准</h4>
+                      <p class="ua-agri-report__body">从2021年ArcGIS栅格图与Kepler.gl六边形聚合图可以清晰看出，战前哈尔科夫州植被覆盖整体呈现分布均匀、连片性强、结构稳定的特征。植被高值区集中分布在Bohodukhivskyi、Kharkivskyi、Chuhuivskyi、Iziumskyi四个核心区域，空间格局呈现西部偏低、东部略高、整体均衡的特点，全州无大面积裸露或植被缺损区域，地表以连续、稳定的自然与农田植被为主。</p>
+                      <p class="ua-agri-report__body">2021年8月29日全域NDVI均值为0.341，代表研究区在无大规模冲突扰动下的自然—农业复合植被最优水平。这一数值与乌克兰全国农业区平均水平（约0.358）接近，反映战前哈尔科夫州农业生产与自然植被处于协调状态。2021年哈尔科夫州农田总面积为1,859,304公顷，未耕种面积占比为19%，人类活动强度适中，农田耕作规律，自然植被受干扰较小，地表覆盖整体处于平衡状态。这一基准值为后续量化战争对植被的冲击提供了可靠参照。</p>
+                    </article>
+                    <button type="button" class="ua-agri-back" data-agri-go="main">← 返回成果分析</button>
+                  </div>
+                  <div class="ua-agri-view" data-agri-view="year-2022" hidden>
+                    <h4 class="ua-agri-year-view__title">2022 年 NDVI 成果与解读</h4>
+                    <div class="ua-agri-year-dash">
+                      <figure class="ua-agri-year-dash__fig">
+                        <button type="button" class="ua-acled-zoom" data-full="./wpgphoto/2022.jpg" data-alt="2022 年 NDVI 栅格" data-caption="2022 年哈尔科夫州 NDVI 栅格影像" aria-label="放大：2022 NDVI 栅格">
+                          <img src="./wpgphoto/2022.jpg" alt="2022 年 NDVI 栅格" width="480" height="360" loading="lazy" decoding="async" />
+                        </button>
+                        <figcaption class="ua-agri-year-dash__cap">NDVI 栅格影像</figcaption>
+                      </figure>
+                      <div class="ua-agri-year-dash__center">
+                        <div class="ua-agri-ndvi-ring" role="img" aria-label="NDVI 均值 0.307">
+                          <span class="ua-agri-ndvi-ring__label">NDVI 均值</span>
+                          <span class="ua-agri-ndvi-ring__value">0.307</span>
+                        </div>
+                      </div>
+                      <figure class="ua-agri-year-dash__fig">
+                        <button type="button" class="ua-acled-zoom" data-full="./wpgphoto/2022.png" data-alt="2022 年六边形聚合" data-caption="2022 年 Kepler.gl 六边形网格分析" aria-label="放大：2022 六边形图">
+                          <img src="./wpgphoto/2022.png" alt="2022 年六边形聚合" width="480" height="360" loading="lazy" decoding="async" />
+                        </button>
+                        <figcaption class="ua-agri-year-dash__cap">六边形网格分析</figcaption>
+                      </figure>
+                    </div>
+                    <article class="ua-agri-report ua-agri-report--inline">
+                      <h4 class="ua-agri-report__title">2022年植被覆盖变化：冲突爆发导致植被显著下降，东部成为重灾区</h4>
+                      <p class="ua-agri-report__body">2022年栅格与六边形可视化结果显示，全州植被覆盖较2021年整体下降。全域NDVI均值降至0.307，较2021年下降0.034，降幅约10%。空间上呈现明显的“东低西高”分化：东部Iziumskyi、Kupianskyi低值斑块密集扩张，中部Kharkivskyi受战事波及出现破碎化，西部Bohodukhivskyi相对稳定但仍有轻微下降。</p>
+                      <p class="ua-agri-report__body">2022年2月24日战争全面爆发后，哈尔科夫州首府哈尔科夫市成为俄军首批进攻目标。围绕该市的激烈炮战持续数周，炮弹落点覆盖城市以北、以东的森林带与农田。卫星影像可清晰识别哈尔科夫市东部及东北部出现大量弹坑群，树木倒伏、地表裸露。炮弹直接摧毁了乔木冠层，而弹坑及周边的土壤压实则阻碍了草本植被的再生。这一区域在2022年NDVI栅格图中呈现为环绕市区的低值环带。</p>
+                    </article>
+                    <button type="button" class="ua-agri-back" data-agri-go="main">← 返回成果分析</button>
+                  </div>
+                  <div class="ua-agri-view" data-agri-view="year-2023" hidden>
+                    <h4 class="ua-agri-year-view__title">2023 年 NDVI 成果与解读</h4>
+                    <div class="ua-agri-year-dash">
+                      <figure class="ua-agri-year-dash__fig">
+                        <button type="button" class="ua-acled-zoom" data-full="./wpgphoto/2023.jpg" data-alt="2023 年 NDVI 栅格" data-caption="2023 年哈尔科夫州 NDVI 栅格影像" aria-label="放大：2023 NDVI 栅格">
+                          <img src="./wpgphoto/2023.jpg" alt="2023 年 NDVI 栅格" width="480" height="360" loading="lazy" decoding="async" />
+                        </button>
+                        <figcaption class="ua-agri-year-dash__cap">NDVI 栅格影像</figcaption>
+                      </figure>
+                      <div class="ua-agri-year-dash__center">
+                        <div class="ua-agri-ndvi-ring" role="img" aria-label="NDVI 均值 0.279">
+                          <span class="ua-agri-ndvi-ring__label">NDVI 均值</span>
+                          <span class="ua-agri-ndvi-ring__value">0.279</span>
+                        </div>
+                      </div>
+                      <figure class="ua-agri-year-dash__fig">
+                        <button type="button" class="ua-acled-zoom" data-full="./wpgphoto/2023.png" data-alt="2023 年六边形聚合" data-caption="2023 年 Kepler.gl 六边形网格分析" aria-label="放大：2023 六边形图">
+                          <img src="./wpgphoto/2023.png" alt="2023 年六边形聚合" width="480" height="360" loading="lazy" decoding="async" />
+                        </button>
+                        <figcaption class="ua-agri-year-dash__cap">六边形网格分析</figcaption>
+                      </figure>
+                    </div>
+                    <article class="ua-agri-report ua-agri-report--inline">
+                      <h4 class="ua-agri-report__title">2023年植被覆盖变化：持续退化，破坏累积超过自然恢复阈值</h4>
+                      <p class="ua-agri-report__body">2023年ArcGIS栅格图与Kepler.gl六边形图显示，哈尔科夫州植被覆盖较2022年进一步下降。全域NDVI均值降至0.279，较2021年下降0.062，较2022年下降0.028。空间上，东部低值区持续扩大且连片程度加剧，西部及中部的相对高值区边缘开始出现破碎化，东西差异达到四年最大。值得警惕的是，2023年NDVI已低于战前全州最低观测水平（2021年西部安全区的最低斑块值约为0.29），意味着即使在相对完好的区域，植被系统也已进入退化通道。</p>
+                      <p class="ua-agri-report__body">一项综合卫星影像与机器学习的遥感研究（2025年发表）核算，2022—2023年全乌克兰森林面积共损失约1,600平方公里。其中哈尔科夫州两年内森林损失约181平方公里，占全州森林面积的显著比例。森林损失的主要原因并非直接砍伐，而是军事行动诱发的林火——炮击和导弹袭击在干旱季节极易点燃松林及橡树林，且由于前线战事持续，消防力量无法进入火场，林火往往持续数周甚至数月，过火后林下种子库被高温破坏，乔木难以天然更新。</p>
+                    </article>
+                    <button type="button" class="ua-agri-back" data-agri-go="main">← 返回成果分析</button>
+                  </div>
+                  <div class="ua-agri-view" data-agri-view="year-2024" hidden>
+                    <h4 class="ua-agri-year-view__title">2024 年 NDVI 成果与解读</h4>
+                    <div class="ua-agri-year-dash">
+                      <figure class="ua-agri-year-dash__fig">
+                        <button type="button" class="ua-acled-zoom" data-full="./wpgphoto/2024.jpg" data-alt="2024 年 NDVI 栅格" data-caption="2024 年哈尔科夫州 NDVI 栅格影像" aria-label="放大：2024 NDVI 栅格">
+                          <img src="./wpgphoto/2024.jpg" alt="2024 年 NDVI 栅格" width="480" height="360" loading="lazy" decoding="async" />
+                        </button>
+                        <figcaption class="ua-agri-year-dash__cap">NDVI 栅格影像</figcaption>
+                      </figure>
+                      <div class="ua-agri-year-dash__center">
+                        <div class="ua-agri-ndvi-ring" role="img" aria-label="NDVI 均值 0.267">
+                          <span class="ua-agri-ndvi-ring__label">NDVI 均值</span>
+                          <span class="ua-agri-ndvi-ring__value">0.267</span>
+                        </div>
+                      </div>
+                      <figure class="ua-agri-year-dash__fig">
+                        <button type="button" class="ua-acled-zoom" data-full="./wpgphoto/2024.png" data-alt="2024 年六边形聚合" data-caption="2024 年 Kepler.gl 六边形网格分析" aria-label="放大：2024 六边形图">
+                          <img src="./wpgphoto/2024.png" alt="2024 年六边形聚合" width="480" height="360" loading="lazy" decoding="async" />
+                        </button>
+                        <figcaption class="ua-agri-year-dash__cap">六边形网格分析</figcaption>
+                      </figure>
+                    </div>
+                    <article class="ua-agri-report ua-agri-report--inline">
+                      <h4 class="ua-agri-report__title">2024年植被覆盖变化：跌至谷底，复合胁迫下的不可逆退化</h4>
+                      <p class="ua-agri-report__body">2024年栅格图与六边形图呈现了四年间最严峻的植被状态：全域NDVI均值降至0.267，为四年最低，较2021年下降0.074，较2023年再降0.012。空间格局上，东部Iziumskyi、Kupianskyi的低值斑块已大面积连片，裸土化特征明显；中部Kharkivskyi、Chuhuivskyi维持中等覆盖但斑块破碎化加剧；西部Bohodukhivskyi虽保持全州最高覆盖，但已显著低于2021年自身水平（从0.36以上降至0.32左右）。全州无任何区域的NDVI恢复到战前水平。</p>
+                      <p class="ua-agri-report__body">2024年5月，俄军在哈尔科夫州北部发动新的大规模地面攻势，沿俄乌边界推进，对边境城市沃夫昌斯克及周边森林展开持续轰炸。乌克兰国家林业资源署估计，俄罗斯军事入侵已损毁乌克兰全国近30%的森林；而哈尔科夫州的森林受损比例更高，达到40%至45%。</p>
+                    </article>
+                    <button type="button" class="ua-agri-back" data-agri-go="main">← 返回成果分析</button>
+                  </div>
                 </div>
+
+              <dialog
+                id="uaAgriStepDialog"
+                class="ua-acled-dialog ua-poi-step-dialog"
+                aria-modal="true"
+                aria-labelledby="uaAgriStepDialogTitle"
+              >
+                <div class="ua-acled-dialog__frame ua-poi-step-dialog__frame">
+                  <button type="button" class="ua-acled-dialog__close" aria-label="关闭详情">×</button>
+                  <h4 id="uaAgriStepDialogTitle" class="ua-poi-step-dialog__title"></h4>
+                  <p class="ua-poi-step-dialog__body"></p>
+                </div>
+              </dialog>
               </article>
             </section>
 
             <section
               id="ua-detail-nightlight"
-              class="home-module ua-research-detail"
+              class="home-module ua-research-detail ua-acled-module ua-wyl-module"
               aria-labelledby="ua-detail-nightlight-heading"
             >
-              <div class="section-head">
-                <h3 id="ua-detail-nightlight-heading">夜光遥感时空演变与空间聚集特征</h3>
-                <p>对应俄乌冲突版块右下角配图；正文与图表尺寸待定，此处预留版块结构。</p>
-              </div>
-              <article class="panel ua-research-detail__panel">
-                <div class="panel-inner">
-                  <p class="value ua-research-detail__placeholder">
-                    内容占位：可在此补充夜光时序、莫兰指数或聚类结果等空间分析展示。
-                  </p>
+              <article class="panel ua-acled-module__shell">
+                <div class="panel-inner ua-acled-module__inner" id="uaWylModule">
+                  <header class="ua-acled-hero">
+                    <h3 id="ua-detail-nightlight-heading" class="ua-acled-hero__title">
+                      夜光遥感时空演变与空间聚集特征
+                    </h3>
+                    <p class="ua-wyl-hero__pill">
+                      夜光遥感就像是「从太空看地球的灯光日记」——战争期间，灯光熄灭的地方，就是经济停滞的地方。
+                    </p>
+                    <a class="ua-acled-scroll-hint" href="#ua-wyl-sources">
+                      <span class="ua-acled-scroll-hint__label">向下浏览模块</span>
+                      <span class="ua-acled-scroll-hint__arrow" aria-hidden="true">↓</span>
+                    </a>
+                  </header>
+
+                  <section id="ua-wyl-sources" class="ua-acled-block" aria-labelledby="ua-wyl-sources-heading">
+                    <h4 id="ua-wyl-sources-heading" class="ua-acled-block__title">数据来源</h4>
+                    <div class="ua-acled-src-grid">
+                      <article class="ua-acled-src-card">
+                        <div class="ua-acled-src-card__icon" aria-hidden="true">🛰️</div>
+                        <h5 class="ua-acled-src-card__name">VIIRS DNB 夜光数据</h5>
+                        <p class="ua-acled-src-card__desc">NOAA/NCEI 发布，空间分辨率约 500m</p>
+                        <span class="ua-acled-badge">2021.11 → 2023.12 · 15 期</span>
+                      </article>
+                      <article class="ua-acled-src-card">
+                        <div class="ua-acled-src-card__icon" aria-hidden="true">🗺️</div>
+                        <h5 class="ua-acled-src-card__name">乌克兰州界矢量数据</h5>
+                        <p class="ua-acled-src-card__desc">来自 HDX/GeoBoundaries，25 个州</p>
+                        <span class="ua-acled-badge">裁剪 + 分区统计</span>
+                      </article>
+                      <article class="ua-acled-src-card">
+                        <div class="ua-acled-src-card__icon" aria-hidden="true">⚙️</div>
+                        <h5 class="ua-acled-src-card__name">本地服务器</h5>
+                        <p class="ua-acled-src-card__desc">Python HTTP Server</p>
+                        <span class="ua-acled-badge">python -m http.server 8080</span>
+                      </article>
+                    </div>
+                  </section>
+
+                  <section id="ua-wyl-pipeline" class="ua-acled-block" aria-labelledby="ua-wyl-pipeline-heading">
+                    <h4 id="ua-wyl-pipeline-heading" class="ua-acled-block__title">处理流程</h4>
+                    <ol class="ua-acled-steps ua-wyl-steps" aria-label="夜光数据处理步骤">
+                      <li class="ua-acled-steps__item">
+                        <span class="ua-acled-steps__circle" aria-hidden="true">✂️</span>
+                        <span class="ua-acled-steps__label">栅格裁剪</span>
+                        <span class="ua-acled-steps__hint">SuperMap</span>
+                      </li>
+                      <li class="ua-acled-steps__sep" aria-hidden="true"></li>
+                      <li class="ua-acled-steps__item">
+                        <span class="ua-acled-steps__circle" aria-hidden="true">📊</span>
+                        <span class="ua-acled-steps__label">分带统计</span>
+                        <span class="ua-acled-steps__hint">SuperMap</span>
+                      </li>
+                      <li class="ua-acled-steps__sep" aria-hidden="true"></li>
+                      <li class="ua-acled-steps__item">
+                        <span class="ua-acled-steps__circle" aria-hidden="true">🧮</span>
+                        <span class="ua-acled-steps__label">栅格代数</span>
+                        <span class="ua-acled-steps__hint">SuperMap</span>
+                      </li>
+                      <li class="ua-acled-steps__sep" aria-hidden="true"></li>
+                      <li class="ua-acled-steps__item">
+                        <span class="ua-acled-steps__circle" aria-hidden="true">📈</span>
+                        <span class="ua-acled-steps__label">TNL/NLRI 计算</span>
+                        <span class="ua-acled-steps__hint">Excel + Python</span>
+                      </li>
+                      <li class="ua-acled-steps__sep" aria-hidden="true"></li>
+                      <li class="ua-acled-steps__item">
+                        <span class="ua-acled-steps__circle" aria-hidden="true">🎨</span>
+                        <span class="ua-acled-steps__label">可视化</span>
+                        <span class="ua-acled-steps__hint">ECharts / kepler.gl</span>
+                      </li>
+                    </ol>
+                    <div class="ua-acled-join-note">
+                      <p>
+                        <span aria-hidden="true">💡</span>
+                        <strong>关键技巧</strong>：裁剪时勾选「忽略背景值/无值」，阈值设为 0。
+                      </p>
+                    </div>
+                  </section>
+
+                  <section id="ua-wyl-results" class="ua-acled-block" aria-labelledby="ua-wyl-results-heading">
+                    <h4 id="ua-wyl-results-heading" class="ua-acled-block__title">国家尺度与州域尺度成果</h4>
+
+                    <div class="ua-wyl-embed">
+                      <h5 class="ua-wyl-embed__title">📈 第一层：国家尺度 —— 乌克兰全国夜光总量时序变化</h5>
+                      <iframe
+                        class="ua-wyl-iframe"
+                        title="乌克兰全国夜光总量时序变化"
+                        src="./wylphoto/%E6%97%B6%E5%BA%8F%E5%9B%BE%26%E5%85%A8%E5%9B%BD%E5%A4%9C%E5%85%89%E6%8D%9F%E5%A4%B1%E7%8E%87.html"
+                        width="100%"
+                        height="450"
+                        loading="lazy"
+                      ></iframe>
+                      <p class="ua-acled-fig__note">
+                        双 Y 轴：左轴夜光总量（折线），右轴环比变化率（柱状）。2022 年 4–8 月及 11 月数据缺失。
+                      </p>
+                      <aside class="ua-wyl-insight">
+                        <p>
+                          <strong>🔍 我们发现了什么？</strong>
+                          2022 年 2 月冲突爆发后，夜光总量从峰值
+                          <span class="ua-wyl-em">335 万</span>
+                          断崖式跌至
+                          <span class="ua-wyl-em">170 万</span>，整体下降约
+                          <span class="ua-wyl-em">34.5%</span>。环比变化率在冲突爆发当月出现
+                          <span class="ua-wyl-em">-31.5%</span>
+                          的最大跌幅。
+                        </p>
+                      </aside>
+                    </div>
+
+                    <p class="ua-wyl-bridge">
+                      全国夜光总量的断崖式下降背后，各州的损失程度是否存在差异？我们进一步将分析细化到州尺度。
+                    </p>
+
+                    <div class="ua-wyl-embed">
+                      <h5 class="ua-wyl-embed__title">🗺️ 第二层：州域尺度 —— 各州夜光损失率空间分布</h5>
+                      <iframe
+                        class="ua-wyl-iframe"
+                        title="各州夜光损失率空间分布"
+                        src="./wylphoto/ukraine_map_manual.html"
+                        width="100%"
+                        height="500"
+                        loading="lazy"
+                      ></iframe>
+                      <p class="ua-acled-fig__note">
+                        红色越深 = 损失越严重，支持点击州查看详细数据，底部按钮可切换地图/条形图。
+                      </p>
+                      <aside class="ua-wyl-insight">
+                        <p>
+                          <strong>🔍 我们发现了什么？</strong>
+                          红色集中在<strong>东部和北部战区</strong>（Kiev、Dnepropetrovsk 等），损失率超过
+                          <span class="ua-wyl-em">-40%</span>；<strong>西部边境州</strong>（Zakarpats&apos;ka 等）呈浅色，损失率仅约
+                          <span class="ua-wyl-em">-8%</span>。
+                        </p>
+                      </aside>
+                    </div>
+
+                    <div class="ua-wyl-stat-grid" aria-label="关键数据摘要">
+                      <article class="ua-wyl-stat-card">
+                        <p class="ua-wyl-stat-card__value">2,890,239</p>
+                        <p class="ua-wyl-stat-card__label">战前平均 TNL</p>
+                        <span class="ua-wyl-stat-card__badge ua-wyl-stat-card__badge--up">▲ 基准线</span>
+                      </article>
+                      <article class="ua-wyl-stat-card">
+                        <p class="ua-wyl-stat-card__value">1,892,188</p>
+                        <p class="ua-wyl-stat-card__label">战后平均 TNL</p>
+                        <span class="ua-wyl-stat-card__badge ua-wyl-stat-card__badge--down">▼ 下降 34.5%</span>
+                      </article>
+                      <article class="ua-wyl-stat-card">
+                        <p class="ua-wyl-stat-card__value">-40.25%</p>
+                        <p class="ua-wyl-stat-card__label">最严重损失</p>
+                        <span class="ua-wyl-stat-card__badge">Dnepropetrovsk</span>
+                      </article>
+                      <article class="ua-wyl-stat-card">
+                        <p class="ua-wyl-stat-card__value">+0.14%</p>
+                        <p class="ua-wyl-stat-card__label">唯一增长</p>
+                        <span class="ua-wyl-stat-card__badge">Lugansk</span>
+                      </article>
+                    </div>
+
+                    <p class="ua-wyl-bridge">
+                      夜光总量的下降在空间上是否呈现规律性？损失严重的区域是否「扎堆」？我们通过空间统计分析来回答这些问题。
+                    </p>
+                  </section>
+
+                  <section id="ua-wyl-spatial" class="ua-acled-block" aria-labelledby="ua-wyl-spatial-heading">
+                    <h4 id="ua-wyl-spatial-heading" class="ua-acled-block__title">空间统计分析</h4>
+                    <div class="ua-wyl-flip-grid">
+                      <article class="ua-wyl-flip-card" tabindex="0">
+                        <button type="button" class="ua-wyl-flip-card__hint" aria-label="点击翻转查看详情" title="点击翻转">
+                          <span aria-hidden="true">🔄</span>
+                        </button>
+                        <div class="ua-wyl-flip-card__inner">
+                          <div class="ua-wyl-flip-card__face ua-wyl-flip-card__face--front">
+                            <h5 class="ua-wyl-flip-card__title">🔍 全局莫兰指数 (Global Moran&apos;s I)</h5>
+                            <p class="ua-wyl-flip-card__desc">
+                              衡量空间自相关的全局指标。I &gt; 0 表示聚集，I &lt; 0 表示分散，I = 0 表示随机分布。
+                            </p>
+                            <p class="ua-wyl-flip-card__stats">
+                              I = <span class="ua-wyl-em">0.646</span> · p &lt; 0.001（显著） · z = <span class="ua-wyl-em">2491.74</span>
+                            </p>
+                            <p class="ua-wyl-flip-card__takeaway">
+                              💡 夜光损失呈<strong>显著空间聚集</strong>（p &lt; 0.001），不是随机分布。
+                            </p>
+                          </div>
+                          <div class="ua-wyl-flip-card__face ua-wyl-flip-card__face--back" aria-hidden="true">
+                            <button type="button" class="ua-wyl-flip-card__close" aria-label="返回正面">×</button>
+                            <div class="ua-wyl-flip-card__back-stats">
+                              <p class="ua-wyl-flip-card__back-title">Global Moran&apos;s I</p>
+                              <p class="ua-wyl-flip-card__back-value">0.646</p>
+                              <p class="ua-wyl-flip-card__back-meta">p &lt; 0.001 · z = 2491.74</p>
+                              <p class="ua-wyl-flip-card__back-note">显著正空间自相关</p>
+                            </div>
+                          </div>
+                        </div>
+                      </article>
+
+                      <article class="ua-wyl-flip-card" tabindex="0">
+                        <button type="button" class="ua-wyl-flip-card__hint" aria-label="点击翻转查看大图" title="点击翻转">
+                          <span aria-hidden="true">🔄</span>
+                        </button>
+                        <div class="ua-wyl-flip-card__inner">
+                          <div class="ua-wyl-flip-card__face ua-wyl-flip-card__face--front">
+                            <h5 class="ua-wyl-flip-card__title">📍 LISA 聚类分析 (Anselin Local Moran&apos;s I)</h5>
+                            <p class="ua-wyl-flip-card__desc">
+                              识别局部空间聚集类型：HH（高-高）、HL（高-低）、LH（低-高）、LL（低-低）。
+                            </p>
+                            <button
+                              type="button"
+                              class="ua-acled-zoom ua-wyl-flip-card__thumb"
+                              data-full="./wylphoto/%E8%81%9A%E7%B1%BB%E5%88%86%E6%9E%90.jpg"
+                              data-alt="LISA 聚类分析结果图"
+                              data-caption="LISA 聚类：高-高聚集集中在 Kiev 周边及东部战区；低-低聚集在西部边境。"
+                              aria-label="放大查看：LISA 聚类图"
+                            >
+                              <img src="./wylphoto/聚类分析.jpg" alt="LISA 聚类分析结果图" width="400" height="220" loading="lazy" decoding="async" />
+                            </button>
+                            <p class="ua-wyl-flip-card__takeaway">
+                              💡 高-高聚集集中在 <strong>Kiev 周边及东部战区</strong>；低-低聚集在 <strong>西部边境</strong>。
+                            </p>
+                          </div>
+                          <div class="ua-wyl-flip-card__face ua-wyl-flip-card__face--back" aria-hidden="true">
+                            <button type="button" class="ua-wyl-flip-card__close" aria-label="返回正面">×</button>
+                            <img src="./wylphoto/聚类分析.jpg" alt="LISA 聚类分析结果大图" decoding="async" />
+                          </div>
+                        </div>
+                      </article>
+
+                      <article class="ua-wyl-flip-card" tabindex="0">
+                        <button type="button" class="ua-wyl-flip-card__hint" aria-label="点击翻转查看大图" title="点击翻转">
+                          <span aria-hidden="true">🔄</span>
+                        </button>
+                        <div class="ua-wyl-flip-card__inner">
+                          <div class="ua-wyl-flip-card__face ua-wyl-flip-card__face--front">
+                            <h5 class="ua-wyl-flip-card__title">🔥❄️ Getis-Ord Gi* 冷热点分析</h5>
+                            <p class="ua-wyl-flip-card__desc">
+                              识别统计显著的热点与冷点。Z &gt; 1.96 为热点，Z &lt; -1.96 为冷点。
+                            </p>
+                            <button
+                              type="button"
+                              class="ua-acled-zoom ua-wyl-flip-card__thumb"
+                              data-full="./wylphoto/HotSpots.png"
+                              data-alt="冷热点分析结果图"
+                              data-caption="全区域呈现冷点分布，夜光损失是全域性现象。"
+                              aria-label="放大查看：冷热点图"
+                            >
+                              <img src="./wylphoto/HotSpots.png" alt="冷热点分析结果图" width="400" height="220" loading="lazy" decoding="async" />
+                            </button>
+                            <p class="ua-wyl-flip-card__takeaway">
+                              💡 全区域呈现 <strong>冷点分布</strong>，夜光损失是 <strong>全域性现象</strong>。
+                            </p>
+                          </div>
+                          <div class="ua-wyl-flip-card__face ua-wyl-flip-card__face--back" aria-hidden="true">
+                            <button type="button" class="ua-wyl-flip-card__close" aria-label="返回正面">×</button>
+                            <img src="./wylphoto/HotSpots.png" alt="冷热点分析结果大图" decoding="async" />
+                          </div>
+                        </div>
+                      </article>
+                    </div>
+
+                    <aside class="ua-wyl-synthesis">
+                      <p>
+                        <strong>🔍 空间统计统合解读</strong>：全局莫兰指数（I=0.646, p&lt;0.001）证实夜光损失呈显著空间聚集；LISA
+                        聚类进一步指出高-高聚集集中在东部和北部战区，低-低聚集分布在西部边境；冷热点分析显示全区域呈现冷点分布，说明夜光损失是全域性现象。Lugansk
+                        州的微弱增长（+0.14%）是唯一的异常点。
+                      </p>
+                    </aside>
+                  </section>
+
+                  <section id="ua-wyl-conclusions" class="ua-acled-block" aria-labelledby="ua-wyl-conclusions-heading">
+                    <h4 id="ua-wyl-conclusions-heading" class="ua-acled-block__title">核心结论</h4>
+                    <div class="ua-wyl-conclusions">
+                      <ul class="ua-wyl-conclusions__list">
+                        <li class="ua-wyl-conclusions__item">
+                          📉 战争导致乌克兰全国夜光总量下降 <span class="ua-wyl-em">34.5%</span>，夜间经济活动显著萎缩
+                        </li>
+                        <li class="ua-wyl-conclusions__item">
+                          🎯 损失最严重的州：<span class="ua-wyl-em">Dnepropetrovsk (-40.25%)</span>、<span class="ua-wyl-em">Kiev (-40.06%)</span>
+                        </li>
+                        <li class="ua-wyl-conclusions__item">
+                          🛡️ 西部边境州（如 Zakarpats&apos;ka）受影响相对较小（<span class="ua-wyl-em">-7.82%</span>）
+                        </li>
+                        <li class="ua-wyl-conclusions__item">
+                          🔍 夜光损失呈<strong>显著空间聚集</strong>（Moran&apos;s I = <span class="ua-wyl-em">0.646</span>，p &lt; 0.001）
+                        </li>
+                        <li class="ua-wyl-conclusions__item">
+                          📍 LISA 聚类：高-高聚集在<strong>东部和北部战区</strong>，低-低在<strong>西部边境</strong>
+                        </li>
+                        <li class="ua-wyl-conclusions__item">
+                          ⚡ 冷热点显示全区域<strong>冷点分布</strong>；Lugansk 微弱增长（<span class="ua-wyl-em">+0.14%</span>）为唯一异常点
+                        </li>
+                      </ul>
+                    </div>
+                  </section>
                 </div>
               </article>
             </section>
