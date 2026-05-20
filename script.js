@@ -117,12 +117,13 @@
           body.classList.add("is-entered");
         }, delay);
         window.setTimeout(function () {
-          const firstHeading = document.querySelector(".brand h1");
-          if (!firstHeading || !firstHeading.focus) return;
+          const focusTarget =
+            document.querySelector(".nav-main .navlink") || document.getElementById("content");
+          if (!focusTarget || !focusTarget.focus) return;
           try {
-            firstHeading.focus({ preventScroll: true });
+            focusTarget.focus({ preventScroll: true });
           } catch (err) {
-            firstHeading.focus();
+            focusTarget.focus();
           }
         }, delay + 240);
       });
@@ -207,9 +208,10 @@
         const prefersReduced =
           window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
         window.scrollTo({ top: 0, behavior: prefersReduced ? "auto" : "smooth" });
-        const brandHeading = document.querySelector(".brand h1");
+        const focusTarget =
+          document.querySelector(".nav-main .navlink") || document.getElementById("content");
         window.setTimeout(function () {
-          brandHeading && brandHeading.focus && brandHeading.focus({ preventScroll: true });
+          focusTarget && focusTarget.focus && focusTarget.focus({ preventScroll: true });
         }, prefersReduced ? 0 : 400);
       });
     }
@@ -577,10 +579,20 @@
         if (back) back.setAttribute("aria-hidden", flipped ? "false" : "true");
       }
 
+      const skipFlipSelector =
+        ".ua-acled-zoom, .ua-wyl-flip-card__hint, .ua-wyl-flip-card__close, .ua-wyl-flip-card__back-prose";
+
       root.querySelectorAll(".ua-wyl-flip-card").forEach(function (card) {
         const hint = card.querySelector(".ua-wyl-flip-card__hint");
         const closeBtn = card.querySelector(".ua-wyl-flip-card__close");
         const back = card.querySelector(".ua-wyl-flip-card__face--back");
+        let lastTap = 0;
+        let longPressTimer = null;
+        let touchHandled = false;
+
+        function shouldSkipFlip(target) {
+          return target && target.closest(skipFlipSelector);
+        }
 
         function toggleFlip() {
           setFlipped(card, !card.classList.contains("is-flipped"));
@@ -601,21 +613,68 @@
         back &&
           back.addEventListener("click", function (e) {
             if (e.target.closest(".ua-wyl-flip-card__close")) return;
+            if (e.target.closest(".ua-wyl-flip-card__back-prose")) return;
             if (card.classList.contains("is-flipped")) setFlipped(card, false);
           });
 
         card.addEventListener("click", function (e) {
-          if (e.target.closest(".ua-acled-zoom, .ua-wyl-flip-card__hint, .ua-wyl-flip-card__close")) return;
+          if (touchHandled) {
+            touchHandled = false;
+            return;
+          }
+          if (shouldSkipFlip(e.target)) return;
           if (!card.classList.contains("is-flipped")) toggleFlip();
         });
 
         card.addEventListener("keydown", function (e) {
+          if (shouldSkipFlip(e.target)) return;
           if (e.key === "Enter" || e.key === " ") {
             e.preventDefault();
             toggleFlip();
           }
           if (e.key === "Escape" && card.classList.contains("is-flipped")) {
             setFlipped(card, false);
+          }
+        });
+
+        card.addEventListener(
+          "touchend",
+          function (e) {
+            if (shouldSkipFlip(e.target)) return;
+            touchHandled = true;
+            const now = Date.now();
+            if (now - lastTap < 420) {
+              e.preventDefault();
+              toggleFlip();
+              lastTap = 0;
+            } else {
+              lastTap = now;
+            }
+          },
+          { passive: false }
+        );
+
+        card.addEventListener("touchstart", function (e) {
+          if (shouldSkipFlip(e.target)) return;
+          if (longPressTimer) window.clearTimeout(longPressTimer);
+          longPressTimer = window.setTimeout(function () {
+            touchHandled = true;
+            toggleFlip();
+            longPressTimer = null;
+          }, 520);
+        });
+
+        card.addEventListener("touchmove", function () {
+          if (longPressTimer) {
+            window.clearTimeout(longPressTimer);
+            longPressTimer = null;
+          }
+        });
+
+        card.addEventListener("touchcancel", function () {
+          if (longPressTimer) {
+            window.clearTimeout(longPressTimer);
+            longPressTimer = null;
           }
         });
       });
@@ -651,6 +710,45 @@
           dlg.showModal();
         });
       });
+    })();
+
+    (function initMilitaryAssessment() {
+      const section = document.getElementById("military-assessment");
+      if (!section) return;
+      const grid = section.querySelector(".mil-assess__grid");
+      const cards = section.querySelectorAll(".mil-assess__card");
+      if (!grid || !cards.length) return;
+
+      const prefersReduced =
+        window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      function revealCards() {
+        cards.forEach(function (card, index) {
+          window.setTimeout(
+            function () {
+              card.classList.add("is-visible");
+            },
+            prefersReduced ? 0 : index * 100
+          );
+        });
+      }
+
+      if (prefersReduced || !("IntersectionObserver" in window)) {
+        revealCards();
+        return;
+      }
+
+      const obs = new IntersectionObserver(
+        function (entries, observer) {
+          entries.forEach(function (entry) {
+            if (!entry.isIntersecting) return;
+            revealCards();
+            observer.unobserve(entry.target);
+          });
+        },
+        { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
+      );
+      obs.observe(grid);
     })();
   }
 

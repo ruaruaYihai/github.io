@@ -427,7 +427,7 @@
   }
   .topbar {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
     gap: 14px;
     padding: 14px 0;
@@ -481,9 +481,13 @@
     justify-content: center;
   }
   .nav-main {
-    grid-column: 2;
+    grid-column: 1;
     justify-self: center;
     max-width: 100%;
+  }
+  .nav-actions {
+    grid-column: 2;
+    justify-self: end;
   }
   .nav-main .navlink {
     white-space: nowrap;
@@ -1188,20 +1192,20 @@
     font-size: 12px;
   }
   .member-card.member-pink .id-strip {
-    background: #ec4899;
-    color: #ffffff;
-  }
-  .member-card.member-blue .id-strip {
-    background: #3b82f6;
-    color: #ffffff;
-  }
-  .member-card.member-yellow .id-strip {
     background: #facc15;
     color: #1f2937;
   }
-  .member-card.member-green .id-strip {
-    background: #22c55e;
+  .member-card.member-blue .id-strip {
+    background: #ec4899;
     color: #ffffff;
+  }
+  .member-card.member-yellow .id-strip {
+    background: #3b82f6;
+    color: #ffffff;
+  }
+  .member-card.member-green .id-strip {
+    background: #bce907;
+    color: #1a2e05;
   }
   .member-avatar {
     width: 98px;
@@ -1229,6 +1233,50 @@
     width: 100%;
     font-size: 12px;
     margin-top: 8px;
+  }
+  .member-duty {
+    width: 100%;
+    margin-top: 4px;
+    padding: 0 2px;
+  }
+  .member-duty__title {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin: 0 0 10px;
+    font-size: 13px;
+    font-weight: 800;
+    color: var(--text);
+    letter-spacing: -0.02em;
+  }
+  .member-duty__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .member-duty__list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 10px 10px 10px 8px;
+    border-radius: 12px;
+    border: 1px solid color-mix(in oklab, var(--border) 75%, transparent);
+    background: color-mix(in oklab, var(--panel-2) 70%, transparent);
+    font-size: 12px;
+    line-height: 1.5;
+    color: var(--muted);
+  }
+  .member-duty__icon {
+    flex-shrink: 0;
+    font-size: 15px;
+    line-height: 1.35;
+  }
+  .member-duty__list strong {
+    color: var(--text);
+    font-weight: 800;
   }
   .flip-hint {
     margin-top: auto;
@@ -3375,9 +3423,69 @@
     color: var(--muted);
   }
 
+  .ua-wyl-steps {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    padding-bottom: 6px;
+  }
+  .ua-wyl-steps .ua-acled-steps__item {
+    flex: 1 1 0;
+    min-width: 72px;
+    max-width: 120px;
+    padding: 0 2px;
+  }
+  .ua-wyl-steps .ua-acled-steps__label {
+    font-size: 12px;
+    line-height: 1.3;
+    word-break: keep-all;
+  }
+  .ua-wyl-steps .ua-acled-steps__hint {
+    font-size: 10px;
+    line-height: 1.35;
+    max-width: none;
+  }
+  .ua-wyl-steps .ua-acled-steps__sep {
+    flex: 0 0 14px;
+    width: 14px;
+    min-width: 14px;
+    margin-top: 22px;
+  }
   .ua-wyl-steps .ua-acled-steps__circle {
-    font-size: 22px;
+    font-size: 20px;
     line-height: 1;
+  }
+  @media (max-width: 640px) {
+    .ua-wyl-steps .ua-acled-steps__sep {
+      width: 14px;
+      height: 2px;
+      margin: 22px 0 0;
+      background: repeating-linear-gradient(
+        90deg,
+        var(--border) 0 4px,
+        transparent 4px 8px
+      );
+    }
+  }
+  .ua-wyl-steps .ua-wyl-steps__item--spatial .ua-acled-steps__circle {
+    background: linear-gradient(
+      145deg,
+      color-mix(in oklab, #a78bfa 32%, var(--panel)),
+      color-mix(in oklab, #c4b5fd 22%, var(--panel))
+    );
+    border-color: color-mix(in oklab, #a78bfa 48%, var(--border));
+    box-shadow:
+      var(--shadow),
+      0 0 0 1px color-mix(in oklab, #a78bfa 18%, transparent);
+  }
+  [data-theme="light"] .ua-wyl-steps .ua-wyl-steps__item--spatial .ua-acled-steps__circle {
+    background: linear-gradient(145deg, #ede9fe, #f5f3ff);
+    border-color: color-mix(in oklab, #7c3aed 35%, var(--border));
   }
 
   .ua-wyl-embed {
@@ -3520,7 +3628,7 @@
 
   .ua-wyl-flip-card {
     position: relative;
-    min-height: 320px;
+    min-height: 380px;
     perspective: 1000px;
     border-radius: var(--radius-sm);
     outline: none;
@@ -3553,7 +3661,7 @@
   .ua-wyl-flip-card__inner {
     position: relative;
     width: 100%;
-    min-height: 320px;
+    min-height: 380px;
     transform-style: preserve-3d;
     transition: transform 0.4s ease-in-out;
   }
@@ -3578,9 +3686,9 @@
   }
   .ua-wyl-flip-card__face--back {
     transform: rotateY(180deg);
-    padding: 12px;
-    align-items: center;
-    justify-content: center;
+    padding: 12px 12px 10px;
+    align-items: stretch;
+    justify-content: flex-start;
     cursor: pointer;
   }
   .ua-wyl-flip-card.is-flipped .ua-wyl-flip-card__face--front {
@@ -3672,6 +3780,27 @@
     margin: 8px 0 0;
     font-size: 13px;
     color: var(--muted);
+  }
+
+  .ua-wyl-flip-card__back-prose {
+    flex: 1;
+    min-height: 0;
+    width: 100%;
+    margin-top: 36px;
+    padding: 0 4px 8px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    text-align: left;
+  }
+  .ua-wyl-flip-card__back-prose p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.65;
+    color: var(--muted);
+  }
+  .ua-wyl-flip-card__back-prose strong {
+    color: var(--text);
+    font-weight: 800;
   }
 
   .ua-wyl-synthesis {
@@ -4604,6 +4733,253 @@
     font-size: 15px;
     line-height: 1.6;
     color: var(--muted);
+  }
+
+  #military-assessment > .section-head:first-of-type h3 {
+    color: var(--brand-2);
+  }
+  [data-theme="light"] #military-assessment > .section-head:first-of-type h3 {
+    color: #ea580c;
+  }
+
+  .mil-assess__shell {
+    position: relative;
+    overflow: hidden;
+  }
+  .mil-assess__inner {
+    position: relative;
+    padding: 22px 20px 26px;
+    background-image:
+      linear-gradient(color-mix(in oklab, var(--border) 35%, transparent) 1px, transparent 1px),
+      linear-gradient(90deg, color-mix(in oklab, var(--border) 35%, transparent) 1px, transparent 1px);
+    background-size: 28px 28px;
+    background-position: center;
+  }
+  .mil-assess__inner::before {
+    content: "";
+    position: absolute;
+    inset: 8% 12% auto;
+    height: 55%;
+    opacity: 0.06;
+    pointer-events: none;
+    background:
+      radial-gradient(ellipse 70% 80% at 50% 40%, color-mix(in oklab, var(--brand-1) 55%, transparent), transparent 68%),
+      radial-gradient(circle at 30% 60%, color-mix(in oklab, var(--brand-2) 40%, transparent), transparent 50%);
+    mask-image: radial-gradient(ellipse 85% 75% at 50% 45%, black 20%, transparent 72%);
+  }
+  .mil-assess__decor {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0;
+  }
+  .mil-assess__shape {
+    position: absolute;
+    border: 1px solid color-mix(in oklab, var(--brand-2) 28%, transparent);
+    opacity: 0.35;
+    animation: milAssessFloat 14s ease-in-out infinite;
+  }
+  .mil-assess__shape--ring {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    top: 12%;
+    right: 8%;
+    --mil-dx: 12px;
+    --mil-dy: -10px;
+  }
+  .mil-assess__shape--hex {
+    width: 72px;
+    height: 72px;
+    top: 58%;
+    left: 6%;
+    clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+    background: color-mix(in oklab, var(--brand-1) 12%, transparent);
+    animation-delay: -4s;
+    --mil-dx: -14px;
+    --mil-dy: 8px;
+  }
+  .mil-assess__shape--dot {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    bottom: 14%;
+    right: 22%;
+    background: color-mix(in oklab, var(--brand-3) 16%, transparent);
+    animation-delay: -7s;
+    --mil-dx: 10px;
+    --mil-dy: 12px;
+  }
+  @keyframes milAssessFloat {
+    0%,
+    100% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+    50% {
+      transform: translate(var(--mil-dx, 8px), var(--mil-dy, -8px)) rotate(8deg);
+    }
+  }
+
+  .mil-assess__grid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+  .mil-assess__grid::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    border-left: 1px dashed color-mix(in oklab, var(--border) 70%, transparent);
+    transform: translateX(-50%);
+    pointer-events: none;
+    opacity: 0.55;
+  }
+  @media (max-width: 760px) {
+    .mil-assess__grid {
+      grid-template-columns: 1fr;
+    }
+    .mil-assess__grid::before {
+      display: none;
+    }
+  }
+
+  .mil-assess__card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding: 24px;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    background: color-mix(in oklab, var(--panel-2) 88%, transparent);
+    box-shadow: var(--shadow);
+    opacity: 0;
+    transform: translateY(22px);
+    transition:
+      opacity 560ms ease var(--mil-delay, 0s),
+      transform 560ms ease var(--mil-delay, 0s),
+      border-color 0.3s ease,
+      box-shadow 0.3s ease;
+  }
+  .mil-assess__card.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .mil-assess__card--wide {
+    grid-column: 1 / -1;
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .mil-assess__card:hover {
+      transform: translateY(-2px);
+      border-color: color-mix(in oklab, var(--brand-2) 52%, var(--border));
+      box-shadow:
+        var(--shadow),
+        0 0 0 1px color-mix(in oklab, var(--brand-2) 22%, transparent),
+        0 12px 32px color-mix(in oklab, var(--brand-2) 18%, transparent);
+    }
+    .mil-assess__card.is-visible:hover {
+      transform: translateY(-2px);
+    }
+    .mil-assess__card:hover .mil-assess__icon {
+      transform: scale(1.08) rotate(8deg);
+    }
+  }
+
+  .mil-assess__card-head {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0;
+  }
+  .mil-assess__icon {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    font-size: 17px;
+    color: var(--mil-accent, var(--brand-2));
+    background: color-mix(in oklab, var(--mil-accent, var(--brand-2)) 22%, transparent);
+    transition: transform 0.3s ease;
+  }
+  .mil-assess__card-title {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 650;
+    letter-spacing: -0.02em;
+    line-height: 1.25;
+    color: var(--text);
+  }
+  .mil-assess__text {
+    margin: 12px 0 0;
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--muted);
+  }
+  .mil-assess__meter {
+    margin-top: 16px;
+  }
+  .mil-assess__meter-label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    margin-bottom: 8px;
+    font-size: 12px;
+    color: var(--faint);
+    letter-spacing: 0.02em;
+  }
+  .mil-assess__meter-val {
+    font-weight: 750;
+    color: var(--mil-accent, var(--brand-2));
+    font-variant-numeric: tabular-nums;
+  }
+  .mil-assess__meter-track {
+    height: 6px;
+    border-radius: 999px;
+    overflow: hidden;
+    background: color-mix(in oklab, var(--panel) 70%, transparent);
+    border: 1px solid color-mix(in oklab, var(--border) 55%, transparent);
+  }
+  .mil-assess__meter-fill {
+    display: block;
+    height: 100%;
+    width: 0;
+    border-radius: inherit;
+    background: linear-gradient(
+      90deg,
+      color-mix(in oklab, var(--mil-accent, var(--brand-2)) 75%, transparent),
+      var(--mil-accent, var(--brand-2))
+    );
+    transition: width 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .mil-assess__card.is-visible .mil-assess__meter-fill {
+    width: calc(var(--mil-pct, 0) * 1%);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .mil-assess__card {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+    .mil-assess__card.is-visible .mil-assess__meter-fill {
+      width: calc(var(--mil-pct, 0) * 1%);
+      transition: none;
+    }
+    .mil-assess__shape {
+      animation: none;
+    }
+    .mil-assess__icon {
+      transition: none;
+    }
   }
 
   @media (prefers-reduced-motion: reduce) {
