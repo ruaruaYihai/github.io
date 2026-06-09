@@ -169,7 +169,7 @@
       });
 
     const backToTopBtn = document.getElementById("backToTopBtn");
-    const backToTopAnchor = document.getElementById("members");
+    const backToTopAnchor = document.getElementById("finebi-dashboard");
     if (backToTopBtn) {
       let scrollTicking = false;
 

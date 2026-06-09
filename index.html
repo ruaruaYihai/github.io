@@ -78,8 +78,7 @@
       <div class="container">
         <div class="topbar">
           <nav class="nav-main" aria-label="Primary">
-            <a class="navlink" href="#members">成员介绍</a>
-            <a class="navlink" href="#project-timeline">项目时间线</a>
+            <a class="navlink" href="#finebi-dashboard">FineBI 仪表盘</a>
             <a class="navlink" href="#ua-detail-spatiotemporal">冲突事件</a>
             <a class="navlink" href="#ua-detail-poi-density">POI</a>
             <a class="navlink" href="#ua-detail-agriculture">NDVI</a>
@@ -213,344 +212,37 @@
           </section>
 
 
-          <section id="members" aria-labelledby="members-intro-heading">
+          <section id="finebi-dashboard" class="home-module" aria-labelledby="finebi-dashboard-heading">
             <div class="section-head">
-              <h3 id="members-intro-heading">成员介绍</h3>
+              <h3 id="finebi-dashboard-heading">FineBI 仪表盘</h3>
+              <p>基于 FineBI 公共链接的交互式数据可视化</p>
             </div>
-
-            <div class="members-grid" role="list" aria-label="团队成员">
-              <article class="member-card member-pink" role="listitem">
-                <div class="member-card-inner">
-                  <div class="member-face member-face-front">
-                    <div class="id-strip">ID card</div>
-                    <div class="member-avatar" aria-hidden="true">
-                      <img src="./hsy.jpg" alt="Shiyu Huang" loading="lazy" decoding="async" />
-                    </div>
-                    <p class="name">Shiyu Huang</p>
-                    <p class="meta">50620232002</p>
-                    <p class="flip-hint">Flip to see more</p>
-                  </div>
-                  <div class="member-face member-face-back">
-                    <div class="id-strip">分工职责</div>
-                    <div class="member-duty">
-                      <p class="member-duty__title"><span aria-hidden="true">📋</span> <strong>主要职责</strong></p>
-                      <ol class="member-duty__list">
-                        <li>
-                          <span class="member-duty__icon" aria-hidden="true">⚔️</span>
-                          <span><strong>① 冲突事件与夜光遥感融合分析</strong></span>
-                        </li>
-                        <li>
-                          <span class="member-duty__icon" aria-hidden="true">🖥️</span>
-                          <span><strong>② 网页设计与制作</strong></span>
-                        </li>
-                      </ol>
-                    </div>
-                  </div>
+            <article class="panel finebi-panel">
+              <div class="panel-inner finebi-panel__inner">
+                <div class="finebi-embed">
+                  <iframe
+                    class="finebi-iframe"
+                    title="FineBI 仪表盘"
+                    src="http://localhost:37799/webroot/decision/link/iy6I"
+                    width="100%"
+                    height="720"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                  ></iframe>
+                  <p class="finebi-embed__note">
+                    若看板无法显示，请确认本地 FineBI 服务已启动，或
+                    <a
+                      class="finebi-embed__link"
+                      href="http://localhost:37799/webroot/decision/link/iy6I"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >在新窗口打开看板</a
+                    >。
+                  </p>
                 </div>
-              </article>
-
-              <article class="member-card member-blue" role="listitem">
-                <div class="member-card-inner">
-                  <div class="member-face member-face-front">
-                    <div class="id-strip">ID card</div>
-                    <div class="member-avatar" aria-hidden="true">
-                      <img src="./lyt.jpg" alt="Yutong Luo" loading="lazy" decoding="async" />
-                    </div>
-                    <p class="name">Yutong Luo</p>
-                    <p class="meta">50620232001</p>
-                    <p class="flip-hint">Flip to see more</p>
-                  </div>
-                  <div class="member-face member-face-back">
-                    <div class="id-strip">分工职责</div>
-                    <div class="member-duty">
-                      <p class="member-duty__title"><span aria-hidden="true">📋</span> <strong>主要职责</strong></p>
-                      <ol class="member-duty__list">
-                        <li>
-                          <span class="member-duty__icon" aria-hidden="true">📍</span>
-                          <span><strong>① POI 时空变化分析</strong></span>
-                        </li>
-                        <li>
-                          <span class="member-duty__icon" aria-hidden="true">📊</span>
-                          <span><strong>② PPT 制作</strong></span>
-                        </li>
-                      </ol>
-                    </div>
-                  </div>
-                </div>
-              </article>
-
-              <article class="member-card member-yellow" role="listitem">
-                <div class="member-card-inner">
-                  <div class="member-face member-face-front">
-                    <div class="id-strip">ID card</div>
-                    <div class="member-avatar" aria-hidden="true">
-                      <img src="./wpg.jpg" alt="Pengge Wang" loading="lazy" decoding="async" />
-                    </div>
-                    <p class="name">Pengge Wang</p>
-                    <p class="meta">50620232012</p>
-                    <p class="flip-hint">Flip to see more</p>
-                  </div>
-                  <div class="member-face member-face-back">
-                    <div class="id-strip">分工职责</div>
-                    <div class="member-duty">
-                      <p class="member-duty__title"><span aria-hidden="true">📋</span> <strong>主要职责</strong></p>
-                      <ol class="member-duty__list">
-                        <li>
-                          <span class="member-duty__icon" aria-hidden="true">🌾</span>
-                          <span><strong>① NDVI 时空变化分析</strong></span>
-                        </li>
-                        <li>
-                          <span class="member-duty__icon" aria-hidden="true">📝</span>
-                          <span><strong>② 报告汇总</strong></span>
-                        </li>
-                      </ol>
-                    </div>
-                  </div>
-                </div>
-              </article>
-
-              <article class="member-card member-green" role="listitem">
-                <div class="member-card-inner">
-                  <div class="member-face member-face-front">
-                    <div class="id-strip">ID card</div>
-                    <div class="member-avatar" aria-hidden="true">
-                      <img src="./wyl.jpg" alt="Yilei Wang" loading="lazy" decoding="async" />
-                    </div>
-                    <p class="name">Yilei Wang</p>
-                    <p class="meta">50620232015</p>
-                    <p class="flip-hint">Flip to see more</p>
-                  </div>
-                  <div class="member-face member-face-back">
-                    <div class="id-strip">分工职责</div>
-                    <div class="member-duty">
-                      <p class="member-duty__title"><span aria-hidden="true">📋</span> <strong>主要职责</strong></p>
-                      <ol class="member-duty__list">
-                        <li>
-                          <span class="member-duty__icon" aria-hidden="true">🛰️</span>
-                          <span><strong>① 夜光遥感冲突态势分析</strong></span>
-                        </li>
-                        <li>
-                          <span class="member-duty__icon" aria-hidden="true">📦</span>
-                          <span><strong>② 成果整合与素材搜集</strong></span>
-                        </li>
-                      </ol>
-                    </div>
-                  </div>
-                </div>
-              </article>
-            </div>
-          </section>
-
-          <section id="project-timeline" class="home-module" aria-labelledby="project-timeline-heading">
-            <div class="section-head">
-              <h3 id="project-timeline-heading">项目时间线</h3>
-              <p>按周次划分的关键节点与任务</p>
-            </div>
-
-            <div class="process-timeline" role="region" aria-label="项目时间线（按周次）">
-              <div class="process-timeline__stage">
-                <svg
-                  class="process-timeline__svg"
-                  viewBox="-80 -195 1160 580"
-                  preserveAspectRatio="xMinYMid meet"
-                  focusable="false"
-                  role="group"
-                  aria-label="项目时间线曲线与周次节点"
-                >
-                  <defs>
-                    <linearGradient id="processTimelineStroke" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
-                      <stop offset="0%" stop-color="#34d399" />
-                      <stop offset="45%" stop-color="#6366f1" />
-                      <stop offset="100%" stop-color="#f97316" />
-                    </linearGradient>
-                    <marker
-                      id="processTimelineArrowEnd"
-                      viewBox="0 0 10 10"
-                      refX="9"
-                      refY="5"
-                      markerWidth="7"
-                      markerHeight="7"
-                      orient="auto"
-                      markerUnits="strokeWidth"
-                    >
-                      <path class="process-timeline__svg-arrowhead" d="M 0 0 L 10 5 L 0 10 Z" />
-                    </marker>
-                  </defs>
-                  
-                  <path
-                    class="process-timeline__curve-bg"
-                    fill="none"
-                    stroke="url(#processTimelineStroke)"
-                    stroke-width="12"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    opacity="0.12"
-                    d="M 40.00,58.40 L 54.60,53.46 L 69.21,50.63 L 83.81,50.08 L 98.41,51.83 L 113.02,55.79 L 127.62,61.75 L 142.22,69.40 L 156.83,78.33 L 171.43,88.09 L 186.03,98.16 L 200.63,108.01 L 215.24,117.13 L 229.84,125.04 L 244.44,131.31 L 259.05,135.64 L 273.65,137.78 L 288.25,137.63 L 302.86,135.19 L 317.46,130.60 L 332.06,124.09 L 346.67,116.00 L 361.27,106.76 L 375.87,96.85 L 390.48,86.79 L 405.08,77.11 L 419.68,68.32 L 434.29,60.86 L 448.89,55.15 L 463.49,51.47 L 478.10,50.02 L 492.70,50.87 L 507.30,53.98 L 521.90,59.19 L 536.51,66.22 L 551.11,74.71 L 565.71,84.21 L 580.32,94.22 L 594.92,104.22 L 609.52,113.68 L 624.13,122.11 L 638.73,129.07 L 653.33,134.20 L 667.94,137.21 L 682.54,137.96 L 697.14,136.41 L 711.75,132.64 L 726.35,126.84 L 740.95,119.33 L 755.56,110.48 L 770.16,100.77 L 784.76,90.71 L 799.37,80.82 L 813.97,71.62 L 828.57,63.59 L 843.17,57.16 L 857.78,52.65 L 872.38,50.31 L 886.98,50.26 L 901.59,52.51 L 916.19,56.92 L 930.79,63.28 L 945.40,71.24 L 960.00,80.40"
-                  />
-                  <path
-                    class="process-timeline__curve"
-                    fill="none"
-                    stroke="url(#processTimelineStroke)"
-                    stroke-width="3.25"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M 40.00,58.40 L 54.60,53.46 L 69.21,50.63 L 83.81,50.08 L 98.41,51.83 L 113.02,55.79 L 127.62,61.75 L 142.22,69.40 L 156.83,78.33 L 171.43,88.09 L 186.03,98.16 L 200.63,108.01 L 215.24,117.13 L 229.84,125.04 L 244.44,131.31 L 259.05,135.64 L 273.65,137.78 L 288.25,137.63 L 302.86,135.19 L 317.46,130.60 L 332.06,124.09 L 346.67,116.00 L 361.27,106.76 L 375.87,96.85 L 390.48,86.79 L 405.08,77.11 L 419.68,68.32 L 434.29,60.86 L 448.89,55.15 L 463.49,51.47 L 478.10,50.02 L 492.70,50.87 L 507.30,53.98 L 521.90,59.19 L 536.51,66.22 L 551.11,74.71 L 565.71,84.21 L 580.32,94.22 L 594.92,104.22 L 609.52,113.68 L 624.13,122.11 L 638.73,129.07 L 653.33,134.20 L 667.94,137.21 L 682.54,137.96 L 697.14,136.41 L 711.75,132.64 L 726.35,126.84 L 740.95,119.33 L 755.56,110.48 L 770.16,100.77 L 784.76,90.71 L 799.37,80.82 L 813.97,71.62 L 828.57,63.59 L 843.17,57.16 L 857.78,52.65 L 872.38,50.31 L 886.98,50.26 L 901.59,52.51 L 916.19,56.92 L 930.79,63.28 L 945.40,71.24 L 960.00,80.40"
-                  />
-                  <g class="process-timeline__callouts">
-                    <g class="process-timeline__note-cluster">
-                      <rect class="process-timeline__svg-note" x="-72" y="198" width="228" height="132" rx="10" ry="10" />
-                      <foreignObject x="-72" y="198" width="228" height="132">
-                        <div xmlns="http://www.w3.org/1999/xhtml" class="process-timeline__note-html">
-                          <p><strong>第1周：选题确定与任务分工</strong></p>
-                          <ul>
-                            <li>确定最终分析主题与范围</li>
-                            <li>
-                              明确四项分析任务：夜光遥感分析、POI核密度分析、冲突对农业生产的影响、<strong>冲突事件时空分布与强度</strong>
-                            </li>
-                            <li>完成团队分工（每项分析指定小组成员，并明确协作机制）</li>
-                          </ul>
-                        </div>
-                      </foreignObject>
-                    </g>
-                    <line
-                      class="process-timeline__svg-arrow"
-                      x1="40"
-                      y1="65.4"
-                      x2="40"
-                      y2="198"
-                      marker-end="url(#processTimelineArrowEnd)"
-                    />
-                    <g class="process-timeline__note-cluster">
-                      <rect class="process-timeline__svg-note" x="159.65" y="-165" width="228" height="155" rx="10" ry="10" />
-                      <foreignObject x="159.65" y="-165" width="228" height="155">
-                        <div xmlns="http://www.w3.org/1999/xhtml" class="process-timeline__note-html">
-                          <p><strong>第2–3周：数据收集准备</strong></p>
-                          <ul>
-                            <li>
-                              收集并整理初步资料：
-                              <ul>
-                                <li>夜光遥感数据源（VIIRS）</li>
-                                <li>POI数据（OpenStreetMap）</li>
-                                <li>农业生产数据（Earthdata、ESA WorldCover、OSM道路/建筑物）</li>
-                                <li><strong>冲突事件数据（ACLED，HDX）</strong></li>
-                              </ul>
-                            </li>
-                          </ul>
-                        </div>
-                      </foreignObject>
-                    </g>
-                    <line
-                      class="process-timeline__svg-arrow"
-                      x1="273.65"
-                      y1="130.78"
-                      x2="273.65"
-                      y2="-10"
-                      marker-end="url(#processTimelineArrowEnd)"
-                    />
-                    <g class="process-timeline__note-cluster">
-                      <rect class="process-timeline__svg-note" x="364.1" y="198" width="228" height="168" rx="10" ry="10" />
-                      <foreignObject x="364.1" y="198" width="228" height="168">
-                        <div xmlns="http://www.w3.org/1999/xhtml" class="process-timeline__note-html">
-                          <p><strong>第4–6周：数据下载与预处理</strong></p>
-                          <ul>
-                            <li>完成所有数据下载</li>
-                            <li>
-                              完成各项数据的初步预处理
-                              <ul>
-                                <li>夜光遥感：裁切、背景噪声去除</li>
-                                <li>POI：提取医院POI、坐标清洗、空间匹配</li>
-                                <li>农业生产数据：计算NDVI、物候曲线匹配、六边形聚合</li>
-                                <li><strong>冲突事件：数据清洗、州名统一、按州/按月份汇总、分时段筛选</strong></li>
-                              </ul>
-                            </li>
-                          </ul>
-                        </div>
-                      </foreignObject>
-                    </g>
-                    <line
-                      class="process-timeline__svg-arrow"
-                      x1="478.1"
-                      y1="57.02"
-                      x2="478.1"
-                      y2="198"
-                      marker-end="url(#processTimelineArrowEnd)"
-                    />
-                    <g class="process-timeline__note-cluster">
-                      <rect class="process-timeline__svg-note" x="568.54" y="-188" width="228" height="178" rx="10" ry="10" />
-                      <foreignObject x="568.54" y="-188" width="228" height="178">
-                        <div xmlns="http://www.w3.org/1999/xhtml" class="process-timeline__note-html">
-                          <p><strong>第6–9周：数据可视化与最终图件制作</strong></p>
-                          <ul>
-                            <li>
-                              各分析任务完成关键可视化
-                              <ul>
-                                <li>夜光亮度变化时序图与空间分布图</li>
-                                <li>POI核密度变化对比图（不同时期），创建渔网图</li>
-                                <li>土地覆盖图，作物与冲突数据叠加双变量专题图（重点区域）</li>
-                                <li>
-                                  <strong>冲突事件：时间强度折线图、全时段空间分布图、关键时期对比图（三时相）、Top5高发区表格</strong>
-                                </li>
-                              </ul>
-                            </li>
-                            <li>生成最终版高分辨率图表（用于报告与网页）</li>
-                            <li>初步整合四类分析结果</li>
-                          </ul>
-                        </div>
-                      </foreignObject>
-                    </g>
-                    <line
-                      class="process-timeline__svg-arrow"
-                      x1="682.54"
-                      y1="130.96"
-                      x2="682.54"
-                      y2="-10"
-                      marker-end="url(#processTimelineArrowEnd)"
-                    />
-                    <g class="process-timeline__note-cluster">
-                      <rect class="process-timeline__svg-note" x="846" y="198" width="228" height="142" rx="10" ry="10" />
-                      <foreignObject x="846" y="198" width="228" height="142">
-                        <div xmlns="http://www.w3.org/1999/xhtml" class="process-timeline__note-html">
-                          <p><strong>第10–11周：报告撰写与网站搭建</strong></p>
-                          <ul>
-                            <li>撰写项目报告</li>
-                            <li>
-                              搭建项目展示网站
-                              <ul>
-                                <li>设计网页结构（首页、方法、结果、交互图表、报告下载）</li>
-                                <li>嵌入最终可视化图表（动态/交互）</li>
-                              </ul>
-                            </li>
-                            <li>小组审阅与修改</li>
-                          </ul>
-                        </div>
-                      </foreignObject>
-                    </g>
-                    <line
-                      class="process-timeline__svg-arrow"
-                      x1="960"
-                      y1="87.4"
-                      x2="960"
-                      y2="198"
-                      marker-end="url(#processTimelineArrowEnd)"
-                    />
-                  </g>
-                  <g class="process-timeline__markers">
-                    <text class="process-timeline__svg-week" x="40" y="42.4">第1周</text>
-                    <circle class="process-timeline__svg-dot" cx="40" cy="58.4" r="7" />
-                    <text class="process-timeline__svg-week" x="273.65" y="121.78">第2–3周</text>
-                    <circle class="process-timeline__svg-dot" cx="273.65" cy="137.78" r="7" />
-                    <text class="process-timeline__svg-week" x="478.1" y="34">第4–6周</text>
-                    <circle class="process-timeline__svg-dot" cx="478.1" cy="50.02" r="7" />
-                    <text class="process-timeline__svg-week" x="682.54" y="121.96">第6–9周</text>
-                    <circle class="process-timeline__svg-dot" cx="682.54" cy="137.96" r="7" />
-                    <text class="process-timeline__svg-week" x="960" y="64.4">第10–11周</text>
-                    <circle class="process-timeline__svg-dot" cx="960" cy="80.4" r="7" />
-                  </g>
-                </svg>
               </div>
-            </div>
+            </article>
           </section>
-
 
           <div class="ua-research-details" id="ua-research-details" aria-label="俄乌冲突专题详情（占位）">
             <section
@@ -827,6 +519,8 @@
 <p class="ua-hsy-exp__out"><span aria-hidden="true">📤</span> 输出：清洗后的冲突事件表、夜光数据表</p>
                     </div>
                     <div class="ua-hsy-exp-panel" data-hsy-panel="1" role="tabpanel" hidden>
+                      <div class="ua-hsy-exp-panel__grid">
+                        <div class="ua-hsy-exp-panel__text">
 <p class="ua-hsy-exp__lead"><span aria-hidden="true">📌</span> <strong>核心任务：</strong>揭示冲突事件数和死亡人数的月度变化趋势</p>
 <h6 class="ua-hsy-exp__sub"><span aria-hidden="true">⚙️</span> 关键操作</h6>
 <ul class="ua-hsy-exp__list"><li>数据透视：按月份汇总事件数与死亡人数</li><li>绘制双轴折线图（左轴事件数 / 右轴死亡人数）</li><li>标注关键战役节点</li></ul>
@@ -834,8 +528,15 @@
 <ul class="ua-hsy-exp__list"><li>2022年3月达到峰值（基辅战役）</li><li>最大环比跌幅：<strong class="ua-hsy-em">-31.5%</strong></li><li>哈尔科夫反攻、扎波罗热反攻对应明显波峰</li></ul>
 <p class="ua-hsy-exp__tools"><span aria-hidden="true">📁</span> 使用工具：<span class="ua-hsy-chip">Excel</span></p>
 <p class="ua-hsy-exp__out"><span aria-hidden="true">📤</span> 输出：2022—2023年月度变化双轴折线图</p>
+                        </div>
+                        <figure class="ua-hsy-exp-panel__fig">
+                          <img src="./hsyphoto2/result_monthly_events_fatalities_2022_2023.png" alt="2022—2023年乌克兰月度冲突事件与死亡人数变化分析" loading="lazy" decoding="async" />
+                        </figure>
+                      </div>
                     </div>
                     <div class="ua-hsy-exp-panel" data-hsy-panel="2" role="tabpanel" hidden>
+                      <div class="ua-hsy-exp-panel__grid">
+                        <div class="ua-hsy-exp-panel__text">
 <p class="ua-hsy-exp__lead"><span aria-hidden="true">📌</span> <strong>核心任务：</strong>识别冲突事件和死亡人数的地理集聚特征</p>
 <h6 class="ua-hsy-exp__sub"><span aria-hidden="true">⚙️</span> 关键操作</h6>
 <ul class="ua-hsy-exp__list"><li>ArcGIS Pro 中导入矢量面 + 统计CSV</li><li>属性连接：ADMIN_NAME ↔ Admin1</li><li>分级色彩制图：6级，浅黄→深红</li></ul>
@@ -843,8 +544,15 @@
 <ul class="ua-hsy-exp__list"><li>高值区集中在东部和南部前线</li><li>顿涅茨克州事件数最高（<strong class="ua-hsy-em">2,305</strong>起）</li><li>死亡人数比事件数更集中</li></ul>
 <p class="ua-hsy-exp__tools"><span aria-hidden="true">📁</span> 使用工具：<span class="ua-hsy-chip">ArcGIS Pro</span></p>
 <p class="ua-hsy-exp__out"><span aria-hidden="true">📤</span> 输出：全时段及3个关键时期的空间分布专题图</p>
+                        </div>
+                        <figure class="ua-hsy-exp-panel__fig">
+                          <img src="./hsyphoto2/result_conflict_events_key_period_comparison.png" alt="关键时期冲突事件空间分布对比图" loading="lazy" decoding="async" />
+                        </figure>
+                      </div>
                     </div>
                     <div class="ua-hsy-exp-panel" data-hsy-panel="3" role="tabpanel" hidden>
+                      <div class="ua-hsy-exp-panel__grid">
+                        <div class="ua-hsy-exp-panel__text">
 <p class="ua-hsy-exp__lead"><span aria-hidden="true">📌</span> <strong>核心任务：</strong>构建各州月度夜光时间序列</p>
 <p class="ua-hsy-exp__meta"><span aria-hidden="true">📥</span> 数据范围：2021.11 — 2023.12（冲突前 → 爆发 → 持续）</p>
 <h6 class="ua-hsy-exp__sub"><span aria-hidden="true">⚙️</span> 关键操作</h6>
@@ -853,8 +561,15 @@
 <ul class="ua-hsy-exp__list"><li>25个州 × 26个月</li><li>夜光指数单位：nW/cm²/sr</li></ul>
 <p class="ua-hsy-exp__tools"><span aria-hidden="true">📁</span> 使用工具：<span class="ua-hsy-chip">Python</span><span class="ua-hsy-chip">pandas</span></p>
 <p class="ua-hsy-exp__out"><span aria-hidden="true">📤</span> 输出：各州夜光时间序列矩阵</p>
+                        </div>
+                        <figure class="ua-hsy-exp-panel__fig">
+                          <img src="./pythonCut.png" alt="Python 夜光数据整理与矩阵构建代码截图" loading="lazy" decoding="async" />
+                        </figure>
+                      </div>
                     </div>
                     <div class="ua-hsy-exp-panel" data-hsy-panel="4" role="tabpanel" hidden>
+                      <div class="ua-hsy-exp-panel__grid">
+                        <div class="ua-hsy-exp-panel__text">
 <p class="ua-hsy-exp__lead"><span aria-hidden="true">📌</span> <strong>核心任务：</strong>对夜光变化轨迹进行分类识别</p>
 <h6 class="ua-hsy-exp__sub"><span aria-hidden="true">⚙️</span> 关键操作</h6>
 <ul class="ua-hsy-exp__list"><li>Z-score标准化（消除绝对亮度差异，突出变化形态）</li><li>KMeans聚类，聚类数 K=4</li></ul>
@@ -862,6 +577,11 @@
 <ul class="ua-hsy-exp__list"><li>🔄 波动型（簇0）：高基础水平，动态调整</li><li>📈 中度下降恢复型（簇1）：初期下降，后期修复</li><li>🔴 持续受扰型（簇2）：长期低位，恢复有限</li><li>🟠 持续受扰型（簇3）：受影响略轻于簇2</li></ul>
 <p class="ua-hsy-exp__tools"><span aria-hidden="true">📁</span> 使用工具：<span class="ua-hsy-chip">Python</span><span class="ua-hsy-chip">scikit-learn</span></p>
 <p class="ua-hsy-exp__out"><span aria-hidden="true">📤</span> 输出：各州夜光轨迹聚类标签</p>
+                        </div>
+                        <figure class="ua-hsy-exp-panel__fig">
+                          <img src="./hsyphoto2/result_ntl_typical_region_trajectory.png" alt="各轨迹类型典型地区夜光指数变化轨迹图" loading="lazy" decoding="async" />
+                        </figure>
+                      </div>
                     </div>
                     <div class="ua-hsy-exp-panel" data-hsy-panel="5" role="tabpanel" hidden>
 <p class="ua-hsy-exp__lead"><span aria-hidden="true">📌</span> <strong>核心任务：</strong>可视化聚类结果，并与冲突事件关联</p>
